@@ -1,28 +1,28 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles/app.sass";
-// import Page from "./components/Page";
-import Maintenance from "./components/Maintenance";
-// import Home from "./screens/Home";
-// import Solutions from "./screens/Nos-Solutions";
-// import Pricing from "./screens/Pricing";
-// import Download from "./screens/Download";
-// import Blog from "./screens/Blog";
-// import BlogDetail from "./screens/BlogDetail";
-// import Lifestyle from "./screens/Lifestyle";
-// import Article from "./screens/Article";
-// import Contact from "./screens/Contact";
-// import ProgressBar from "./components/ProgressBar/ProgressBar";
-// import ScrollButton from "./components/ScrollButton/index";
-// import Class02 from "./screens/Class02";
-// import Class02Details from "./screens/Class02Details";
-// import StrategieTransformationDigitale from "./screens/StrategieTransformationDigitale";
-// import CreationSiteWebSEO from "./screens/CreationSiteWebSEO";
-// import GestionCroissanceReseauxSociauxSocialMedia from "./screens/GestionCroissanceReseauxSociauxSocialMedia";
-// import ProductionContenuMarque from "./screens/ProductionContenuMarque";
-// import AutomatisationSolutionsDigitalesSurMesure from "./screens/AutomatisationSolutionsDigitalesSur-Mesure";
-// import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFormationDigitaleCoaching";
+import Page from "./components/Page";
+// import Maintenance from "./components/Maintenance";
+import Home from "./screens/Home";
+import Solutions from "./screens/Nos-Solutions";
+import Pricing from "./screens/Pricing";
+import Download from "./screens/Download";
+import Blog from "./screens/Blog";
+import BlogDetail from "./screens/BlogDetail";
+import Lifestyle from "./screens/Lifestyle";
+import Article from "./screens/Article";
+import Contact from "./screens/Contact";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
+import ScrollButton from "./components/ScrollButton/index";
+import Class02 from "./screens/Class02";
+import Class02Details from "./screens/Class02Details";
+import StrategieTransformationDigitale from "./screens/StrategieTransformationDigitale";
+import CreationSiteWebSEO from "./screens/CreationSiteWebSEO";
+import GestionCroissanceReseauxSociauxSocialMedia from "./screens/GestionCroissanceReseauxSociauxSocialMedia";
+import ProductionContenuMarque from "./screens/ProductionContenuMarque";
+import AutomatisationSolutionsDigitalesSurMesure from "./screens/AutomatisationSolutionsDigitalesSur-Mesure";
+import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFormationDigitaleCoaching";
 import { BlogProvider } from "./context/BlogContext";
-// import About from "./screens/About/index";
+import About from "./screens/About/index";
 import MetaTags from "./components/MetaTags";
 
 
@@ -30,12 +30,12 @@ function App() {
     return (
         <BlogProvider>
             <MetaTags />
-            {/* <ScrollButton/> */}
-            {/* <ProgressBar/> */}
+            <ScrollButton/>
+            <ProgressBar/>
             <Routes>
-                <Route path="/" element={<Maintenance />} />
-                <Route path="*" element={<Maintenance />} />
-                {/* 
+                {/* <Route path="/" element={<Maintenance />} />
+                <Route path="*" element={<Maintenance />} /> */}
+                
                 <Route path="/">
                     <Route
                         index
@@ -182,7 +182,7 @@ function App() {
                         }
                     />
                 </Route>
-                */}
+               
             </Routes>
         </BlogProvider>
     );
