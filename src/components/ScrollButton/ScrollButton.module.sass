@@ -1,0 +1,105 @@
+@import ../../styles/helpers
+
+.scroll
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 64px
+    height: 64px
+    border-radius: 50%
+    background: none
+    overflow: hidden
+    border: 2px solid $neutrals6
+    transition: border-color .2s
+    +d
+        width: 40px
+        height: 40px
+    svg
+        fill: $neutrals4
+        transition: fill .2s
+    &:hover
+        border-color: $neutrals2
+        svg
+            fill: $neutrals2
+    +dark
+        border-color: $neutrals3
+        &:hover
+            border-color: $neutrals8
+            svg
+                fill: $neutrals8
+
+.fixed
+    position: fixed
+    right: 24px
+    bottom: 24px
+    opacity: 0
+    pointer-events: none
+    background: $neutrals8
+    border-color: transparent
+    box-shadow: 0 8px 24px rgba(15, 15, 15, 0.12)
+    transition: opacity .2s, transform .2s
+    transform: translateY(12px)
+    z-index: 3000
+    +dark
+        background: $neutrals1
+    +t
+        right: 16px
+        bottom: 16px
+
+.visible
+    opacity: 1
+    pointer-events: auto
+    transform: translateY(0)
+
+.line
+    display: flex
+    flex-direction: column
+    transform: translateY(33px)
+    animation: arrowsUp ease-out 1.4s infinite
+    +d
+        transform: translateY(22px)
+        animation-name: arrowsUpSmall
+    svg
+        &:not(:last-child)
+            margin-bottom: 50px
+            +d
+                margin-bottom: 30px
+
+@keyframes arrowsUp
+    0%
+        transform: translateY(33px)
+    80%
+        transform: translateY(-33px)
+    100%
+        transform: translateY(-33px)
+
+@keyframes arrowsUpSmall
+    0%
+        transform: translateY(22px)
+    80%
+        transform: translateY(-22px)
+    100%
+        transform: translateY(-22px)
+
+.upIcon
+    transform: rotate(180deg)
+
+.progressCircle
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%) rotate(-90deg) // center + start from top
+  width: 64px
+  height: 64px
+
+  circle
+    fill: none
+    vector-effect: non-scaling-stroke // keeps stroke uniform if resized
+
+
+.bg
+  stroke: $neutrals6
+  opacity: 0.15
+
+.progress
+  transition: stroke-dashoffset 0.25s linear

@@ -1,0 +1,85 @@
+@import ../../styles/helpers
+
+.stage
+    margin-bottom: 16px
+    +t
+        margin-bottom: 44px
+    +m
+        margin-bottom: 32px
+
+.row
+    display: flex
+    +d
+        margin-left: -150px
+    +t
+        display: block
+        margin: 0
+
+.col
+    &:first-child
+        flex: 0 0 448px
+        +t
+            margin-bottom: 48px
+    &:nth-child(2)
+        flex-grow: 1
+        padding-left: 128px
+        +x
+            padding-left: 80px
+        +t
+            padding: 0
+
+.preview
+    img
+        width: 100%
+        border-radius: 16px
+
+.title
+    margin-bottom: 22px
+
+.info
+    margin-bottom: 30px
+    color: $neutrals4
+    +m
+        margin-bottom: 34px
+
+.list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: 24px
+    margin-bottom: 44px
+    +t
+        grid-template-columns: repeat(2, 1fr)
+        gap: 20px
+    +m
+        grid-template-columns: 1fr
+        gap: 16px
+        margin-bottom: 48px
+
+.item
+    width: 100%
+    +m
+        &:not(:last-child)
+            margin-bottom: 32px
+
+.category
+    position: relative
+    margin-bottom: 22px
+    padding-bottom: 22px
+    font-weight: 600
+    +m
+        margin-bottom: 14px
+        padding-bottom: 14px
+    &:before
+        content: ""
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 160px
+        height: 2px
+        background: $neutrals6
+        +dark
+            background: $neutrals3
+
+.content
+    color: $neutrals4
+

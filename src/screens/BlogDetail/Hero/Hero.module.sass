@@ -1,0 +1,208 @@
+@import ../../../styles/helpers
+
+.sectionn
+     padding: 6px 0px
+     +m
+         padding: 4px 0px
+
+
+.container
+    display: flex
+    justify-content: center
+
+.centered
+    max-width: 1000px
+    text-align: left
+    +t
+        max-width: 100%
+    +m
+        padding: 0 16px
+
+.details
+    display: flex
+    justify-content: center
+    margin-bottom: 16px
+
+.status
+    &:not(:last-child)
+        margin-right: 4px
+
+.title
+    margin-bottom: 16px
+    text-align: left
+    +m
+        font-size: 22px
+
+.info
+    margin: 0 auto 48px
+    max-width: 600px
+    +body-1
+    color: $neutrals4
+    +m
+        margin-bottom: 24px
+        font-size: 16px
+
+.wrap
+    margin: 0 auto 24px
+    max-width: 1000px
+    width: 100%
+    +t
+        max-width: 800px
+    +m
+        max-width: 100%
+        margin: 0 0 16px
+    :global
+        .slick-list
+            padding: 0 !important
+        .slick-slide
+            padding: 0 !important
+            > div
+                width: 100%
+
+.preview
+    position: relative
+    img
+        width: 100%
+        height: auto
+        border-radius: 16px
+        +m
+            border-radius: 12px
+
+.item
+    display: flex
+    +caption-1
+    font-weight: 500
+    justify-content: center
+    &:not(:last-child)
+        margin-bottom: 20px
+
+.icon
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-shrink: 0
+    width: 20px
+    height: 24px
+    margin-right: 12px
+    svg
+        fill: $neutrals4
+    
+.parameter
+    flex: 0 0 156px
+    padding-right: 16px
+    color: $neutrals4
+
+.text
+    margin: 40px auto
+    max-width: 500px
+    padding-top: 40px
+    border-top: 1px solid $neutrals6
+    color: $neutrals3
+    +d
+        margin-top: 32px
+        padding-top: 32px
+    +dark
+        border-color: $neutrals3
+        color: $neutrals6
+    p
+        &:not(:last-child)
+            margin-bottom: 24px
+
+.list
+    margin: 40px auto
+    max-width: 500px
+    padding: 24px 20px
+    border-radius: 8px
+    border: 2px solid $neutrals6
+    text-align: left
+    +d
+        margin-top: 32px
+    +dark
+        border-color: $neutrals3
+
+.box
+    position: relative
+    padding-left: 26px
+    font-weight: 600
+    &:before
+        content: ""
+        position: absolute
+        top: 2px
+        left: 0
+        width: 16px
+        height: 16px
+        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' fill='none' viewBox='0 0 18 18'%3E%3Cpath fill-rule='evenodd' d='M8.999 17.333c4.602 0 8.333-3.731 8.333-8.333S13.602.667 8.999.667.666 4.398.666 9s3.731 8.333 8.333 8.333zm4.874-10.126a1 1 0 0 0-1.414-1.414l-4.293 4.293-1.793-1.793a1 1 0 1 0-1.414 1.414l2.5 2.5a1 1 0 0 0 1.414 0l5-5z' fill='%2345b36b'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+    &:not(:last-child)
+        margin-bottom: 8px
+
+.btns
+    display: flex
+    justify-content: center
+    margin-top: 48px
+    +d
+        margin-top: 40px
+    
+    .button
+        &:first-child
+            margin-right: 12px
+        &:nth-child(2)
+            flex-grow: 1
+            max-width: 300px
+
+// Loading and error states
+.loading
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 60px 20px
+    text-align: center
+    
+    p
+        margin-top: 16px
+        color: $neutrals4
+        +body-1
+
+.loadingSpinner
+    width: 40px
+    height: 40px
+    border: 3px solid $neutrals6
+    border-top: 3px solid $blue
+    border-radius: 50%
+    animation: spin 1s linear infinite
+    +dark
+        border-color: $neutrals3
+        border-top-color: $blue
+
+@keyframes spin
+    0%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(360deg)
+
+.error
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 60px 20px
+    text-align: center
+    
+    p
+        margin-bottom: 16px
+        color: $red
+        +body-1
+    
+    button
+        padding: 12px 24px
+        background: $blue
+        color: white
+        border: none
+        border-radius: 8px
+        cursor: pointer
+        +body-2
+        font-weight: 600
+        transition: background-color 0.2s
+        
+        &:hover
+            background: darken($blue, 10%)

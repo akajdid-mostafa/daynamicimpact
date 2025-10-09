@@ -1,0 +1,104 @@
+import React from "react";
+import cn from "classnames";
+import { Link } from "react-router-dom";
+import styles from "./Hero.module.sass";
+import Image from "../Image";
+
+const Hero = ({ 
+  scrollToRef,
+  stage = "Votre marque, irrésistible en ligne",
+  title = "Dynamic Impact",
+  titleHighlight = "Agence marketing",
+  titleSuffix = "& écosystèmes opérationnels",
+  description = "Dynamic Impact conçoit et déploie des écosystèmes marketing et opérationnels complets : site web SEO, CRM/ERP, création de contenu et formation d'équipes. Résultat : conversion, fidélisation et croissance mesurable.",
+  primaryButton = {
+    text: "Demander un audit offert",
+    to: "/download"
+  },
+  secondaryButton = {
+    text: "Voir nos offres",
+    to: "/class02-details"
+  },
+  gallery = [
+    {
+      srcSet: "/images/content/Hero/hero.webp 2x",
+      srcSetDark: "/images/content/Hero/hero.webp 2x",
+      src: "/images/content/Hero/hero.webp",
+      srcDark: "/images/content/Hero/hero.webp",
+      alt: "Watch",
+      isImage: false
+    },
+    {
+      srcSet: "/images/content/Hero/hero1.webp 2x",
+      src: "/images/content/ball.png",
+      alt: "Ball",
+      isImage: true
+    },
+    {
+      srcSet: "/images/content/Hero/hero2.webp 2x",
+      src: "/images/content/Hero/hero2.webp",
+      alt: "Bottle",
+      isImage: true
+    },
+    {
+      srcSet: "/images/content/Hero/hero4.webp 2x",
+      src: "/images/content/ball-black.png",
+      alt: "Ball black",
+      isImage: true
+    }
+  ]
+}) => {
+  return (
+    <div className={styles.hero}>
+      <div className={cn("container", styles.container)}>
+        <div className={styles.wrap}>
+          <div className={cn("stage", styles.stage)}>
+            {stage}
+          </div>
+          <h1 className={cn("h2", styles.title)}>
+            {title}
+            <span className={styles.underlined}>{titleHighlight}</span> {titleSuffix}
+          </h1>
+          <div className={styles.text}>
+            {description}
+          </div>
+          <div className={styles.btns}>
+            <Link className={cn("button", styles.button)} to={primaryButton.to}>
+              {primaryButton.text}
+            </Link>
+            <Link
+              className={cn("button-stroke", styles.button)}
+              to={secondaryButton.to}
+            >
+              {secondaryButton.text}
+            </Link>
+          </div>
+        </div>
+
+        <div className={styles.gallery}>
+          {gallery.map((item, index) => (
+            <div key={index} className={styles.preview}>
+              {item.isImage ? (
+                <img
+                  srcSet={item.srcSet}
+                  src={item.src}
+                  alt={item.alt}
+                />
+              ) : (
+                <Image
+                  srcSet={item.srcSet}
+                  srcSetDark={item.srcSetDark}
+                  src={item.src}
+                  srcDark={item.srcDark}
+                  alt={item.alt}
+                />
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Hero;

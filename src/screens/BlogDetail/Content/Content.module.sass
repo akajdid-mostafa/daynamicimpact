@@ -1,0 +1,208 @@
+@import ../../../styles/helpers
+
+
+.wrapper
+    max-width: 1000px
+    margin: 0 auto
+
+.contentWrapper
+    background: $neutrals8
+    border-radius: 16px
+    padding: 40px
+    border: 1px solid $neutrals6
+    +dark
+        background: $neutrals2
+        border-color: $neutrals3
+    +m
+        padding: 24px
+
+.meta
+    display: flex
+    flex-wrap: wrap
+    gap: 24px
+    margin-bottom: 40px
+    padding: 24px
+    background: $neutrals8
+    border-radius: 12px
+    border: 1px solid $neutrals6
+    +dark
+        background: $neutrals2
+        border-color: $neutrals3
+    +m
+        flex-direction: column
+        gap: 16px
+        padding: 20px
+
+.author, .date, .category
+    display: flex
+    flex-direction: column
+    gap: 4px
+
+.label
+    +caption-2
+    color: $neutrals4
+    font-weight: 500
+    text-transform: uppercase
+    letter-spacing: 0.5px
+
+.value
+    +body-2
+    color: $neutrals2
+    font-weight: 600
+    +dark
+        color: $neutrals8
+
+.content
+    +body-1
+    color: $neutrals2
+    line-height: 1.8
+    font-size: 18px
+    +dark
+        color: $neutrals6
+    +m
+        font-size: 16px
+        line-height: 1.7
+    
+    // Style HTML content
+    h1, h2, h3, h4, h5, h6
+        color: $neutrals1
+        font-weight: 700
+        margin: 32px 0 16px 0
+        line-height: 1.3
+        +dark
+            color: $neutrals8
+        
+        &:first-child
+            margin-top: 0
+    
+    h2
+        font-size: 40px
+        line-height: (48/40)
+        letter-spacing: -.01em
+        font-weight: 700
+        border-bottom: 2px solid $neutrals6
+        padding-bottom: 8px
+        +t
+            font-size: 32px
+            line-height: (40/32)
+        +dark
+            border-color: $neutrals3
+        +m
+            font-size: 28px
+            line-height: (36/28)
+    
+    h3
+        font-size: 32px
+        line-height: (40/32)
+        letter-spacing: -.01em
+        font-weight: 700
+        +m
+            font-size: 24px
+            line-height: (32/24)
+    
+    p
+        margin-bottom: 20px
+        line-height: 1.7
+        
+        &:last-child
+            margin-bottom: 0
+    
+    img
+        max-width: 100%
+        height: auto
+        border-radius: 12px
+        margin: 32px 0
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1)
+        transition: transform 0.3s ease
+        +dark
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3)
+        
+        &:hover
+            transform: translateY(-2px)
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15)
+            +dark
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4)
+    
+    a
+        color: $blue
+        text-decoration: none
+        font-weight: 500
+        transition: color 0.2s
+        
+        &:hover
+            color: darken($blue, 10%)
+            text-decoration: underline
+    
+    ul, ol
+        margin: 20px 0
+        padding-left: 24px
+        
+        li
+            margin-bottom: 8px
+            line-height: 1.6
+    
+    blockquote
+        margin: 24px 0
+        padding: 20px 24px
+        background: $neutrals8
+        border-left: 4px solid $blue
+        border-radius: 0 8px 8px 0
+        font-style: italic
+        +dark
+            background: $neutrals2
+            border-left-color: $blue
+    
+    code
+        background: $neutrals8
+        color: $neutrals2
+        padding: 2px 6px
+        border-radius: 4px
+        font-family: 'Courier New', monospace
+        font-size: 0.9em
+        +dark
+            background: $neutrals3
+            color: $neutrals8
+    
+    pre
+        background: $neutrals8
+        color: $neutrals2
+        padding: 20px
+        border-radius: 8px
+        overflow-x: auto
+        margin: 24px 0
+        +dark
+            background: $neutrals3
+            color: $neutrals8
+        
+        code
+            background: none
+            padding: 0
+            color: inherit
+    
+    table
+        width: 100%
+        border-collapse: collapse
+        margin: 24px 0
+        background: $neutrals8
+        border-radius: 8px
+        overflow: hidden
+        +dark
+            background: $neutrals2
+        
+        th, td
+            padding: 12px 16px
+            text-align: left
+            border-bottom: 1px solid $neutrals6
+            +dark
+                border-color: $neutrals3
+        
+        th
+            background: $neutrals7
+            font-weight: 600
+            color: $neutrals2
+            +dark
+                background: $neutrals3
+                color: $neutrals8
+        
+        tr:last-child td
+            border-bottom: none

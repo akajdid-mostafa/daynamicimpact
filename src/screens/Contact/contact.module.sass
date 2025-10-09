@@ -1,0 +1,258 @@
+@import ../../styles/helpers
+
+.contactWrapper
+  display: flex
+  flex-direction: column
+  gap: 3rem // Slightly reduced gap
+  padding: 0rem 1.5rem // Slightly reduced padding
+  max-width: 1200px // Slightly reduced max-width
+  margin: 0 auto
+  margin-bottom: 70px
+
+// HERO - Keep as is for now, as it's commented out
+.hero
+  position: relative
+  background-size: cover
+  background-position: center
+  height: 200px
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+
+.heroOverlay
+  background: rgba(0,0,0,0.4)
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.heroTitle
+  color: #fff
+  font-size: 2.5rem
+  font-weight: bold
+
+.heroWave
+  position: absolute
+  bottom: -1px
+  width: 100%
+  svg
+    display: block
+    height: 40px
+    width: 100%
+
+// INTRO
+.intro
+  text-align: center
+  max-width: 900px // Wider intro text area
+  margin: 0 auto
+
+
+.introDesc
+  margin: 0 auto
+  color: $neutrals4
+  font-size: 18px
+  line-height: 1.6
+
+// CONTACT CARDS
+.cards
+  display: grid
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) // Larger minmax for cards
+  gap: 2rem // Increased gap for cards
+
+.card
+  background: $neutrals8 // Use neutrals color
+  border-radius: 1.5rem // More rounded corners
+  padding: 2rem // More padding
+  box-shadow: 0 8px 24px rgba(0,0,0,.08) // Softer, more diffuse shadow
+  text-align: center
+  transition: transform .3s ease, box-shadow .3s ease
+  &:hover
+    transform: translateY(-5px)
+    box-shadow: 0 12px 32px rgba(0,0,0,.12)
+
+.cardHeader
+  display: flex
+  align-items: center
+  justify-content: center
+  gap: .75rem // Slightly larger gap
+  margin-bottom: 1rem // More spacing
+
+.cardTitle
+  font-size: 1.5rem // Larger title font
+  font-weight: 700 // Consistent bold weight
+  color: $purplef
+
+.cardDesc
+  color: $neutrals4 // Use neutrals color
+  margin-bottom: 1.5rem // More spacing
+  font-size: 1rem // Standard font size
+
+.cardLink
+  font-weight: 600 // Slightly less bold for link
+  color: $purple // Use blue for links
+  transition: color .3s, transform .3s
+  text-decoration: none // Remove underline
+  &:hover
+    color: $purple-light // Hover color
+    transform: translateY(-2px) // Subtle hover effect
+
+.icon
+  font-size: 2rem // Larger icon size
+  color: $purplef // Use blue for icons
+
+// BOTTOM SECTION
+.bottom
+   
+  display: grid
+  grid-template-columns: 1fr 1fr
+  margin-bottom: 4rem
+  gap: 3rem // Increased gap
+  @media(max-width: 768px)
+    grid-template-columns: 1fr
+
+.mapSection iframe
+  border-radius: 1rem // Rounded corners for map
+  box-shadow: 0 8px 24px rgba(0,0,0,.08) // Softer shadow
+
+.socialBlock
+  margin-top: 1.5rem // More spacing
+  text-align: center
+
+.socialTitle
+  font-weight: 600 // Consistent bold weight
+  margin-bottom: 1rem // More spacing
+  color: $neutrals3 // Use neutrals color
+
+.socials
+  display: flex
+  justify-content: center
+  gap: 1.5rem // Increased gap
+  img
+    width: 36px // Slightly larger icons
+    height: 36px
+    transition: transform .3s ease, opacity .3s ease
+    &:hover
+      transform: scale(1.15)
+      opacity: 0.8
+
+// FORM
+.form
+  background: $neutrals8 // Use neutrals color
+  padding: 2rem // More padding
+  border-radius: 1.5rem // More rounded corners
+  box-shadow: 0 8px 24px rgba(0,0,0,.08) // Softer shadow
+
+.formTitle
+  font-size: 1.8rem // Larger title font
+  font-weight: 700 // Consistent bold weight
+  margin-bottom: 1.5rem // More spacing
+  color: $neutrals2 // Use neutrals color
+
+.formRow
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 1.5rem // Increased gap
+  margin-bottom: 1.5rem // Increased margin
+  @media(max-width: 768px)
+    grid-template-columns: 1fr
+
+.formmail
+  grid-template-columns: 1fr 1fr
+  gap: 1.5rem // Increased gap
+  margin-bottom: 1.5rem // Increased margin
+  @media(max-width: 768px)
+    grid-template-columns: 1fr
+
+.form input,
+.form select,
+.form textarea
+  padding: 1rem 1.2rem // More padding
+  border-radius: .75rem // More rounded corners
+  border: 1px solid $neutrals6 // Lighter border
+  font-size: 1.05rem // Slightly larger font size
+  width: 100%
+  background: $neutrals9 // Lighter input background
+  color: $neutrals2 // Input text color
+  &:focus
+    outline: none
+    border-color: $blue // Focus highlight
+    box-shadow: 0 0 0 3px rgba($blue, 0.2)
+  &::placeholder
+    color: $neutrals4 // Placeholder color
+
+
+// Business Info Section
+.businessInfo
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background: $neutrals9
+  border-radius: 1.5rem
+  padding: 2rem
+  // margin: rem 0
+  box-shadow: 0 4px 16px rgba(0,0,0,.06)
+  +t
+    flex-direction: column
+    gap: 1.5rem
+    text-align: center
+
+.hours
+  h3
+    font-size: 1.25rem
+    font-weight: 700
+    color: $neutrals2
+    margin-bottom: .5rem
+  p
+    color: $neutrals4
+    font-size: 1rem
+    margin: 0
+
+.ctaBlock
+  +t
+    width: 100%
+
+.ctaButton
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  background: linear-gradient(135deg, $blue, $purple)
+  color: white
+  padding: 1rem 2rem
+  border-radius: 1rem
+  text-decoration: none
+  font-weight: 600
+  font-size: 1.1rem
+  transition: all .3s ease
+  box-shadow: 0 4px 16px rgba(59, 130, 246, .3)
+  +t
+    width: 100%
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 8px 24px rgba(59, 130, 246, .4)
+    color: white
+
+// TOAST
+.toast
+  position: fixed
+  bottom: 30px
+  left: 50%
+  transform: translateX(-50%)
+  background: linear-gradient(90deg, $green, $blue) // Using a success-oriented gradient
+  color: #fff
+  padding: 1.2rem 2.5rem
+  border-radius: .75rem
+  box-shadow: 0 6px 18px rgba(0,0,0,.25)
+  font-weight: 600
+  font-size: 1.1rem
+
+
+.buttonn
+  color: #fff
+  font-weight: 700
+  margin-top: 1rem
+  padding: 1rem 2.5rem
+  cursor: pointer
+  transition: all .3s ease
+  box-shadow: 0 4px 12px rgba($purple, 0.2)

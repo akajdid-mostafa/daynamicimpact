@@ -1,0 +1,124 @@
+@import ../../../styles/helpers
+
+.section
+    +m
+        padding-top: 64px
+
+.head
+    max-width: 545px
+    margin-bottom: 80px
+    +m
+        margin-bottom: 48px
+
+.stage
+    margin-bottom: 32px
+
+.title
+    margin-bottom: 20px
+
+.info
+    margin-bottom: 24px
+    +body-1
+    color: $neutrals4
+
+.button
+    +m
+        width: 100%
+
+.wrap
+    +m
+        margin: 0 -12px
+
+.item
+    &:not(:last-child)
+        margin-bottom: 112px
+        +t
+            margin-bottom: 80px
+        +m
+            margin-bottom: 0
+
+.row
+    display: flex
+    align-items: center
+    margin: 0 -16px
+    +m
+        flex-direction: column-reverse
+        margin: 0
+
+.col
+    flex: 0 0 calc(50% - 32px)
+    width: calc(50% - 32px)
+    margin: 0 16px
+    +m
+        flex: 0 0 100%
+        width: 100%
+    img
+        width: 100%
+        border-radius: 24px
+    &:first-child
+        padding-top: 32px
+        +d
+            padding-top: 0
+        +m
+            margin-top: 48px
+
+.details
+    max-width: 460px
+    +m
+        max-width: 100%
+
+.number
+    color: $purplef
+    margin-bottom: 24px
+    padding-bottom: 26px
+    border-bottom: 2px solid $neutrals6
+    +sf-pro-display
+    font-size: 32px
+    line-height: (40/32)
+    +dark
+        color:$purple-light
+        border-color: $neutrals3
+
+.category
+    margin-bottom: 16px
+    font-weight: 600
+
+.content
+    +caption-1
+    color: $neutrals4
+    margin-bottom: 20px
+
+.points
+    list-style: none
+    padding: 0
+    margin: 0
+
+.point
+    display: flex
+    align-items: flex-start
+    margin-bottom: 12px
+    +caption-1
+    color: $neutrals4
+    opacity: 0
+    transform: translateY(20px)
+    animation: slideUp 0.6s ease-out forwards
+    &:last-child
+        margin-bottom: 0
+
+@keyframes slideUp
+    to
+        opacity: 1
+        transform: translateY(0)
+
+.checkIcon
+    flex-shrink: 0
+    margin-right: 12px
+    margin-top: 3px
+    fill: $purple
+    +dark
+        fill: $purple-light
+
+.detailsButton
+    margin-top: 24px
+    +m
+        width: 100%

@@ -1,0 +1,299 @@
+@import ../../../styles/helpers
+
+// Enhanced responsive breakpoints
+=responsive-padding($desktop, $tablet, $mobile, $small-mobile: null)
+    padding: $desktop
+    +d
+        padding: $tablet
+    +t
+        padding: $tablet
+    +m
+        padding: $mobile
+    @if $small-mobile
+        +s
+            padding: $small-mobile
+
+=responsive-font-size($desktop, $tablet, $mobile, $small-mobile: null)
+    font-size: $desktop
+    +d
+        font-size: $tablet
+    +t
+        font-size: $tablet
+    +m
+        font-size: $mobile
+    @if $small-mobile
+        +s
+            font-size: $small-mobile
+
+=illustration-base
+    position: relative
+    z-index: 3
+    display: flex
+    justify-content: center
+    +t
+        flex: 0 0 100%
+        width: 80%
+    +m
+        width: 100%
+        order: 2
+    +s
+        width: 90%
+        order: 2
+
+// Main styles
+.section
+    position: relative
+    +responsive-padding(96px 0, 64px 0, 48px 0, 32px 0)
+
+.container
+    display: flex
+    justify-content: center
+    width: 100%
+    +s
+        padding: 0 16px
+
+.wrapper
+    position: relative
+    width: 100%
+    max-width: 1200px
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+    color: #FFFFFF
+    border-radius: 32px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: space-between
+    +responsive-padding(80px 64px, 64px 48px, 48px 32px, 32px 20px)
+    +t
+        flex-direction: column
+        text-align: center
+        gap: 32px
+    +m
+        flex-direction: column
+        text-align: center
+        gap: 32px
+    +s
+        gap: 24px
+        border-radius: 20px
+
+.content
+    flex: 0 0 50%
+    max-width: 500px
+    position: relative
+    z-index: 3
+    +t
+        flex: 0 0 100%
+        max-width: 100%
+        margin-bottom: 0
+        order: 1
+    +m
+        flex: 0 0 100%
+        max-width: 100%
+        margin-bottom: 0
+        order: 1
+    +s
+        order: 1
+
+.title
+    margin-bottom: 20px
+    font-weight: 700
+    line-height: 1.2
+    letter-spacing: -0.5px
+    +responsive-font-size(48px, 40px, 32px, 28px)
+    +m
+        margin-bottom: 16px
+    +s
+        margin-bottom: 12px
+        line-height: 1.1
+
+.subtitle
+    color: rgba(255, 255, 255, 0.9)
+    margin-bottom: 32px
+    line-height: 1.6
+    +responsive-font-size(20px, 18px, 16px, 14px)
+    +m
+        margin-bottom: 24px
+    +s
+        margin-bottom: 20px
+        line-height: 1.5
+
+.actions
+    display: flex
+    +t
+        justify-content: center
+    +m
+        justify-content: center
+    +s
+        justify-content: center
+
+.button
+    background: #FFFFFF
+    color: #3B71FE
+    font-weight: 600
+    font-size: 18px
+    padding: 18px 40px
+    border-radius: 16px
+    border: none
+    cursor: pointer
+    transition: all 0.3s ease
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4)
+    white-space: nowrap
+    +m
+        font-size: 16px
+        padding: 16px 32px
+        border-radius: 12px
+    +s
+        font-size: 14px
+        padding: 14px 24px
+        border-radius: 10px
+        width: 100%
+        max-width: 280px
+    &:hover
+        transform: translateY(-2px)
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2)
+        background: $white
+    &:active
+        transform: translateY(0)
+        +s
+            transform: scale(0.98)
+
+// Illustration styles with enhanced responsive positioning
+.illustration
+    flex: 0 0 45%
+    +illustration-base
+    +t
+        order: 2
+        z-index: 2
+    +m
+        order: 2
+        width: 100%
+        max-width: 400px
+        margin: 0 auto
+    +s
+        width: 100%
+        max-width: 300px
+        margin: 0 auto
+
+// Secondary illustrations - only visible on large desktop
+.illustration2
+    display: none
+    +d
+        display: flex
+        position: absolute
+        z-index: 1
+        right: 10%
+        top: 20%
+        width: 60px
+        height: 60px
+        justify-content: center
+
+.illustration3
+    display: none
+    +d
+        display: flex
+        position: absolute
+        z-index: 1
+        right: 20%
+        top: 25%
+        width: 40px
+        height: 40px
+        justify-content: center
+
+// Enhanced image styles with responsive scaling
+.image, .image2, .image3
+    height: auto
+    max-width: 450px
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.2))
+    transition: all 0.3s ease
+    +t
+        max-width: 350px
+        filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.15))
+    +m
+        max-width: 350px
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1))
+    +s
+        max-width: 280px
+        filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1))
+
+.image
+    width: 100%
+
+.image2
+    width: 100%
+    +t
+        width: 100%
+    +m
+        width: 100%
+
+.image3
+    width: 100%
+    +t
+        width: 100%
+    +m
+        width: 100%
+
+// Enhanced dot styles with responsive positioning
+.dot
+    display: none
+    +d
+        display: block
+        position: absolute
+        width: 12px
+        height: 12px
+        background: rgba(240, 137, 72, 0.6)
+        border-radius: 50%
+        z-index: 1
+
+.dotOne
+    +d
+        top: 40px
+        left: 40px
+
+.dotTwo
+    +d
+        top: 50%
+        right: 60px
+        transform: translateY(-50%)
+
+.dotThree
+    +d
+        bottom: 40px
+        left: 30%
+
+// Enhanced responsive adjustments
++m
+    .illustration2, .illustration3
+        display: none
+    .dot
+        display: none
+
++s
+    .dot
+        display: none
+    .illustration2, .illustration3
+        display: none
+
+// Landscape mobile optimization
+@media (max-height: 500px) and (orientation: landscape)
+    .section
+        padding: 32px 0
+    .wrapper
+        padding: 24px 32px
+        gap: 16px
+    .title
+        font-size: 24px
+        margin-bottom: 12px
+    .subtitle
+        font-size: 14px
+        margin-bottom: 16px
+    .button
+        padding: 12px 24px
+        font-size: 14px
+
+// High DPI displays optimization
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
+    .image, .image2, .image3
+        image-rendering: -webkit-optimize-contrast
+        image-rendering: crisp-edges

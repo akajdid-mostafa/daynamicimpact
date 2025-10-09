@@ -1,0 +1,317 @@
+import React, { useState, useEffect } from "react";
+import cn from "classnames";
+import styles from "./Catalog.module.sass";
+import Icon from "../../../components/Icon";
+import Card from "../../../components/Card";
+import Dropdown from "../../../components/Dropdown";
+
+// const navLinks = ["Communication & Marketing", "Design & Créativité", "Développement & Technologie", "SEO & Performance","Social Media","Transformation Digitale","Business & Inspiration"];
+
+// const dateOptions = ["Newest", "Oldest"];
+const sportOptions = ["Plus récent", "Plus ancien"];
+const timeOptions = ["Toutes les catégories", "Communication & Marketing", "Design & Créativité", "Développement & Technologie", "SEO & Performance","Social Media","Transformation Digitale","Business & Inspiration"];
+// const difficultyOptions = ["Beginner", "Advanced", "Intermediate"];
+// const levelOptions = ["Level", "Level 1", "Level 2"];
+
+const Catalog = () => {
+  // State for API data
+  const [blogs, setBlogs] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [pagination, setPagination] = useState({
+    total: 0,
+    limit: 10,
+    offset: 0,
+    hasMore: false,
+    currentPage: 1,
+    totalPages: 1
+  });
+  
+  // Filter states
+  const [sortOrder, setSortOrder] = useState(sportOptions[0]);
+  const [category, setCategory] = useState(timeOptions[0]);
+  const [search, setSearch] = useState("");
+
+  // API configuration - Replace with your actual API base URL
+  const API_BASE_URL = 'https://blog-platfrom-zeta.vercel.app'; // TODO: Replace with actual API base URL
+  
+  // Function to fetch blogs from API
+  const fetchBlogs = async (searchQuery = '', typeFilter = '', sortOrder = '', limit = 10, offset = 0) => {
+    try {
+      setLoading(true);
+      setError(null);
+      
+      // Build query parameters
+      const params = new URLSearchParams();
+      if (limit) params.append('limit', limit.toString());
+      if (offset) params.append('offset', offset.toString());
+      // Only add type filter if it's not "Toutes les catégories" (All categories)
+      if (typeFilter && typeFilter !== timeOptions[0] && typeFilter !== "Toutes les catégories") {
+        params.append('type', typeFilter);
+      }
+      if (searchQuery) params.append('search', searchQuery);
+      
+      // Add sorting parameter based on the selected option
+      if (sortOrder) {
+        console.log('Sort order selected:', sortOrder); // Debug log
+        if (sortOrder === "Plus récent") {
+          params.append('sortBy', 'date');
+          params.append('sortOrder', 'desc');
+          console.log('Setting sort: date desc (newest first)'); // Debug log
+        } else if (sortOrder === "Plus ancien") {
+          params.append('sortBy', 'date');
+          params.append('sortOrder', 'asc');
+          console.log('Setting sort: date asc (oldest first)'); // Debug log
+        }
+      }
+      
+      const apiUrl = `${API_BASE_URL}/api/blogs?${params.toString()}`;
+      console.log('Fetching from:', apiUrl); // Debug log
+      console.log('All params:', Object.fromEntries(params)); // Debug log
+      
+      const response = await fetch(apiUrl, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          // Add CORS headers if needed
+        },
+        // Add mode: 'cors' if needed
+        mode: 'cors'
+      });
+      
+      console.log('Response status:', response.status); // Debug log
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const data = await response.json();
+      console.log('API Response:', data); // Debug log
+      console.log('Number of blogs returned:', data.blogs?.length); // Debug log
+      
+      if (data.blogs && data.blogs.length > 0) {
+        console.log('First blog date:', data.blogs[0].created_at);
+        console.log('Last blog date:', data.blogs[data.blogs.length - 1].created_at);
+        // Check if blogs are sorted by date
+        const dates = data.blogs.map(blog => new Date(blog.created_at));
+        const isDescending = dates.every((date, i) => i === 0 || dates[i-1] >= date);
+        const isAscending = dates.every((date, i) => i === 0 || dates[i-1] <= date);
+        console.log('Is sorted descending (newest first):', isDescending);
+        console.log('Is sorted ascending (oldest first):', isAscending);
+      }
+      
+      // Transform API data to match card component format
+      const transformedBlogs = data.blogs.map(blog => ({
+        id: blog.id,
+        title: blog.title,
+        url: `/blog/${blog.id}`,
+        image: blog.main_image,
+        image2x: blog.main_image, // Use same image for 2x
+        category: blog.type?.toLowerCase() || 'general',
+        categoryText: blog.type || 'Blog',
+        avatar: '/images/default-avatar.png', // Default avatar since not in API
+        trainer: blog.author || 'Anonymous',
+        level: 'normal',
+        levelText: new Date(blog.created_at).toLocaleDateString('fr-FR'),
+        play: false, // No video info in API
+        created_at: blog.created_at // Keep original date for sorting
+      }));
+      
+      // Apply client-side sorting as fallback if API sorting doesn't work
+      let sortedBlogs = transformedBlogs;
+      if (sortOrder) {
+        console.log('Applying client-side sorting for:', sortOrder);
+        if (sortOrder === "Plus récent") {
+          sortedBlogs = transformedBlogs.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
+          console.log('Sorted by newest first (client-side)');
+        } else if (sortOrder === "Plus ancien") {
+          sortedBlogs = transformedBlogs.sort((a, b) => new Date(a.created_at) - new Date(b.created_at));
+          console.log('Sorted by oldest first (client-side)');
+        }
+      }
+      
+      console.log('Final transformed blogs:', sortedBlogs); // Debug log
+      
+      // Update state
+      if (offset === 0) {
+        setBlogs(sortedBlogs);
+      } else {
+        setBlogs(prev => [...prev, ...sortedBlogs]);
+      }
+      
+      // Calculate pagination info
+      const totalPages = Math.ceil(data.pagination.total / data.pagination.limit);
+      const currentPage = Math.floor(data.pagination.offset / data.pagination.limit) + 1;
+      
+      setPagination({
+        ...data.pagination,
+        currentPage,
+        totalPages
+      });
+    } catch (err) {
+      console.error('Error fetching blogs:', err);
+      setError(`Erreur de connexion: ${err.message}`);
+      // Don't use mock data fallback - show error state instead
+      if (offset === 0) {
+        setBlogs([]);
+        setPagination({ 
+          total: 0, 
+          limit: 10, 
+          offset: 0, 
+          hasMore: false,
+          currentPage: 1,
+          totalPages: 0
+        });
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+  
+  // Pagination navigation functions
+  const goToPage = (page) => {
+    if (page >= 1 && page <= pagination.totalPages && !loading) {
+      const newOffset = (page - 1) * pagination.limit;
+      fetchBlogs(search, category, sortOrder, pagination.limit, newOffset);
+    }
+  };
+  
+  // Fetch blogs on component mount
+  useEffect(() => {
+    fetchBlogs('', timeOptions[0], sportOptions[0]);
+  }, []);
+  
+  // Refetch when search or filters change
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      fetchBlogs(search, category, sortOrder, 10, 0); // Use fixed limit to avoid dependency issues
+    }, 500); // Debounce search
+    
+    return () => clearTimeout(timeoutId);
+  }, [search, category, sortOrder]);
+  
+  // All blogs are already filtered by API, so just use them directly
+  const displayBlogs = blogs;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    fetchBlogs(search, category, sortOrder, 10, 0); // Use fixed limit to match other calls
+  };
+
+  return (
+    <div className={cn("section-pb", styles.section)}>
+      <div className={cn("container", styles.container)}>
+        <div className={styles.head}>
+          <div className={styles.title}>Trouvez le blog qui vous inspire</div>
+          <form
+            className={styles.search}
+            action=""
+            onSubmit={handleSubmit}
+          >
+            <input
+              className={styles.input}
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              name="search"
+              placeholder="Rechercher un article..."
+              required={false}
+            />
+            <button className={styles.result} type="submit">
+              <Icon name="search" size="16" />
+            </button>
+          </form>
+        </div>
+        <div className={styles.wrap}>
+          <div className={styles.sorting}>
+            <div className={styles.cell}>
+              <div className={styles.label}>Trier par</div>
+              <Dropdown
+                className={styles.dropdown}
+                value={sortOrder}
+                setValue={setSortOrder}
+                options={sportOptions}
+              />
+            </div>
+            <div className={styles.cell}>
+              <div className={styles.label}>catégories</div>
+              <Dropdown
+                className={styles.dropdown}
+                value={category}
+                setValue={setCategory}
+                options={timeOptions}
+              />
+            </div>
+          </div>
+        </div>
+        <div className={styles.list}>
+          {loading && blogs.length === 0 ? (
+            // Initial loading state
+            <div className={styles.loading}>
+              <div className={styles.loadingSpinner}></div>
+            </div>
+          ) : error && blogs.length === 0 ? (
+            // Error state
+            <div className={styles.error}>
+              <p>Erreur lors du chargement: {error}</p>
+              <button onClick={() => fetchBlogs(search, category, sortOrder, 10, 0)}>Réessayer</button>
+            </div>
+          ) : displayBlogs.length === 0 ? (
+            // No results state
+            <div className={styles.noResults}>
+              <img 
+                src="/images/Blog/vide.jpg" 
+                alt="Aucun article trouvé" 
+                className={styles.noResultsImage}
+              />
+            </div>
+          ) : (
+            // Success state - render blogs
+            displayBlogs.map((blog) => (
+              <Card className={styles.card} item={blog} key={blog.id} />
+            ))
+          )}
+        </div>
+        {/* Pagination Controls */}
+        {pagination.totalPages > 1 && (
+          <div className={styles.pagination}>
+            <button 
+              className={cn(styles.paginationBtn, { [styles.disabled]: pagination.currentPage === 1 })}
+              onClick={() => goToPage(pagination.currentPage - 1)}
+              disabled={pagination.currentPage === 1 || loading}
+            >
+              <Icon name="arrow-left" size="16" />
+              Précédent
+            </button>
+            
+            <div className={styles.paginationNumbers}>
+              {Array.from({ length: pagination.totalPages }, (_, i) => i + 1).map(pageNum => (
+                <button
+                  key={pageNum}
+                  className={cn(styles.paginationNumber, {
+                    [styles.active]: pageNum === pagination.currentPage
+                  })}
+                  onClick={() => goToPage(pageNum)}
+                  disabled={loading}
+                >
+                  {pageNum}
+                </button>
+              ))}
+            </div>
+            
+            <button 
+              className={cn(styles.paginationBtn, { [styles.disabled]: pagination.currentPage === pagination.totalPages })}
+              onClick={() => goToPage(pagination.currentPage + 1)}
+              disabled={pagination.currentPage === pagination.totalPages || loading}
+            >
+              Suivant
+              <Icon name="arrow-right" size="16" />
+            </button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default Catalog;

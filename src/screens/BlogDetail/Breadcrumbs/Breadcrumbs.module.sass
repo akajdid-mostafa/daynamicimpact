@@ -1,0 +1,85 @@
+@import ../../../styles/helpers
+
+.breadcrumbs
+    position: relative
+    border-radius: 24px
+    margin-bottom: 42px
+    +d
+        margin-bottom: 44
+    +m
+        margin-bottom: 22px
+
+.container
+    max-width: 1280px
+    margin: 0 auto
+    padding: 0 80px
+    +t
+        padding: 0 40px
+    +m
+        padding: 0 32px
+
+.overlay
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: rgba(0, 0, 0, 0.6)
+    border-radius: 24px
+    +m
+        border-radius: 16px
+
+.wrap
+    position: relative
+    z-index: 2
+    padding: 112px 64px
+    border-radius: 24px
+    text-align: center
+    +t
+        padding: 80px 48px
+    +m
+        padding: 32px 16px
+
+.title
+    margin-bottom: 12px
+    color: white
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7)
+
+.info
+    margin-bottom: 24px
+    +body-1
+    color: rgba(255, 255, 255, 0.9)
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7)
+    +m
+        font-size: 16px
+
+.list
+    margin-left: -34px
+    +m
+        margin-left: -20px
+
+.item
+    display: inline
+    margin-left: 34px
+    +button-2
+    color: rgba(255, 255, 255, 0.9)
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7)
+    +m
+        margin-left: 20px
+    &:not(:last-child)
+        &:after
+            content: ""
+            display: inline-block
+            width: 6px
+            height: 10px
+            margin-left: 34px
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='6' height='10' fill='none' viewBox='0 0 6 10'%3E%3Cpath fill-rule='evenodd' d='M.293.793a1 1 0 0 0 0 1.414L3.086 5 .293 7.793a1 1 0 1 0 1.414 1.414l3.5-3.5a1 1 0 0 0 0-1.414l-3.5-3.5a1 1 0 0 0-1.414 0z' fill='%23ffffff'/%3E%3C/svg%3E") no-repeat 50% 50% / 100% auto
+            +m
+                margin-left: 20px
+
+.link
+    color: rgba(255, 255, 255, 0.9)
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7)
+    transition: color .2s
+    &:hover
+        color: white
