@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Hero from "./Hero";
 // import Clients from "../../components/Clients";
 import Steps from "./Steps";
-import Intro from "../../components/Intro";
+// import Intro from "../../components/Intro";
 import Book from "./Book";
 // import ValueProps from "../../components/ValueProps";
 import About from "./About";
@@ -11,7 +11,7 @@ import About from "./About";
 // import Review from "../../components/Review";
 // import Quality from "./Quality";
 import Advantages from "../../components/Advantages";
-import Workouts from "../../components/Workouts";
+// import Workouts from "../../components/Workouts";
 // import Offer from "../../components/Offer";
 import Faq from "../../components/Faq";
 // import History from "../../components/History/index";
@@ -23,7 +23,7 @@ import Blog from "../../components/Blog";
 import Services from "../../components/Services/services";
 import Offer from "../../components/Offer";
 // import Multisites from "../../components/Multisites";
-import Succes from "../../components/Succes";
+// import Succes from "../../components/Succes";
 // import Sucees from "../../components/sucees";
 
 
@@ -44,17 +44,17 @@ const Home = () => {
       {/* Processus en 4 étapes (visuel + texte) */}
       <Steps scrollToRef={scrollToRef} />
       {/* Intro */}
-      <Intro />
+      {/* <Intro /> */}
       {/* Multisites */}
       {/* <Multisites /> */}
       {/* Succes */}
-      <Succes />  
+      {/* <Succes />   */}
       {/* Sucees */}
       {/* <Sucees /> */}
       {/* Book */}
       <Book />
       {/* Workouts */}
-      <Workouts />
+      {/* <Workouts /> */}
       {/* Blog / Ressources (SEO + content marketing) */}
       <Blog/>
       {/* Foire aux Questions (FAQ)  */}
