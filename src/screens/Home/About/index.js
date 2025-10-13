@@ -1,4 +1,5 @@
 import cn from "classnames";
+import { Link } from "react-router-dom";
 import styles from "./About.module.sass";
 // import Icon from "../../../components/Icon";
 import ScrollParallax from "../../../components/ScrollParallax";
@@ -25,7 +26,7 @@ const item2 = [
   {
     title: "Notre Mission",
     color: "#45B26B",
-    images: "/images/content/lightning.svg",
+    images: "/images/icon/mission.svg",
     alt: "branding",
     content:
       "Accélérer votre transformation digitale grâce à des stratégies sur-mesure et des systèmes réellement adoptés par vos équipes pour générer des résultats mesurables.",
@@ -33,7 +34,7 @@ const item2 = [
   {
     title: "Notre Vision",
     color: "#9757D7",
-    images: "/images/content/lightning.svg",
+    images: "/images/icon/vision2.svg",
     alt: "marketing",
     content:
       "Créer des écosystèmes où la technologie et les process servent vos ambitions, et non l'inverse. Nous visons un impact durable où chaque outil devient un levier de croissance.",
@@ -41,7 +42,7 @@ const item2 = [
   {
     title: "Nos Valeurs",
     color: "#3772FF",
-    images: "/images/content/lightning.svg",
+    images: "/images/icon/valeur.svg",
     alt: "code",
     content:
       "Transparence, innovation, et un engagement total envers la réussite de chaque projet. Votre succès est le nôtre.",
@@ -49,10 +50,6 @@ const item2 = [
 ];
 
 const About = () => {
-  const handleLearnMore = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <div className={cn("section-border-top", styles.section)}>
       <div className={cn("container", styles.container)}>
@@ -79,7 +76,7 @@ const About = () => {
                 <div className={styles.item} key={index}>
                   <div
                     className={styles.icon}
-                    style={{ backgroundColor: x.color }}
+                    // style={{ backgroundColor: x.color }}
                   >
                     <img src={x.images} alt={x.alt} />
                   </div>
@@ -90,12 +87,12 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <button
+            <Link
               className={cn("button", styles.button)}
-              onClick={handleLearnMore}
+              to="/about"
             >
               Découvrez Notre Méthode →
-            </button>
+            </Link>
           </div>
           <div className={styles.col}>
             <div className={styles.bg}>

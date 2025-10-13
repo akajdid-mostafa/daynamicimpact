@@ -92,14 +92,19 @@ const socials = [
         url: "https://www.facebook.com/",
     },
     {
-        title: "twitter",
+        title: "x",
         size: "18",
-        url: "https://twitter.com/",
+        url: "https://x.com/",
     },
     {
         title: "instagram",
         size: "16",
         url: "https://www.instagram.com/",
+    },
+    {
+        title: "linkedin",
+        size: "16",
+        url: "https://www.linkedin.com/",
     },
 ];
 

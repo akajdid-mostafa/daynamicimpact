@@ -14,15 +14,15 @@ const menu = [
   },
   {
     title: "Nos Solutions",
-    url: "/",
+    url: "/Nos-Solutions",
   },
   {
     title: "Notre Impact",
-    url: "/class01",
+    url: "/about",
   },
   {
-    title: "L'Agence",
-    url: "/features",
+    title: "Ressources",
+    url: "/blog",
   },
   // {
   //     title: "Download",
@@ -37,9 +37,9 @@ const socials = [
     url: "https://www.facebook.com",
   },
   {
-    title: "twitter",
+    title: "x",
     size: "18",
-    url: "https://twitter.com",
+    url: "https://x.com",
   },
   {
     title: "instagram",
@@ -47,15 +47,20 @@ const socials = [
     url: "https://www.instagram.com",
   },
   {
-    title: "dribbble",
+    title: "linkedin",
     size: "16",
-    url: "https://dribbble.com",
+    url: "https://www.linkedin.com",
   },
-  {
-    title: "behance",
-    size: "20",
-    url: "https://www.behance.net",
-  },
+  // {
+  //   title: "dribbble",
+  //   size: "16",
+  //   url: "https://dribbble.com",
+  // },
+  // {
+  //   title: "behance",
+  //   size: "20",
+  //   url: "https://www.behance.net",
+  // },
 ];
 
 const Footer = () => {

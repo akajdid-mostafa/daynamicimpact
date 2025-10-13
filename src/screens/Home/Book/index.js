@@ -105,11 +105,11 @@ const Book = () => {
               </div>
             ))}
           </div>
-          <div className={styles.note}>
+          {/* <div className={styles.note}>
             <strong className={styles.green}>Offre spéciale</strong> : -15% sur
             votre premier projet en{" "}
             <strong className={styles.black}>{new Date().getFullYear()}</strong>
-          </div>
+          </div> */}
 
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">

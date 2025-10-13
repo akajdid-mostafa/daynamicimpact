@@ -8,7 +8,7 @@ const Offer = ({ className }) => {
     <div className={cn(className, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={cn("stage", styles.stage)}>
-          Audit Gratuit - 30 min 🚀
+          Demande Audit - 30 min 🚀
         </div>
         <h2 className={cn("h1", styles.title)}>
           Agence Marketing Digital au Maroc - Résultats Garantis
@@ -18,7 +18,7 @@ const Offer = ({ className }) => {
           SEO, Google Ads et sites web performants pour votre croissance.
         </div>
         <Link className={cn("button", styles.button)} to="/download">
-          Audit gratuit
+          Demande audit
         </Link>
       </div>
     </div>
