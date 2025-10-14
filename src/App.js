@@ -23,6 +23,7 @@ import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFor
 import { BlogProvider } from "./context/BlogContext";
 import About from "./screens/About/index";
 import MetaTags from "./components/MetaTags";
+import ContactUs from "./screens/contact-us/index";
 
 
 function App() {
@@ -177,6 +178,14 @@ function App() {
                         element={
                             <Page>
                                 <AccompagnementFormationDigitaleCoaching />
+                            </Page>
+                        }
+                    />
+                    <Route
+                        path="contact-us"
+                        element={
+                            <Page>
+                                <ContactUs />
                             </Page>
                         }
                     />

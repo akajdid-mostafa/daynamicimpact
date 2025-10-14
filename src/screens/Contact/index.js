@@ -23,29 +23,40 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    setTimeout(() => {
-      setShowToast(true);
-      setFormData({
-        name: "",
-        phone: "",
-        email: "",
-        service: "0",
-        message: "",
-      });
-
-      setTimeout(() => setShowToast(false), 3000);
-    }, 1000);
-
-    // Example fetch, replace with your backend
     try {
-      const res = await fetch("/api/sendEmail", {
+      // Prepare data in the required format
+      const emailData = {
+        name: formData.name,
+        email: formData.email,
+        number: formData.phone,
+        message: formData.message
+      };
+
+      const res = await fetch("https://email-lemon-pi.vercel.app/api/dynamic", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        headers: { 
+          "Content-Type": "application/json" 
+        },
+        body: JSON.stringify(emailData),
       });
-      if (res.ok) console.log("Email sent!");
+
+      if (res.ok) {
+        console.log("Email sent successfully!");
+        setShowToast(true);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          message: "",
+        });
+        setTimeout(() => setShowToast(false), 3000);
+      } else {
+        console.error("Failed to send email:", res.status);
+        alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
+      }
     } catch (err) {
       console.error("Error sending email:", err);
+      alert("Erreur lors de l'envoi du message. Veuillez réessayer.");
     }
   };
 
@@ -76,8 +87,8 @@ const Contact = () => {
             icon={<MdPhoneInTalk className={styles.icon} />}
             title="Téléphone"
             description="Appelez-nous directement"
-            link="tel:+212704309787"
-            linkText="+212 704-309787"
+            link="tel:+212660434143"
+            linkText="+216 604-34143"
           />
           <ContactCard
             icon={<MdMarkEmailRead className={styles.icon} />}
@@ -183,7 +194,7 @@ const Contact = () => {
 
         {/* TOAST */}
         {showToast && (
-          <div className={styles.toast}>Message envoyé avec succès ✅</div>
+          <div className={styles.toast}>Message envoyé avec succès </div>
         )}
       </div>
     </div>

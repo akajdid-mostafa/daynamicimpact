@@ -14,11 +14,11 @@ const Hero = ({ scrollToRef }) => {
             Solutions Digitales Complètes
           </div>
           <h1 className={cn("h1", styles.title)}>
-            Agence Marketing Digital au Maroc
+            Agence de Marketing et de Conseil Stratégique
           </h1>
           <div className={styles.text}>
-            Nous transformons votre présence en ligne en un moteur de croissance durable. 
-            SEO, Google Ads, création de sites web et stratégies marketing sur mesure.
+            Nous accompagnons les entreprises dans leur transformation
+            stratégique, organisationnelle et digitale.
           </div>
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">

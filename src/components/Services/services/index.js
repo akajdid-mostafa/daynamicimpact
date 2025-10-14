@@ -128,7 +128,7 @@ const Services = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
                   <div className={styles.content}>{x.content}</div>
                   <Link
                     className={cn("button-stroke", styles.button)}
-                    to={x.url}
+                    to="/nos-solutions"
                   >
                     En savoir plus
                   </Link>

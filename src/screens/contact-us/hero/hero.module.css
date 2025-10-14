@@ -1,0 +1,25 @@
+.heading {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 72px;
+    line-height: auto;
+    letter-spacing: -2%;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.64px;
+  }
+}
+
+@media (max-width: 430px) {
+}

@@ -9,23 +9,23 @@ import ScrollParallax from "../../../components/ScrollParallax";
 const items = [
   {
     title: "Identité Visuelle",
-    color: "#45B26B",
-    images: "/images/content/user.svg",
+    // color: "#45B26B",
+    images: "/images/icon/identite-visuel.svg",
     alt: "branding",
     content: "Création de logos, chartes graphiques et univers visuels uniques",
   },
   {
     title: "Marketing Digital",
-    color: "#9757D7",
-    images: "/images/content/medal-1.svg",
+    // color: "#9757D7",
+    images: "/images/icon/marketing-digital.svg",
     alt: "marketing",
     content:
       "Stratégies social media, publicité en ligne et génération de leads",
   },
   {
     title: "Développement Web & App",
-    color: "#3772FF",
-    images: "/images/content/lightning.svg",
+    // color: "#3772FF",
+    images: "/images/icon/developpement.svg",
     alt: "code",
     content: "Sites vitrines, e-commerce et applications sur mesure",
   },

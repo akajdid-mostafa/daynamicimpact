@@ -1,0 +1,13 @@
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social svg {
+  stroke: var(--slate-500);
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s;
+}
+
+.social:hover svg {
+  stroke: var(--black);
+}
