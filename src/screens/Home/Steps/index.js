@@ -6,31 +6,31 @@ import ScrollParallax from "../../../components/ScrollParallax";
 const items = [
   {
     title: "Conception & Stratégie",
-    color: "#3772FF",
-    images: "/images/content/download.svg",
+    // color: "#3772FF",
+    images: "/images/icon/1.svg",
     content:
-      "Définition des objectifs SMART, élaboration du parcours client et priorisation des fonctionnalités clés. Nous créons ensuite le plan produit/marketing détaillé et la roadmap claire pour le lancement de votre MVP.",
+      "Définition des objectifs SMART, élaboration du parcours client et priorisation des fonctionnalités clés.",
   },
   {
-    title: "Architecture & Blueprint technique",
-    color: "#9757D7",
-    images: "/images/content/whistle.svg",
+    title: "Architecture & Blueprint",
+    // color: "#9757D7",
+    images: "/images/icon/2.svg",
     content:
-      "Conception du blueprint technique : flux de données, choix technologiques (site, CRM, ERP), et architecture API. Spécification des points de synchronisation et des contraintes de sécurité pour une base solide.",
+      "Conception du blueprint technique : flux de données, choix technologiques (site, CRM, ERP), et architecture API.",
   },
   {
-    title: "Implémentation du MVP & Livraison rapide",
-    color: "#EF466F",
-    images: "/images/content/medal.svg",
+    title: "Implémentation MVP",
+    // color: "#EF466F",
+    images: "/images/icon/3.svg",
     content:
-      "Développement du MVP (site/landing page + intégration CRM), tests essentiels et déploiement en pré-production. L'objectif est de livrer rapidement une première version fonctionnelle et de mesurer sa valeur.",
+      "Développement du MVP (site/landing page + intégration CRM), tests essentiels et déploiement en pré-production.",
   },
   {
-    title: "Adoption, Formation & Optimisation continue",
-    color: "#45B26B",
-    images: "/images/content/stopwatch.svg",
+    title: "Adoption et Formation",
+    // color: "#45B26B",
+    images: "/images/icon/4.svg",
     content:
-      "Formation des équipes (SOP, scripts, playbooks) et déploiement d'automatisations (confirmation, rappels). Nous optimisons les cycles via les KPIs pour assurer la transition du projet vers une opération pérenne.",
+      "Formation des équipes (SOP, scripts, playbooks) et déploiement d'automatisations (confirmation, rappels).",
   },
 ];
 
@@ -47,12 +47,12 @@ const Steps = ({ scrollToRef }) => {
         <div className={styles.list}>
           {items.map((x, index) => (
             <ScrollParallax className={styles.item} key={index}>
-              {/* <div
+              <div
                 className={styles.preview}
                 style={{ backgroundColor: x.color }}
               >
                 <img src={x.images} alt={`Step ${index}`} />
-              </div> */}
+              </div>
               <div className={styles.number}>Step {index + 1}</div>
               <div className={styles.subtitle}>{x.title}</div>
               <div className={styles.content}>{x.content}</div>

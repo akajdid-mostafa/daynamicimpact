@@ -12,7 +12,7 @@
 
 .top
     max-width: 620px
-    margin: 0 auto 80px
+    margin: 0 auto 60px
     text-align: center
     +d
         margin-bottom: 64px
@@ -82,8 +82,12 @@
 .content
     flex: 1
     margin-bottom: 32px
-    +caption-1
+    // +caption-2
+    font-size: 14px
+    line-height: (20/14)
     color: $neutrals4
+    +dark
+        color: $neutrals20
 
 .button
     align-self: flex-start

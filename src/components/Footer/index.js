@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import cn from "classnames";
 import styles from "./Footer.module.sass";
 import Subscription from "../Subscription";
-import Theme from "../Theme";
+// import Theme from "../Theme";
 import Icon from "../Icon";
 import Image from "../Image";
 import { FaSquareFacebook,FaSquareXTwitter,FaSquareInstagram,FaLinkedin } from "react-icons/fa6";
@@ -67,11 +67,11 @@ const Footer = () => {
                 <Image
                   className={styles.pic}
                   src="/images/logo-dark-dynamic.svg"
-                  srcDark="/images/logo.svg"
+                  srcDark="/images/Logo-white.svg"
                   alt="Fitness Pro"
                 />
               </Link>
-              <Theme className={styles.theme} />
+              {/* <Theme className={styles.theme} /> */}
             </div>
             <div
               className={cn(styles.item, {

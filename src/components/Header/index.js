@@ -153,7 +153,7 @@ const Headers = () => {
     };
 
     const handleResize = () => {
-      const mobile = window.innerWidth <= 1160; // Mobile and medium screen breakpoint
+      const mobile = window.innerWidth <= 1160; // Mobile, medium, and large screen breakpoint
       setIsMobile(mobile);
     };
 
@@ -191,7 +191,7 @@ const Headers = () => {
           <Image
             className={styles.pic}
             src="/images/logo-dark-dynamic.svg"
-            srcDark="/images/logo.svg"
+            srcDark="/images/Logo-white.svg"
             alt="Fitness Pro"
           />
         </Link>

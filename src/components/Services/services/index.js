@@ -8,57 +8,57 @@ import ScrollParallax from "../../ScrollParallax";
 
 const items = [
   {
-    title: "Stratégie & Transformation Digitale",
+    title: "Stratégie & Conseil",
     url: "/Nos-Solutions/strategie-transformation-digitale",
     // color: "#45B26B",
-    image: "/images/icon/strateegie-digitale.svg",
+    image: "/images/icon/strategie-conseil.svg",
     alt: "user",
     content:
-      "Analyse et conception de stratégies de croissance sur mesure.",
+      "Aligner votre vision et planifier votre croissance durable.",
   },
   {
-    title: "Création de Sites Web Performants & SEO Avancé",
+    title: "Transformation & Digitalisation",
     url: "/Nos-Solutions/creation-site-web",
     // color: "#9757D7",
-    image: "/images/icon/Website&seo.svg",
+    image: "/images/icon/transformation-digitalisation.svg",
     alt: "medal",
     content:
-      "Création de sites modernes, rapides et optimisés SEO.",
+      "Optimiser vos processus et intégrer des solutions digitales.",
   },
   {
-    title: "Gestion & Croissance des Réseaux Sociaux",
+    title: "Performance & Outils",
     url: "/Nos-Solutions/gestion-reseaux-sociaux",
     // color: "#3772FF",
-    image: "/images/icon/gestion-reseaux-sociaux.svg",
+    image: "/images/icon/performance.svg",
     alt: "lightning",
     content:
-      "Animation, gestion et croissance de votre présence en ligne.",
+      "Mettre en place des outils pour mesurer et améliorer.",
   },
   {
-    title: "Production de Contenu de Marque Premium",
+    title: "Risques & Conformité",
     url: "/Nos-Solutions/production-contenu-marque",
     // color: "#45B26B",
-    image: "/images/icon/content-production.svg",
+    image: "/images/icon/gestion-risque.svg",
     alt: "user",
     content:
-      "Création de contenus visuels et narratifs à fort impact.",
+      "Protéger votre entreprise et garantir la conformité.",
   },
   {
-    title: "Automatisation & Solutions Digitales Sur-Mesure",
+    title: "Communication & Impact",
     url: "/Nos-Solutions/automatisation-processus",
     // color: "#9757D7",
-    image: "/images/icon/automatisation.svg",
+    image: "/images/icon/communcation.svg",
     alt: "medal",
     content:
-      "Mise en place de CRM, ERP et outils automatisés.",
+      "Bâtir une réputation et un impact institutionnel fort.",
   },
   {
-    title: "Accompagnement & Formation Digitale",
+    title: "Accompagnement & Formation",
     url: "/Nos-Solutions/formation-coaching-digital",
     // color: "#3772FF",
-    image: "/images/icon/design-elements.svg",
+    image: "/images/icon/accompagnement-formation.svg",
     alt: "lightning",
-    content: "Coaching et suivi stratégique pour des équipes autonomes.",
+    content: "Développer les compétences et l'autonomie de vos équipes.",
   },
 ];
 

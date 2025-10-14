@@ -3,17 +3,17 @@ import "./styles/app.sass";
 import Page from "./components/Page";
 import Home from "./screens/Home";
 import Solutions from "./screens/Nos-Solutions";
-import Pricing from "./screens/Pricing";
-import Download from "./screens/Download";
+// import Pricing from "./screens/Pricing";
+// import Download from "./screens/Download";
 import Blog from "./screens/Blog";
 import BlogDetail from "./screens/BlogDetail";
-import Lifestyle from "./screens/Lifestyle";
-import Article from "./screens/Article";
+// import Lifestyle from "./screens/Lifestyle";
+// import Article from "./screens/Article";
 import Contact from "./screens/Contact";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import ScrollButton from "./components/ScrollButton/index";
-import Class02 from "./screens/Class02";
-import Class02Details from "./screens/Class02Details";
+// import Class02 from "./screens/Class02";
+// import Class02Details from "./screens/Class02Details";
 import StrategieTransformationDigitale from "./screens/StrategieTransformationDigitale";
 import CreationSiteWebSEO from "./screens/CreationSiteWebSEO";
 import GestionCroissanceReseauxSociauxSocialMedia from "./screens/GestionCroissanceReseauxSociauxSocialMedia";
@@ -60,22 +60,22 @@ function App() {
                             </Page>
                         }
                     />
-                    <Route
+                    {/* <Route
                         path="pricing"
                         element={
                             <Page>
                                 <Pricing />
                             </Page>
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="download"
                         element={
                             <Page>
                                 <Download />
                             </Page>
                         }
-                    />
+                    /> */}
                     <Route
                         path="blog"
                         element={
@@ -92,38 +92,38 @@ function App() {
                             </Page>
                         }
                     />
-                    <Route
+                    {/* <Route
                         path="lifestyle"
                         element={
                             <Page>
                                 <Lifestyle />
                             </Page>
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="article"
                         element={
                             <Page>
                                 <Article />
                             </Page>
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="class02"
                         element={
                             <Page>
                                 <Class02 />
                             </Page>
                         }
-                    />
-                    <Route
+                    /> */}
+                    {/* <Route
                         path="class02-details"
                         element={
                             <Page>
                                 <Class02Details />
                             </Page>
                         }
-                    />
+                    /> */}
                     <Route
                         path="contact"
                         element={

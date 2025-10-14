@@ -10,6 +10,8 @@
     transition: color .2s
     user-select: none
     cursor: pointer
+    +dark
+        color: $neutrals20
     // -webkit-tap-highlight-color: rgba(0,0,0,0)
     +d
         padding: 0 50px 0 0
@@ -60,13 +62,13 @@
     // Scrolled state - change color when user scrolls
     &.scrolled
         +dark
-            color: $neutrals8
+            color: $neutrals20
 
     // Clicked state - change color when link is clicked
     &.clicked
         color: $purple
         +dark
-            color: $purple-light
+            color: $neutrals20
 
     // Active state - use gradient like other nav links
     &.active

@@ -53,6 +53,8 @@
         box-shadow: 0px 64px 64px 0 rgba(15, 15, 15, 0.1)
         &.active
             display: flex
+            +dark
+                background: $neutrals20
     +t
         padding: 0 40px 64px
     +m
@@ -93,6 +95,7 @@
 .link,
 .group,
 .nav > div
+
     &:not(:last-child)
         margin-right: 32px
         +x
@@ -109,6 +112,8 @@
   +button-2
   color: $neutrals4
   transition: color .2s
+  +dark
+    color: $neutrals20
 
   &:hover
     background: $primary-gradient
@@ -128,17 +133,19 @@
     -webkit-text-fill-color: transparent
     background-clip: text
     color: transparent
+    +dark
+      color: $neutrals20
 
   // Scrolled state - change color when user scrolls
   &.scrolled
     +dark
-      color: $neutrals8
+      color: $neutrals20
 
   // Clicked state - change color when link is clicked
   &.clicked
     color: $purple
     +dark
-      color: $purple-light
+      color: $neutrals20
 
     
 .details
@@ -178,6 +185,8 @@
 .text
     +caption-1
     color: $neutrals4
+    +dark
+      color: $neutrals6
 
 .socials
     display: flex
@@ -194,6 +203,8 @@
     height: 24px
     svg
         fill: $neutrals4
+        +dark
+            fill: $neutrals20
         transition: fill .2s
     &:hover svg
         fill: $neutrals2
@@ -213,6 +224,8 @@
         background: none
         -webkit-tap-highlight-color: rgba(0,0,0,0)
         &.active
+            +dark
+                color: $neutrals20
             &:before
                 transform: translateY(0) rotate(-45deg)
             &:after

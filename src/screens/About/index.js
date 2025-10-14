@@ -8,7 +8,7 @@ import Hero from "../../components/Hero";
 import ValueProps from "../../components/ValueProps";
 import Offer from "../../components/Offer";
 import Advantages from "../../components/Advantages";
-import Faq from "../Pricing/Faq";
+import Faq from "../../components/Faq";
 
 const AboutPage = () => {
   return (
