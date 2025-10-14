@@ -142,7 +142,7 @@ const Services = () => {
             className={cn("button-stroke", styles.button)}
             to="/contact"
           >
-            <span>Demander un audit gratuit</span>
+            <span>Demander un audit</span>
             <Icon name="arrow-right" size="10" />
           </Link>
         </div>

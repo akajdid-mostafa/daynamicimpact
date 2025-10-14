@@ -6,6 +6,7 @@ import Subscription from "../Subscription";
 import Theme from "../Theme";
 import Icon from "../Icon";
 import Image from "../Image";
+import { FaSquareFacebook,FaSquareXTwitter,FaSquareInstagram,FaLinkedin } from "react-icons/fa6";
 
 const menu = [
   {
@@ -23,44 +24,32 @@ const menu = [
   {
     title: "Ressources",
     url: "/blog",
-  },
-  // {
-  //     title: "Download",
-  //     url: "/download",
-  // },
+  }
 ];
 
 const socials = [
+  
   {
-    title: "facebook",
-    size: "16",
-    url: "https://www.facebook.com",
+    title: "LinkedIn",
+    icon: FaLinkedin,
+    url: "https://www.linkedin.com/company/dynamic-impact-advisory/?viewAsMember=true",
   },
   {
-    title: "x",
-    size: "18",
-    url: "https://x.com",
+    title: "X (Twitter)",
+    icon: FaSquareXTwitter,
+    url: "https://x.com/",
   },
   {
-    title: "instagram",
-    size: "16",
-    url: "https://www.instagram.com",
+    title: "Facebook",
+    icon: FaSquareFacebook,
+    url: "https://www.facebook.com/profile.php?id=61580942150486",
   },
   {
-    title: "linkedin",
-    size: "16",
-    url: "https://www.linkedin.com",
+    title: "Instagram",
+    icon: FaSquareInstagram,
+    url: "https://www.instagram.com/dynamic.impact.agency/",
   },
-  // {
-  //   title: "dribbble",
-  //   size: "16",
-  //   url: "https://dribbble.com",
-  // },
-  // {
-  //   title: "behance",
-  //   size: "20",
-  //   url: "https://www.behance.net",
-  // },
+  
 ];
 
 const Footer = () => {
@@ -77,8 +66,8 @@ const Footer = () => {
               <Link className={styles.logo} to="/">
                 <Image
                   className={styles.pic}
-                  src="/images/logo-dark-footer.svg"
-                  srcDark="/images/Logo-white-footer.svg"
+                  src="/images/logo-dark-dynamic.svg"
+                  srcDark="/images/logo.svg"
                   alt="Fitness Pro"
                 />
               </Link>
@@ -114,10 +103,13 @@ const Footer = () => {
           <div className={styles.col}>
             <div className={styles.category}>contact</div>
             <div className={styles.info}>
-              <p>Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°47, Casablanca, Morocco</p>
+              <p>
+                Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38,
+                Casablanca, Morocco
+              </p>
               {/* <p>Zackerychester</p> */}
               {/* <p>Bahamas</p> */}
-              <p>+212 539-33-29-02</p>
+              <p>0660434143</p>
             </div>
           </div>
           <div className={styles.col}>
@@ -136,20 +128,24 @@ const Footer = () => {
       <div className={styles.foot}>
         <div className={cn("container", styles.container)}>
           <div className={styles.copyright}>
-          Copyright © 2025.Dynamic Impact Tous droits réservés.
+            Copyright © 2025.Dynamic Impact Tous droits réservés.
           </div>
           <div className={styles.socials}>
-            {socials.map((x, index) => (
-              <a
-                className={styles.social}
-                href={x.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={index}
-              >
-                <Icon name={x.title} size={x.size} />
-              </a>
-            ))}
+            {socials.map((x, index) => {
+              const IconComponent = x.icon;
+              return (
+                <a
+                  className={styles.social}
+                  href={x.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  key={index}
+                  title={x.title}
+                >
+                  <IconComponent size={20} />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -3,24 +3,7 @@ import styles from "./contact.module.sass";
 import { MdMarkEmailRead, MdPhoneInTalk, MdLocationOn } from "react-icons/md";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import cn from "classnames";
-// const socialLinks = [
-//   {
-//     imgSrc: "/images/Footer/facebook.svg",
-//     link: "https://www.facebook.com/profile.php?id=61567020357925&mibextid=ZbWKwL",
-//     width: 20,
-//   },
-//   {
-//     imgSrc: "/images/Footer/insta.svg",
-//     link: "https://www.instagram.com/ocean.connecting",
-//     width: 28,
-//   },
-//   { imgSrc: "/images/Footer/twitter.svg", link: "#", width: 28 },
-//   {
-//     imgSrc: "/images/Footer/youtube.svg",
-//     link: "https://www.youtube.com/results?search_query=ocean+connecting",
-//     width: 28,
-//   },
-// ];
+
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +68,7 @@ const Contact = () => {
           <ContactCard
             icon={<MdLocationOn className={styles.icon} />}
             title="Adresse"
-            description="Bureau Dynamic Impact, Casablanca, Maroc"
+            description="Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38, Casablanca, Morocco"
             link="https://goo.gl/maps/QcWzYETAh4FS3KTD7"
             linkText="Voir sur Google Maps"
           />
@@ -106,7 +89,7 @@ const Contact = () => {
         </div>
 
          {/* BUSINESS HOURS & CTA */}
-         <div className={styles.businessInfo}>
+         {/* <div className={styles.businessInfo}>
            <div className={styles.hours}>
              <h3>Horaires de contact</h3>
              <p>Lun–Ven : 09:00 – 18:00 • Sam : sur RDV • Dimanche : fermé</p>
@@ -121,7 +104,7 @@ const Contact = () => {
                Demander un devis gratuit
              </a>
            </div>
-         </div>
+         </div> */}
 
         {/* MAP + SOCIAL + FORM */}
         <div className={styles.bottom}>

@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles/app.sass";
 import Page from "./components/Page";
-// import Maintenance from "./components/Maintenance";
 import Home from "./screens/Home";
 import Solutions from "./screens/Nos-Solutions";
 import Pricing from "./screens/Pricing";
