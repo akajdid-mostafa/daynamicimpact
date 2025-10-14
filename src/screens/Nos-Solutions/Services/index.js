@@ -8,86 +8,80 @@ import ScrollParallax from "../../../components/ScrollParallax";
 
 const items = [
   {
-    title: "Stratégie & Transformation Digitale",
+    title: "Stratégie & Croissance ",
     image: "/images/content/service1.svg",
     image2x: "/images/content/service1.svg",
     content:
-      "Accompagner les marques dans leur transformation digitale et maximiser leur impact en ligne.",
+      "Accompagner votre organisation dans la définition et la mise en œuvre de sa vision stratégique pour une croissance durable.",
     points: [
-      "Audit complet de votre écosystème digital",
-      "Définition d'une stratégie digitale sur-mesure",
-      "Objectifs clairs et mesurables",
-      "Roadmap d'implémentation"
+      "Conseil stratégique et gouvernance",
+      "Analyse et restructuration des modèles opérationnels",
+      "Accompagnement à la levée de fonds et business plans"
     ],
     url: "/strategie-transformation-digitale",
   },
   {
-    title: "Création de Sites Web Performants & SEO Avancé",
+    title: "Transformation & Digitalisation ",
     image: "/images/content/service2.svg",
     image2x: "/images/content/service2.svg",
     content:
-      "Offrir des plateformes digitales qui convertissent et renforcent l’image de marque.",
+      "Guider votre entreprise à travers la transformation et l'optimisation de ses processus à l'ère du numérique.",
     points: [
-      "Design responsive et expérience utilisateur optimale",
-      "Développement sur mesure avec les dernières technologies",
-      "Optimisation SEO avancée",
-      "Intégration de fonctionnalités e-commerce"
+      "Transformation organisationnelle et performance",
+      "Digitalisation et intégration des systèmes (ERP / Data)",
+      "Diagnostic et optimisation des processus "
     ],
     url: "/creation-site-web",
   },
   {
-    title: "Gestion & Croissance des Réseaux Sociaux",
+    title: "Performance & Mesure",
     image: "/images/content/service3.svg",
     image2x: "/images/content/service3.svg",
     content:
-      "Construire une communauté active et développer votre notoriété digitale.",
+      "Mettre en place des outils et des indicateurs clairs pour piloter vos activités et garantir le succès de vos projets.",
     points: [
-      "Création de contenu engageant et viral",
-      "Planification stratégique de publication",
-      "Gestion de la communauté et interactions",
-      "Analyses et reporting mensuel"
+      "Mise en place de tableaux de bord et KPIs",
+      "Audit et optimisation des performances",
+      "Reporting stratégique et financier"
     ],
     url: "/gestion-reseaux-sociaux",
   },
   {
-    title: "Production de Contenu de Marque Premium",
+    title: "Gouvernance & Risques",
     image: "/images/content/service3.svg",
     image2x: "/images/content/service3.svg",
     content:
-      "Créer des contenus à fort impact qui marquent les esprits et attirent vos clients idéaux.",
+      "Établir une structure solide pour protéger votre organisation et assurer sa conformité réglementaire.",
     points: [
-      "Photos et vidéos professionnelles",
-      "Rédaction de textes persuasifs",
-      "Design graphique et infographies",
-      "Contenu adapté à chaque plateforme"
+      "Management des risques et conformité",
+      "Audit interne et contrôle de gestion",
+      "Analyse de la chaîne de valeur"
     ],
     url: "/production-contenu-marque",
   },
   {
-    title: "Automatisation & Solutions Digitales Sur-Mesure",
+    title: "Communication & Impact ",
     image: "/images/content/service3.svg",
     image2x: "/images/content/service3.svg",
     content:
-      "Gagner du temps, réduire les coûts et scaler efficacement votre activité.",
+      "Construire une image de marque forte et une communication institutionnelle à fort impact pour renforcer votre réputation.",
     points: [
-      "Intégration de CRM et outils de marketing",
-      "Automatisation des processus répétitifs",
-      "Solutions personnalisées selon vos besoins",
-      "Formation et support technique"
+      "Communication institutionnelle et impact durable",
+      "Stratégie de réputation et de marque employeur",
+      "Gestion de la communication de crise "
     ],
     url: "/Automatisation-Solutions-Digitales-Sur-Mesure",
   },
   {
-    title: "Accompagnement & Formation Digitale",
+    title: "Formation & Leadership",
     image: "/images/content/service3.svg",
     image2x: "/images/content/service3.svg",
     content:
-      "Rendre vos équipes autonomes et garantir une croissance durable.",
+      "Développer les compétences de vos équipes et de vos dirigeants pour une performance et une autonomie accrues.",
     points: [
-      "Formation sur mesure pour vos équipes",
-      "Accompagnement personnalisé",
-      "Support continu et réactif",
-      "Transfert de compétences"
+      "Formation et accompagnement des dirigeants",
+      "Transfert de compétences et gestion du changement",
+      "Ateliers de renforcement des capacités "
     ],
     url: "/automatisation-processus",
   },

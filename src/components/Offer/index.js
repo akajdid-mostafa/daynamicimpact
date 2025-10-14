@@ -8,17 +8,18 @@ const Offer = ({ className }) => {
     <div className={cn(className, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={cn("stage", styles.stage)}>
-          Demande Audit - 30 min 🚀
+          DEMANDE D'ANALYSE STRATÉGIQUE - 30 MIN
         </div>
         <h2 className={cn("h1", styles.title)}>
-          Agence Marketing Digital au Maroc - Résultats Garantis
+          Agence de Marketing et de Conseil Stratégique
         </h2>
         <div className={styles.text}>
-          Boostez votre visibilité en ligne avec Dynamic Impact. 
-          SEO, Google Ads et sites web performants pour votre croissance.
+          Optimisez votre gouvernance et votre performance avec notre expertise.
+          Conseil stratégique, transformation digitale et accompagnement
+          personnalisé pour votre succès.
         </div>
         <Link className={cn("button", styles.button)} to="/download">
-          Demande audit
+        Demander un diagnostic
         </Link>
       </div>
     </div>
