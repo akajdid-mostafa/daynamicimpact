@@ -8,28 +8,28 @@ const items = [
     title: "Transparence",
     description:
       "livrables clairs, métriques partagées, communication régulière.",
-    image: "/images/content/hand-grip-circlee.png",
-    image2x: "/images/content/hand-grip-circlee.png",
+    image: "/images/icon/transparence1.svg",
+    image2x: "/images/icon/transparence1.svg",
   },
   {
     title: "Innovation",
     description:
       "technologie choisie pour résoudre un problème business concret.",
-    image: "/images/content/hand-grip-circlee.png",
-    image2x: "/images/content/hand-grip-circlee.png",
+    image: "/images/icon/innovation.svg",
+    image2x: "/images/icon/innovation.svg",
   },
   {
     title: "Engagement",
     description: "nous accompagnons jusqu’à la mise en main par vos équipes.",
-    image: "/images/content/hand-grip-circlee.png",
-    image2x: "/images/content/hand-grip-circlee.png",
+    image: "/images/icon/engagement.svg",
+    image2x: "/images/icon/engagement.svg",
   },
   {
     title: "Orientation",
     description:
       "chaque action est mesurée et priorisée selon son impact métier.",
-    image: "/images/content/hand-grip-circlee.png",
-    image2x: "/images/content/hand-grip-circlee.png",
+    image: "/images/icon/orientation.svg",
+    image2x: "/images/icon/orientation.svg",
   },
 ];
 

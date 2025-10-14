@@ -10,8 +10,8 @@ const items = [
   {
     title: "Stratégie & Transformation Digitale",
     url: "/Nos-Solutions/strategie-transformation-digitale",
-    color: "#45B26B",
-    image: "/images/content/user.svg",
+    // color: "#45B26B",
+    image: "/images/icon/strateegie-digitale.svg",
     alt: "user",
     content:
       "Analyse et conception de stratégies de croissance sur mesure.",
@@ -19,8 +19,8 @@ const items = [
   {
     title: "Création de Sites Web Performants & SEO Avancé",
     url: "/Nos-Solutions/creation-site-web",
-    color: "#9757D7",
-    image: "/images/content/medal-1.svg",
+    // color: "#9757D7",
+    image: "/images/icon/Website&seo.svg",
     alt: "medal",
     content:
       "Création de sites modernes, rapides et optimisés SEO.",
@@ -28,8 +28,8 @@ const items = [
   {
     title: "Gestion & Croissance des Réseaux Sociaux",
     url: "/Nos-Solutions/gestion-reseaux-sociaux",
-    color: "#3772FF",
-    image: "/images/content/lightning.svg",
+    // color: "#3772FF",
+    image: "/images/icon/gestion-reseaux-sociaux.svg",
     alt: "lightning",
     content:
       "Animation, gestion et croissance de votre présence en ligne.",
@@ -37,8 +37,8 @@ const items = [
   {
     title: "Production de Contenu de Marque Premium",
     url: "/Nos-Solutions/production-contenu-marque",
-    color: "#45B26B",
-    image: "/images/content/user.svg",
+    // color: "#45B26B",
+    image: "/images/icon/content-production.svg",
     alt: "user",
     content:
       "Création de contenus visuels et narratifs à fort impact.",
@@ -46,8 +46,8 @@ const items = [
   {
     title: "Automatisation & Solutions Digitales Sur-Mesure",
     url: "/Nos-Solutions/automatisation-processus",
-    color: "#9757D7",
-    image: "/images/content/medal-1.svg",
+    // color: "#9757D7",
+    image: "/images/icon/automatisation.svg",
     alt: "medal",
     content:
       "Mise en place de CRM, ERP et outils automatisés.",
@@ -55,8 +55,8 @@ const items = [
   {
     title: "Accompagnement & Formation Digitale",
     url: "/Nos-Solutions/formation-coaching-digital",
-    color: "#3772FF",
-    image: "/images/content/lightning.svg",
+    // color: "#3772FF",
+    image: "/images/icon/design-elements.svg",
     alt: "lightning",
     content: "Coaching et suivi stratégique pour des équipes autonomes.",
   },

@@ -136,7 +136,7 @@ const Footer = () => {
       <div className={styles.foot}>
         <div className={cn("container", styles.container)}>
           <div className={styles.copyright}>
-          Copyright © 2025. Tous droits réservés.
+          Copyright © 2025.Dynamic Impact Tous droits réservés.
           </div>
           <div className={styles.socials}>
             {socials.map((x, index) => (

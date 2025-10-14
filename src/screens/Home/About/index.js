@@ -34,7 +34,7 @@ const item2 = [
   {
     title: "Notre Vision",
     color: "#9757D7",
-    images: "/images/icon/vision2.svg",
+    images: "/images/icon/vision.svg",
     alt: "marketing",
     content:
       "Créer des écosystèmes où la technologie et les process servent vos ambitions, et non l'inverse. Nous visons un impact durable où chaque outil devient un levier de croissance.",

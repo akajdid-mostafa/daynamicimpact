@@ -47,12 +47,12 @@ const Steps = ({ scrollToRef }) => {
         <div className={styles.list}>
           {items.map((x, index) => (
             <ScrollParallax className={styles.item} key={index}>
-              <div
+              {/* <div
                 className={styles.preview}
                 style={{ backgroundColor: x.color }}
               >
                 <img src={x.images} alt={`Step ${index}`} />
-              </div>
+              </div> */}
               <div className={styles.number}>Step {index + 1}</div>
               <div className={styles.subtitle}>{x.title}</div>
               <div className={styles.content}>{x.content}</div>
