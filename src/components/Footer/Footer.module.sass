@@ -154,6 +154,8 @@
     color: $neutrals4
     +m
         margin: 0 0 24px
+    +dark
+        color: $neutrals20
 
 .socials
     display: flex
@@ -168,9 +170,11 @@
     svg
         fill: $neutrals4
         transition: fill .2s
+        +dark
+            fill: $neutrals20
     &:hover svg
         fill: $neutrals2
         +dark
-            fill: $neutrals8
+            fill: $neutrals20
     &:not(:last-child)
         margin-right: 24px
