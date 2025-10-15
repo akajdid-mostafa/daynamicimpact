@@ -25,7 +25,7 @@ const Hero = ({ scrollToRef }) => {
           </div>
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">
-              Audit Gratuit
+              Demande Audit 
             </Link>
             <Link
               className={cn("button-stroke", styles.button)}
