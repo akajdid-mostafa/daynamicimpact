@@ -190,7 +190,7 @@ const Headers = () => {
         >
           <Image
             className={styles.pic}
-            src="/images/logo-dark-dynamic.svg"
+            src="/images/LOGO_COLORS.webp"
             srcDark="/images/Logo-white.svg"
             alt="Dynamic Impact"
           />

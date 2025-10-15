@@ -7,28 +7,28 @@ const items = [
   {
     title: "Conception & Stratégie",
     // color: "#3772FF",
-    images: "/images/icon/1.svg",
+    images: "/images/icon/step1.svg",
     content:
       "Définition des objectifs SMART, élaboration du parcours client et priorisation des fonctionnalités clés.",
   },
   {
     title: "Architecture & Blueprint",
     // color: "#9757D7",
-    images: "/images/icon/2.svg",
+    images: "/images/icon/step2.svg",
     content:
       "Conception du blueprint technique : flux de données, choix technologiques (site, CRM, ERP), et architecture API.",
   },
   {
     title: "Implémentation MVP",
     // color: "#EF466F",
-    images: "/images/icon/3.svg",
+    images: "/images/icon/step3.svg",
     content:
       "Développement du MVP (site/landing page + intégration CRM), tests essentiels et déploiement en pré-production.",
   },
   {
     title: "Adoption et Formation",
     // color: "#45B26B",
-    images: "/images/icon/4.svg",
+    images: "/images/icon/step4.svg",
     content:
       "Formation des équipes (SOP, scripts, playbooks) et déploiement d'automatisations (confirmation, rappels).",
   },
@@ -49,7 +49,7 @@ const Steps = ({ scrollToRef }) => {
             <ScrollParallax className={styles.item} key={index}>
               <div
                 className={styles.preview}
-                style={{ backgroundColor: x.color }}
+                // style={{ backgroundColor: x.color }}
               >
                 <img src={x.images} alt={`Step ${index}`} />
               </div>
