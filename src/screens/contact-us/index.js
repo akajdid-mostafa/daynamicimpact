@@ -1,10 +1,26 @@
-import Page from "../../components/Page";
-import ContactForm from "./contact-form/contact-form";
+// import Page from "../../components/Page";
+import ContactForm from "./contact-form";
 
-export default function ContactUsPage() {
+// export default function ContactUsPage() {
+//   return (
+//     <Page>
+//       <ContactForm />
+//     </Page>
+//   );
+// }
+
+import React from "react";
+// import Hero from "./Hero";
+
+const ContactUs = () => {
+  // const scrollToRef = useRef(null);
+
   return (
-    <Page>
+    <>
+      {/* <Hero scrollToRef={scrollToRef} /> */}
       <ContactForm />
-    </Page>
+    </>
   );
-}
+};
+
+export default ContactUs;

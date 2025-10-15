@@ -10,23 +10,24 @@ const Hero = ({ scrollToRef }) => {
       <div className={cn("container", styles.container)}>
         <div className={styles.wrap}>
           <div className={cn("stage", styles.stage)}>
-            Build the system. See the growth.
+            CRÉER UN SYSTÈME. CONSTRUIRE L'AVENIR.
           </div>
           <h1 className={cn("h2", styles.title)}>
-            Nous alignons stratégie, tech et équipes pour
-            <span className={styles.underlined}>accélérer </span> votre chiffre
-            d’affaires.
+            Nous transformons votre entreprise en
+            <span className={styles.underlined}>
+              accélérant
+            </span>{" "}
+            votre croissance digitale
           </h1>
           <div className={styles.text}>
-            Dynamic Impact conçoit l&apos;univers complet qui fait performer votre
-            entreprise : site efficace, flux CRM synchronisés, contenus qui
-            convertissent et formation des équipes sur le terrain. Pas de jargon
-             des actions mesurables, des process adoptés et des résultats que
-            l&apos;on suit.
+            Nous concevons l&apos;écosystème complet qui fait performer votre
+            entreprise : audit stratégique, transformation des processus,
+            solutions digitales et accompagnement des équipes. Des actions
+            mesurables, des processus adaptés et des résultats concrets.
           </div>
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">
-            Demander une étude 
+              Demander une étude
             </Link>
             <Link
               className={cn("button-stroke", styles.button)}

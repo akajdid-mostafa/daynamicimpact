@@ -29,7 +29,7 @@ const item2 = [
     images: "/images/icon/mission.svg",
     alt: "branding",
     content:
-      "Accélérer votre transformation digitale grâce à des stratégies sur-mesure et des systèmes réellement adoptés par vos équipes pour générer des résultats mesurables.",
+      "Transformer la complexité en clarté pour que vos ambitions deviennent des résultats concrets. Nous vous accompagnons dans votre transformation stratégique pour un impact mesurable.",
   },
   {
     title: "Notre Vision",
@@ -37,7 +37,7 @@ const item2 = [
     images: "/images/icon/vision.svg",
     alt: "marketing",
     content:
-      "Créer des écosystèmes où la technologie et les process servent vos ambitions, et non l'inverse. Nous visons un impact durable où chaque outil devient un levier de croissance.",
+      "Créer des modèles où la gouvernance, la technologie et les données se combinent pour servir vos ambitions. Chaque solution est un levier de croissance durable pour votre entreprise.",
   },
   {
     title: "Nos Valeurs",
@@ -45,7 +45,7 @@ const item2 = [
     images: "/images/icon/valeur.svg",
     alt: "code",
     content:
-      "Transparence, innovation, et un engagement total envers la réussite de chaque projet. Votre succès est le nôtre.",
+      "Transparence, innovation et engagement total envers la réussite de chaque projet. Votre succès est notre boussole. Nous construisons avec vous un partenariat de confiance.",
   },
 ];
 
@@ -59,13 +59,13 @@ const About = () => {
           </div>
           <div className={styles.col}>
             <h2 className={cn("h2", styles.title)}>
-              Des Résultats Digitaux, un Impact Réel
+              Une Stratégie Ciblée, un Succès Garanti
             </h2>
             <div className={styles.info}>
-              Dynamic Impact conçoit et met en œuvre des écosystèmes marketing
-              pensés pour la performance. Nous alignons stratégie, technologie
-              et opérations pour transformer votre visibilité en clients fidèles
-              et en chiffre d&apos;affaires durable.
+              Dynamic Impact est une agence de marketing et de conseil
+              stratégique et opérationnel basée à Casablanca. Nous aidons les
+              entreprises à se transformer en alliant gouvernance, technologie
+              et données pour créer des modèles performants et durables.
             </div>
           </div>
         </div>
@@ -87,10 +87,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <Link
-              className={cn("button", styles.button)}
-              to="/about"
-            >
+            <Link className={cn("button", styles.button)} to="/about">
               Découvrez Notre Méthode →
             </Link>
           </div>
