@@ -68,7 +68,7 @@ const Footer = () => {
                 <Image
                   className={styles.pic}
                   src="/images/LOGO_COLORS.webp"
-                  srcDark="/images/Logo-white.svg"
+                  srcDark="/images/LOGO_BLACK.webp"
                   alt="Dynamic Impact"
                 />
               </Link>
