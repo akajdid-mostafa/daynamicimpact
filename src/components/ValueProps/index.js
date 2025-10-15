@@ -53,6 +53,7 @@ const ValueProps = ({
               <div className={styles.icon}>
                 <Image
                   src={x.icon}
+                  srcDark={x.icon}
                   alt={x.title}
                 />
               </div>

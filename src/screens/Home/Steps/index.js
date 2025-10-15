@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import cn from "classnames";
 import styles from "./Steps.module.sass";
 import ScrollParallax from "../../../components/ScrollParallax";
@@ -35,6 +35,52 @@ const items = [
 ];
 
 const Steps = ({ scrollToRef }) => {
+  const listRef = useRef(null);
+
+  useEffect(() => {
+    // Check if mobile and start auto-scroll
+    const isMobile = window.innerWidth <= 768;
+    let scrollInterval;
+    
+    if (isMobile && listRef.current) {
+      const startAutoScroll = () => {
+        const scrollWidth = listRef.current.scrollWidth - listRef.current.clientWidth;
+        let currentScroll = 0;
+        let isScrollingRight = true;
+        
+        scrollInterval = setInterval(() => {
+          if (isScrollingRight) {
+            currentScroll += 1;
+            listRef.current.scrollLeft = currentScroll;
+            
+            // When reach the end, start scrolling back
+            if (currentScroll >= scrollWidth) {
+              isScrollingRight = false;
+            }
+          } else {
+            currentScroll -= 1;
+            listRef.current.scrollLeft = currentScroll;
+            
+            // When reach the beginning, start scrolling forward again
+            if (currentScroll <= 0) {
+              isScrollingRight = true;
+            }
+          }
+        }, 20); // Smooth scroll speed
+      };
+
+      // Start auto-scroll after 1 second
+      setTimeout(startAutoScroll, 1000);
+    }
+
+    // Cleanup function
+    return () => {
+      if (scrollInterval) {
+        clearInterval(scrollInterval);
+      }
+    };
+  }, []);
+
   return (
     <div className={cn("section", styles.section)} ref={scrollToRef}>
       <div className={cn("container", styles.container)}>
@@ -44,7 +90,7 @@ const Steps = ({ scrollToRef }) => {
           Notre agence vous accompagne de l&apos;idée à la réalisation grâce à des solutions digitales innovantes et sur mesure.
           </div>
         </div>
-        <div className={styles.list}>
+        <div className={styles.list} ref={listRef}>
           {items.map((x, index) => (
             <ScrollParallax className={styles.item} key={index}>
               <div

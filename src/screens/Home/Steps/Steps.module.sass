@@ -51,6 +51,10 @@
             flex-shrink: 0
             width: 40px
             height: 1px
+    &.autoScrolling
+        +m
+            scroll-behavior: smooth
+            scroll-snap-type: x mandatory
 
 .item
     position: relative
@@ -58,12 +62,18 @@
     width: calc(25% - 32px)
     margin: 0 16px
     text-align: center
+    transition: all 0.3s ease
     +t
         flex: 0 0 256px
         width: 256px
         margin: 0
+        scroll-snap-align: center
     +m
         text-align: left
+    &.active
+        +m
+            transform: scale(1.05)
+            z-index: 2
     &:after
         content: ""
         position: absolute
@@ -109,6 +119,7 @@
     margin: 0 auto 80px
     border-radius: 24px
     filter: drop-shadow(15px 0 15px rgba(0, 0, 0, 0.2))
+    transition: all 0.3s ease
     +dark
         filter: drop-shadow(15px 0 15px rgba(194, 148, 234, 0.6))
     +m
@@ -123,6 +134,7 @@
         transform: translateY(-50%)
         border-radius: 50%
         border: 2px solid $neutrals5
+        transition: all 0.3s ease
     &:before
         left: -36px
     &:after
