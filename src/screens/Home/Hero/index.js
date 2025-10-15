@@ -22,8 +22,7 @@ const Hero = ({ scrollToRef }) => {
           <div className={styles.text}>
             Nous concevons l&apos;écosystème complet qui fait performer votre
             entreprise : audit stratégique, transformation des processus,
-            solutions digitales et accompagnement des équipes. Des actions
-            mesurables, des processus adaptés et des résultats concrets.
+            solutions digitales et accompagnement des équipes.
           </div>
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">
@@ -33,7 +32,7 @@ const Hero = ({ scrollToRef }) => {
               className={cn("button-stroke", styles.button)}
               to="/nos-solutions"
             >
-              Voir nos offres
+              Nos Services
             </Link>
           </div>
         </div>
@@ -41,20 +40,20 @@ const Hero = ({ scrollToRef }) => {
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet="/images/content/Hero/hero.webp 2x"
-              srcSetDark="/images/content/Hero/hero.webp 2x"
+              srcSet="/images/content/Hero/hero1.webp 2x"
+              srcSetDark="/images/content/Hero/hero1.webp 2x"
               src="/images/content/Hero/hero.webp"
               srcDark="/images/content/Hero/hero.webp"
               alt="Watch"
             />
           </div>
-          <div className={styles.preview}>
+          {/* <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero1.webp 2x"
               src="/images/content/ball.png"
               alt="Ball"
             />
-          </div>
+          </div> */}
           <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero2.webp 2x"
@@ -64,8 +63,8 @@ const Hero = ({ scrollToRef }) => {
           </div>
           <div className={styles.preview}>
             <img
-              srcSet="/images/content/Hero/hero4.webp 2x"
-              src="/images/content/ball-black.png"
+              srcSet="/images/content/Hero/hero3.webp 2x"
+              src="/images/content/Hero/hero3.webp"
               alt="Ball black"
             />
           </div>

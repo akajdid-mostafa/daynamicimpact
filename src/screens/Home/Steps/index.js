@@ -53,7 +53,7 @@ const Steps = ({ scrollToRef }) => {
               >
                 <img src={x.images} alt={`Step ${index}`} />
               </div>
-              <div className={styles.number}>Step {index + 1}</div>
+              <div className={styles.number}>Etape {index + 1}</div>
               <div className={styles.subtitle}>{x.title}</div>
               <div className={styles.content}>{x.content}</div>
             </ScrollParallax>

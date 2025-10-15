@@ -3,7 +3,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./Hero.module.sass";
 import Image from "../../../components/Image";
-import ScrollParallax from "../../../components/ScrollParallax";
+// import ScrollParallax from "../../../components/ScrollParallax";
 
 const Hero = ({ scrollToRef }) => {
   return (
@@ -13,12 +13,15 @@ const Hero = ({ scrollToRef }) => {
           <div className={cn("stage", styles.stage)}>
             Solutions Digitales Complètes
           </div>
-          <h1 className={cn("h1", styles.title)}>
+          <h1 className={cn("h2", styles.title)}>
             Agence de Marketing et de Conseil Stratégique
           </h1>
           <div className={styles.text}>
             Nous accompagnons les entreprises dans leur transformation
-            stratégique, organisationnelle et digitale.
+            stratégique, organisationnelle et digitale. Notre approche unique
+            allie conseil en gouvernance et performance avec des solutions de
+            marketing digital sur mesure pour maximiser votre impact, votre
+            croissance et votre succès.
           </div>
           <div className={styles.btns}>
             <Link className={cn("button", styles.button)} to="/contact">
@@ -35,14 +38,14 @@ const Hero = ({ scrollToRef }) => {
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet="/images/content/all-service.svg 2x"
-              srcSetDark="/images/content/all-service.svg 2x"
-              src="/images/content/all-service.svg"
-              srcDark="/images/content/all-service.svg"
+              srcSet="/images/content/hero-sulution.webp 2x"
+              srcSetDark="/images/content/hero-sulution.webp 2x"
+              src="/images/content/hero-sulution.webp"
+              srcDark="/images/content/hero-sulution.webp"
               alt="Dynamic Impact - Agence Marketing Digital"
             />
           </div>
-          <ScrollParallax
+          {/* <ScrollParallax
             className={styles.preview}
             animateIn="fadeInUp"
             delay={300}
@@ -52,8 +55,8 @@ const Hero = ({ scrollToRef }) => {
               src="/images/content/ball.png"
               alt="Solutions SEO"
             />
-          </ScrollParallax>
-          <ScrollParallax
+          </ScrollParallax> */}
+          {/* <ScrollParallax
             className={styles.preview}
             animateIn="fadeInUp"
             delay={600}
@@ -63,7 +66,7 @@ const Hero = ({ scrollToRef }) => {
               src="/images/content/ball-black.png"
               alt="Marketing Digital"
             />
-          </ScrollParallax>
+          </ScrollParallax> */}
         </div>
       </div>
     </div>

@@ -120,6 +120,25 @@
     &:not(:last-child)
         margin-bottom: 4px
 
+.contactItem
+    display: flex
+    align-items: flex-start
+    gap: 12px
+    margin-bottom: 16px
+    &:last-child
+        margin-bottom: 0
+    p
+        margin: 0
+        line-height: 1.5
+
+.contactIcon
+    color: $neutrals4
+    font-size: 16px
+    margin-top: 2px
+    flex-shrink: 0
+    +dark
+        color: $neutrals20
+
 .foot
     padding: 25px 0 20px
     border-top: 1px solid $neutrals6

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./contact-form.module.css";
-import { Dropdown } from "../../../components/ui";
+import Dropdown from "../../../components/ui/dropdown";
 import Socials from "../../../components/socials";
 import mock from "../../../constants/mock";
 
@@ -65,9 +65,11 @@ const ContactForm = ({ options = mock.options }) => {
   };
 
   return (
-    <div className={cn("section")}>
+    <div className={cn("")}>
       <div className={cn("container", styles.container)}>
-        <div className={styles.col}>
+        <div className={styles.section}>
+        <div className={styles.content}>
+          <div className={styles.col}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.wrapper}>
               <input
@@ -169,7 +171,9 @@ const ContactForm = ({ options = mock.options }) => {
             <div className={cn("paragraph-medium", styles.text)}>Follow us</div>
             <Socials />
           </div>
+          </div>
         </div>
+      </div>
       </div>
     </div>
   );

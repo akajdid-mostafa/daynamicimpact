@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styles from "./Book.module.sass";
 import Icon from "../../../components/Icon";
 import Image from "../../../components/Image";
-import ScrollParallax from "../../../components/ScrollParallax";
+// import ScrollParallax from "../../../components/ScrollParallax";
 
 const items = [
   {
@@ -38,25 +38,25 @@ const Book = () => {
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet="/images/content/book.svg 2x"
-              srcSetDark="/images/content/book.svg 2x"
-              src="/images/content/book.svg"
-              srcDark="/images/content/book.svg"
+              srcSet="/images/content/book.webp 2x"
+              srcSetDark="/images/content/book.webp 2x"
+              src="/images/content/book.webp"
+              srcDark="/images/content/book.webp"
               alt="Book pic"
             />
           </div>
-          <ScrollParallax
+          {/* <ScrollParallax
             className={styles.preview}
             animateIn="fadeInUp"
             offset={300}
           >
             <img
-              srcSet="/images/content/base.svg 2x"
-              src="/images/content/base.svg"
+              srcSet="/images/content/book2.webp 2x"
+              src="/images/content/book2.webp"
               alt="Ball"
             />
-          </ScrollParallax>
-          <ScrollParallax
+          </ScrollParallax> */}
+          {/* <ScrollParallax
             className={styles.preview}
             animateIn="fadeInUp"
             offset={300}
@@ -66,8 +66,8 @@ const Book = () => {
               src="/images/content/advanced.svg"
               alt="Ball"
             />
-          </ScrollParallax>
-          <ScrollParallax
+          </ScrollParallax> */}
+          {/* <ScrollParallax
             className={styles.preview}
             animateIn="fadeInUp"
             offset={300}
@@ -77,11 +77,11 @@ const Book = () => {
               src="/images/content/dumbbells.png"
               alt="Dumbbells"
             />
-          </ScrollParallax>
+          </ScrollParallax> */}
         </div>
         <div className={styles.wrap}>
           <h2 className={cn("h4", styles.title)}>
-            Propulsez Votre Marque avec Nos Solutions Digitales
+            Développer votre marque avec nos solutions digitales
           </h2>
 
           <div className={styles.info}>

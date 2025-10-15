@@ -14,13 +14,13 @@ const AboutPage = () => {
   return (
     <>
       <Hero
-        stage="On voit le digital autrement"
-        title="Un marketing pensé"
-        titleHighlight="pour servir"
-        titleSuffix="votre business"
-        description="Chez Dynamic Impact, le digital n’est pas une vitrine, c’est un levier. Nous concevons des systèmes clairs, efficaces et adaptés : plus de clients, moins de friction, des équipes qui avancent. Envie de comprendre comment ? La suite vous montre notre vision, notre méthode et les résultats concrets obtenus sur le terrain."
+        stage="ON VOIT LA TRANSFORMATION AUTREMENT"
+        title="Une stratégie pensée pour servir "
+        titleHighlight="votre croissance"
+        titleSuffix=" "
+        description="Chez Dynamic Impact, la transformation n'est pas un projet isolé, c'est un levier de croissance. Nous concevons des systèmes clairs, efficaces et adaptés : plus de gouvernance, moins de risques, des équipes qui excellent. Envie de comprendre comment ? La suite vous montre notre vision, notre méthode et les résultats concrets obtenus sur le terrain."
         primaryButton={{
-          text: "Découvrir notre méthode",
+          text: "Notre stratégie",
           to: "#team",
         }}
         secondaryButton={{
@@ -29,28 +29,28 @@ const AboutPage = () => {
         }}
         gallery={[
           {
-            srcSet: "/images/content/Hero/hero.webp 2x",
-            srcSetDark: "/images/content/Hero/hero.webp 2x",
-            src: "/images/content/Hero/hero.webp",
-            srcDark: "/images/content/Hero/hero.webp",
+            srcSet: "/images/content/impact.webp 2x",
+            srcSetDark: "/images/content/impact.webp 2x",
+            src: "/images/content/impact.webp",
+            srcDark: "/images/content/impact.webp",
             alt: "Watch",
             isImage: false,
           },
+          // {
+          //   srcSet: "/images/content/Hero/hero1.webp 2x",
+          //   src: "/images/content/ball.png",
+          //   alt: "Ball",
+          //   isImage: true,
+          // },
           {
-            srcSet: "/images/content/Hero/hero1.webp 2x",
-            src: "/images/content/ball.png",
-            alt: "Ball",
-            isImage: true,
-          },
-          {
-            srcSet: "/images/content/Hero/hero2.webp 2x",
-            src: "/images/content/Hero/hero2.webp",
+            srcSet: "/images/content/Hero/book1.webp 2x",
+            src: "/images/content/Hero/book1.webp",
             alt: "Bottle",
             isImage: true,
           },
           {
-            srcSet: "/images/content/Hero/hero4.webp 2x",
-            src: "/images/content/ball-black.png",
+            srcSet: "/images/content/Hero/book2.webp 2x",
+            src: "/images/content/Hero/book2.webp",
             alt: "Ball black",
             isImage: true,
           },
@@ -59,23 +59,23 @@ const AboutPage = () => {
       <Story />
       <ValueProps 
         className="section"
-        stage="Un partenariat durable repose sur des valeurs simples et concrètes"
+        stage="UN PARTENARIAT DURABLE REPOSE SUR DES VALEURS SIMPLES ET CONCRÈTES"
         title="Nos principes, Un cadre simple et efficace"
         items={[
           {
             title: "Impact durable",
-            content: "Nous guidons chaque décision à partir de résultats clairs et mesurables, plutôt que de promesses vagues. L’objectif est de construire une performance qui s’inscrit dans le temps et crée une vraie valeur pour votre activité.",
-            icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>'
+            content: "Nous guidons chaque décision vers des résultats concrets, plutôt que de vagues promesses. L'objectif est de construire une performance qui s'inscrit dans le temps, créant ainsi une vraie valeur pour votre activité et votre image de marque.",
+            icon: "/images/icon/mission.svg",
           },
           {
             title: "Vision globale",
-            content: "Nous relions produit, process et équipe dans une approche cohérente afin d’éviter les solutions fragmentées. Cette vision d’ensemble permet de fluidifier vos opérations et d’aligner tous les acteurs vers le même objectif.",
-            icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>'
+            content: "Nous relions stratégie, gouvernance et digital dans une approche cohérente pour éviter les solutions fragmentées. Cette vision d'ensemble permet de fluidifier vos opérations et d'aligner tous les acteurs vers un même objectif.",
+            icon: "/images/icon/vision.svg",
           },
           {
             title: "Autonomie forte",
-            content: "Nous transmettons les savoirs et les méthodes nécessaires pour rendre vos équipes indépendantes. Notre rôle n’est pas seulement de livrer, mais de vous permettre de garder la maîtrise et d’évoluer en toute confiance.",
-            icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>'
+            content: "Nous transmettons les savoirs et les méthodes nécessaires pour rendre vos équipes indépendantes. Notre rôle n'est pas seulement de livrer, mais de vous permettre de garder la maîtrise et d'évoluer en toute confiance.",
+            icon: "/images/icon/valeurs.svg",
           },
         ]}
       />

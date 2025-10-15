@@ -1,89 +1,188 @@
 @import ../../../styles/helpers
+@keyframes float 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(-20px)
+  
+
+@keyframes rotate 
+  from 
+    transform: rotate(0deg)
+  
+  to 
+    transform: rotate(360deg)
+  
+
+
+@keyframes sideToSide 
+  0%, 100% 
+    transform: translateX(0)
+  
+  50% 
+    transform: translateX(10px)
+
+@keyframes upToDown 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(15px)
+  
+
 
 .hero
     position: relative
     display: flex
     align-items: center
-    min-height: 880px
-    padding: 34px 0 180px
+    min-height: 750px
+    padding: 34px 0 80px
+    +x
+        min-height: 800px
     +d
-        min-height: 606px
-        padding: 80px 0
+        min-height: 624px
     +m
         min-height: auto
-        padding: 64px 0 0
+        padding: 64px 0 152px
 
 .wrap
     position: relative
     z-index: 3
     max-width: 450px
     +t
-        max-width: 350px
+        max-width: 340px
     +m
         max-width: 100%
-        margin-bottom: 32px
+        margin-bottom: 80px
 
 .title
     margin-bottom: 20px
 
+.underlined 
+    position: relative
+    display: inline-block
+    
+    &::after 
+        content: ''
+        position: absolute
+        left: 0
+        bottom: 9px 
+        width: 100%
+        height: 10px 
+        background: $primary-gradient-tran
+        border-radius: 2px 
+        z-index: -1
+
+.stage
+    color: $neutrals4
+    +dark
+        color: $neutrals20
+
 .text
     margin-bottom: 40px
     color: $neutrals4
+    +dark
+        color: $neutrals20
 
 .btns
     display: flex
+    gap: 16px
+    flex-wrap: wrap
+    +t
+        gap: 12px
+    +m
+        display: flex
+        flex-direction: column
+        gap: 12px
+        width: 100%
 
 .button
+    flex: 1
+    min-width: 200px
+    text-align: center
+    +t
+        min-width: 180px
+        padding: 12px 20px
     +m
-        padding: 0 22px
+        width: 100%
+        min-width: auto
+        padding: 14px 24px
+        font-size: 16px
     &:not(:last-child)
-        margin-right: 16px
+        margin-right: 0
     
 .scroll
     position: absolute
     bottom: 96px
     +d
-        display: none
+        bottom: 48px
+    +m
+        bottom: 64px
 
 .gallery
     position: absolute
     top: 50%
-    right: calc(50% - 720px)
-    width: 800px
-    transform: translateY(-50%)
+    right: calc(50% - 465px)
+    width: 612px
+    max-width: 90vw
+    transform: translateY(-58%)
     pointer-events: none
+    +x
+        right: calc(40% - 425px)
+        width: min(650px, 80vw)
     +d
-        top: 54%
-        right: calc(50% - 600px)
-        width: 600px
+        right: calc(30% - 465px)
+        width: min(420px, 70vw)
     +t
-        right: calc(50% - 520px)
-        width: 550px
+        right: calc(35% - 270px)
+        width: min(420px, 60vw)
+        transform: translateY(-50%)
     +m
         position: relative
         top: auto
         right: auto
-        width: 580px
-        margin: 0 auto
-        transform: translateY(0)
-    +s
-        left: -32%
+        left: 0
+        margin: 40px auto 0
+        transform: translate(0, 0)
+        width: 100%
+        max-width: 400px
+        pointer-events: all
 
 .preview
     &:first-child
         position: relative
         z-index: 2
+    // &:nth-child(4)
+    //     top: -20%
+    //     left: -15%
+    //     z-index: 3
+    //     width: 140%
+    //     animation: float 4s ease-in-out infinite
     &:nth-child(2)
-        top: 10%
-        right: 20%
-        z-index: 3
-        width: 20%
+        top: 2%
+        right: 4%
+        z-index: 4
+        width: 15%
+        animation: sideToSide 5s ease-in-out infinite
     &:nth-child(3)
-        top: 47%
-        left: 12%
-        z-index: 1
-        width: 8.5%
+        top: 82%
+        right: 59%
+        bottom: 13%
+        z-index: 3
+        width: 15%
+        // animation: rotate 8s linear infinite
+        animation: sideToSide 5s ease-in-out infinite
+
     &:not(:first-child)
         position: absolute
+        transition: all 0.3s ease-out
+        +dark
+            filter: drop-shadow(0 0 20px rgba(194, 148, 234, 0.4))
     img
         width: 100%
+        object-fit: cover
+        border-radius: 20px
+        +dark
+            filter: drop-shadow(0 0 15px rgba(194, 148, 234, 0.2))
+        

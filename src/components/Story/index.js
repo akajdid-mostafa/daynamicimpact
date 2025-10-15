@@ -8,12 +8,12 @@ const items = [
   {
     title: "Aujourd’hui",
     content:
-      "Nous consolidons nos services, renforçons notre présence et construisons une équipe alignée sur nos valeurs.",
+      "Nous consolidons nos services de conseil et de marketing, renforçons notre présence à Casablanca et construisons une équipe alignée sur nos valeurs.",
   },
   {
     title: "Demain",
     content:
-      "Nous visons à devenir une référence au Maroc, puis à l’international, en offrant des solutions toujours plus claires, humaines et durables.",
+      "Nous visons à devenir une référence au Maroc, puis à l'international, en offrant des solutions toujours plus claires, humaines et durables.",
   },
 ];
 
@@ -24,24 +24,24 @@ const Story = () => {
         <div className={styles.row}>
           <div className={styles.col}>
             <div className={styles.preview}>
-              <img src="/images/content/story-pic.png" alt="Story Pic" />
+              <img src="/images/content/impact2.webp" alt="Story Pic" />
             </div>
           </div>
           <div className={styles.col}>
             <div className={cn("stage-small", styles.stage)}>
-              Notre raison d’avancer
+              NOTRE RAISON D&apos;AVANCER
             </div>
             <h2 className={cn("h3", styles.title)}>
-              Une vision claire, un impact mesurable{" "}
+              Une vision claire, un impact mesurable
             </h2>
             <div className={styles.info}>
-              Votre transformation digitale doit devenir un levier de
-              croissance, avec plus de clarté, d’autonomie et d’impact.C’est
-              notre vision : créer des environnements où les outils servent vos
-              ambitions, jamais l’inverse.Pour y parvenir, notre mission au
-              quotidien est de vous écouter, de clarifier les priorités et
-              d’accompagner vos équipes afin de rendre la transformation fluide,
-              concrète et créatrice de valeur.
+              Votre transformation ne doit pas être un obstacle, mais un levier
+              de croissance. C&apos;est notre vision : créer des environnements où la
+              gouvernance, la technologie et les équipes servent vos ambitions,
+              et non l'inverse. Pour y parvenir, notre mission est de vous
+              écouter, de clarifier les priorités et de vous accompagner pour
+              rendre votre transformation stratégique, concrète et créatrice de
+              valeur.
             </div>
             <div className={styles.list}>
               {items.map((x, index) => (
@@ -51,8 +51,8 @@ const Story = () => {
                 </ScrollParallax>
               ))}
             </div>
-            <Link className={cn("button-stroke", styles.button)} to="/class02">
-              Rejoindre l’aventure
+            <Link className={cn("button", styles.button)} to="/class02">
+              Rejoindre l&apos;aventure
             </Link>
           </div>
         </div>

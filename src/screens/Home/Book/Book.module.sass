@@ -1,5 +1,37 @@
 @import ../../../styles/helpers
 
+@keyframes float 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(-20px)
+  
+
+@keyframes rotate 
+  from 
+    transform: rotate(0deg)
+  
+  to 
+    transform: rotate(360deg)
+  
+
+
+@keyframes sideToSide 
+  0%, 100% 
+    transform: translateX(0)
+  
+  50% 
+    transform: translateX(10px)
+
+@keyframes upToDown 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(15px)
+
+
 .section
     position: relative
     +m
@@ -13,12 +45,14 @@
 .gallery
     position: absolute
     top: 50%
-    left: calc(50% - 640px)
-    width: 624px
+    left: calc(50% - 540px)
+    width: 524px
+    +dark
+            filter: drop-shadow(0 0 15px rgba(194, 148, 234, 0.4))
     transform: translateY(-50%)
     pointer-events: none
     +x
-        left: calc(50% - 610px)
+        left: calc(50% - 550px)
         width: 580px
     +d
         left: calc(50% - 560px)
@@ -34,10 +68,11 @@
         position: relative
         z-index: 2
     &:nth-child(2)
-        top: 14%
-        right: 13%
+        top: -8%
+        right: 43%
         z-index: 3
-        width: 29.5%
+        width: 20%
+        animation: upToDown 5s ease-in-out infinite
     &:nth-child(3)
         top: 46%
         left: 15%
@@ -69,6 +104,7 @@
         padding: 32px
     +dark
         background: $neutrals1
+        filter: drop-shadow(0 0 15px rgba(194, 148, 234, 0.2))
 
 .title
     margin-bottom: 24px

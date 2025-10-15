@@ -2,7 +2,7 @@ import cn from "classnames";
 import { Link } from "react-router-dom";
 import styles from "./About.module.sass";
 // import Icon from "../../../components/Icon";
-import ScrollParallax from "../../../components/ScrollParallax";
+// import ScrollParallax from "../../../components/ScrollParallax";
 
 // const items = [
 //   {
@@ -94,17 +94,17 @@ const About = () => {
           <div className={styles.col}>
             <div className={styles.bg}>
               <img
-                srcSet="/images/content/about-pic.svg 2x"
-                src="/images/content/about-pic.svg"
+                srcSet="/images/icon/about.webp 2x"
+                src="/images/icon/about.webp"
                 alt="À propos de notre équipe"
               />
-              <ScrollParallax className={styles.preview} animateIn="fadeInUp">
+              {/* <ScrollParallax className={styles.preview} animateIn="fadeInUp">
                 <img
                   srcSet="/images/content/plate.svg 2x"
                   src="/images/content/plate.svg"
                   alt="Notre plateforme"
                 />
-              </ScrollParallax>
+              </ScrollParallax> */}
               {/* <button className={cn("play", styles.play)}>
                 <Icon name="play" size="21" />
               </button> */}

@@ -12,6 +12,7 @@ import ValueProps from "../../components/ValueProps";
 import Offer from "../../components/Offer";
 import Services from "./Services";
 import Faq from "../../components/Faq";
+// import Services from "../../components/Services/services";
 
 const Features = () => {
   const scrollToRef = useRef(null);

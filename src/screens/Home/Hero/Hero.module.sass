@@ -22,6 +22,13 @@
   
   50% 
     transform: translateX(10px)
+
+@keyframes upToDown 
+  0%, 100% 
+    transform: translateY(0)
+  
+  50% 
+    transform: translateY(15px)
   
 
 
@@ -29,8 +36,8 @@
     position: relative
     display: flex
     align-items: center
-    min-height: 880px
-    padding: 34px 0 130px
+    min-height: 750px
+    padding: 34px 0 80px
     +x
         min-height: 800px
     +d
@@ -80,16 +87,30 @@
 
 .btns
     display: flex
+    gap: 16px
+    flex-wrap: wrap
+    +t
+        gap: 12px
     +m
-        display: block
+        display: flex
+        flex-direction: column
+        gap: 12px
+        width: 100%
 
 .button
+    flex: 1
+    min-width: 200px
+    text-align: center
+    +t
+        min-width: 180px
+        padding: 12px 20px
     +m
         width: 100%
+        min-width: auto
+        padding: 14px 24px
+        font-size: 16px
     &:not(:last-child)
-        margin-right: 16px
-        +m
-            margin: 0 0 16px
+        margin-right: 0
     
 .scroll
     position: absolute
@@ -103,52 +124,65 @@
     position: absolute
     top: 50%
     right: calc(50% - 465px)
-    width: 512px
+    width: 612px
+    max-width: 90vw
     transform: translateY(-58%)
     pointer-events: none
     +x
-        right: calc(50% - 425px)
-        width: 450px
+        right: calc(40% - 425px)
+        width: min(650px, 80vw)
     +d
-        right: calc(50% - 365px)
-        width: 320px
+        right: calc(30% - 465px)
+        width: min(420px, 70vw)
     +t
-        right: calc(50% - 300px)
+        right: calc(35% - 270px)
+        width: min(420px, 60vw)
+        transform: translateY(-50%)
     +m
         position: relative
         top: auto
         right: auto
-        left: -16px
-        margin: 0 auto
-        transform: translate(0,0)
+        left: 0
+        margin: 40px auto 0
+        transform: translate(0, 0)
+        width: 100%
+        max-width: 400px
         pointer-events: all
 
 .preview
     &:first-child
         position: relative
         z-index: 2
+    // &:nth-child(4)
+    //     top: -20%
+    //     left: -15%
+    //     z-index: 3
+    //     width: 140%
+    //     animation: float 4s ease-in-out infinite
     &:nth-child(2)
-        top: -20%
-        left: -15%
-        z-index: 3
-        width: 140%
-        animation: float 4s ease-in-out infinite
-    &:nth-child(3)
-        top: 50%
-        right: 16%
+        top: 2%
+        right: 4%
         z-index: 4
-        width: 35%
+        width: 15%
         animation: sideToSide 5s ease-in-out infinite
-    &:nth-child(4)
-        top: 6%
-        right: 8%
+    &:nth-child(3)
+        top: 82%
+        right: 59%
         bottom: 13%
         z-index: 3
-        width: 18%
-        animation: rotate 8s linear infinite
+        width: 15%
+        // animation: rotate 8s linear infinite
+        animation: sideToSide 5s ease-in-out infinite
+
     &:not(:first-child)
         position: absolute
         transition: all 0.3s ease-out
+        +dark
+            filter: drop-shadow(0 0 20px rgba(194, 148, 234, 0.4))
     img
         width: 100%
+        object-fit: cover
+        border-radius: 20px
+        +dark
+            filter: drop-shadow(0 0 15px rgba(194, 148, 234, 0.2))
         

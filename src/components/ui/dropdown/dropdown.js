@@ -8,7 +8,7 @@ import icons from "../../../constants/icons";
 export default function Dropdown({ placeholder, options, className }) {
   const [open, setOpen] = React.useState(false);
   const [selectedOption, setSelectedOption] = React.useState(null);
-  const useRef = React.useRef(null);
+  const dropdownRef = React.useRef(null);
 
   const toggleDropdown = () => setOpen(!open);
 
@@ -19,7 +19,7 @@ export default function Dropdown({ placeholder, options, className }) {
 
   React.useEffect(() => {
     const handleClickOutside = (event) => {
-      if (useRef.current && !useRef.current.contains(event.target)) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setOpen(false);
       }
     };
@@ -28,11 +28,11 @@ export default function Dropdown({ placeholder, options, className }) {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [useRef]);
+  }, [dropdownRef]);
 
   return (
     <button
-      ref={useRef}
+      ref={dropdownRef}
       type="button"
       className={cn(styles.container, className)}
       onClick={toggleDropdown}

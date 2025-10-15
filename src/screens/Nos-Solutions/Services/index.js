@@ -9,8 +9,8 @@ import ScrollParallax from "../../../components/ScrollParallax";
 const items = [
   {
     title: "Stratégie & Croissance ",
-    image: "/images/content/service1.svg",
-    image2x: "/images/content/service1.svg",
+    image: "/images/content/solution1.webp",
+    image2x: "/images/content/solution1.webp",
     content:
       "Accompagner votre organisation dans la définition et la mise en œuvre de sa vision stratégique pour une croissance durable.",
     points: [
@@ -22,8 +22,8 @@ const items = [
   },
   {
     title: "Transformation & Digitalisation ",
-    image: "/images/content/service2.svg",
-    image2x: "/images/content/service2.svg",
+    image: "/images/content/solution2.webp",
+    image2x: "/images/content/solution2.webp",
     content:
       "Guider votre entreprise à travers la transformation et l'optimisation de ses processus à l'ère du numérique.",
     points: [
@@ -35,8 +35,8 @@ const items = [
   },
   {
     title: "Performance & Mesure",
-    image: "/images/content/service3.svg",
-    image2x: "/images/content/service3.svg",
+    image: "/images/content/solution3.webp",
+    image2x: "/images/content/solution3.webp",
     content:
       "Mettre en place des outils et des indicateurs clairs pour piloter vos activités et garantir le succès de vos projets.",
     points: [
@@ -48,8 +48,8 @@ const items = [
   },
   {
     title: "Gouvernance & Risques",
-    image: "/images/content/service3.svg",
-    image2x: "/images/content/service3.svg",
+    image: "/images/content/solution4.webp",
+    image2x: "/images/content/solution4.webp",
     content:
       "Établir une structure solide pour protéger votre organisation et assurer sa conformité réglementaire.",
     points: [
@@ -61,8 +61,8 @@ const items = [
   },
   {
     title: "Communication & Impact ",
-    image: "/images/content/service3.svg",
-    image2x: "/images/content/service3.svg",
+    image: "/images/content/solution5.webp",
+    image2x: "/images/content/solution5.webp",
     content:
       "Construire une image de marque forte et une communication institutionnelle à fort impact pour renforcer votre réputation.",
     points: [
@@ -74,8 +74,8 @@ const items = [
   },
   {
     title: "Formation & Leadership",
-    image: "/images/content/service3.svg",
-    image2x: "/images/content/service3.svg",
+    image: "/images/content/solution6.webp",
+    image2x: "/images/content/solution6.webp",
     content:
       "Développer les compétences de vos équipes et de vos dirigeants pour une performance et une autonomie accrues.",
     points: [
@@ -165,16 +165,19 @@ const Services = () => {
                           </li>
                         ))}
                       </ul>
-                      <Link
+                      {/* <Link
                         className={cn("button-stroke button-small", styles.detailsButton)}
                         to={`/Nos-Solutions${x.url}`}
                       >
                         Voir les détails
                         <Icon name="arrow-right" size="10" />
-                      </Link>
+                      </Link> */}
                     </div>
                   </div>
                   <div className={styles.col}>
+                    <br />
+                    <br />
+                    <br />
                     <img
                       srcSet={`${x.image2x} 2x`}
                       src={x.image}

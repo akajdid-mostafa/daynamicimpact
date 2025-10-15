@@ -8,7 +8,7 @@ const Offer = ({ className }) => {
     <div className={cn(className, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={cn("stage", styles.stage)}>
-          DEMANDE D'ANALYSE STRATÉGIQUE - 30 MIN
+          DEMANDE D'ANALYSE STRATÉGIQUE 
         </div>
         <h2 className={cn("h1", styles.title)}>
           Agence de Marketing et de Conseil Stratégique

@@ -21,19 +21,19 @@ const Hero = ({
   },
   gallery = [
     {
-      srcSet: "/images/content/Hero/hero.webp 2x",
-      srcSetDark: "/images/content/Hero/hero.webp 2x",
-      src: "/images/content/Hero/hero.webp",
-      srcDark: "/images/content/Hero/hero.webp",
+      srcSet: "/images/content/Hero/hero1.webp 2x",
+      srcSetDark: "/images/content/Hero/hero1.webp 2x",
+      src: "/images/content/Hero/hero1.webp",
+      srcDark: "/images/content/Hero/hero1.webp",
       alt: "Watch",
       isImage: false
     },
-    {
-      srcSet: "/images/content/Hero/hero1.webp 2x",
-      src: "/images/content/ball.png",
-      alt: "Ball",
-      isImage: true
-    },
+    // {
+    //   srcSet: "/images/content/Hero/hero.webp 2x",
+    //   src: "/images/content/hero.webp",
+    //   alt: "Ball",
+    //   isImage: true
+    // },
     {
       srcSet: "/images/content/Hero/hero2.webp 2x",
       src: "/images/content/Hero/hero2.webp",
@@ -41,8 +41,9 @@ const Hero = ({
       isImage: true
     },
     {
-      srcSet: "/images/content/Hero/hero4.webp 2x",
-      src: "/images/content/ball-black.png",
+      srcSet: "/images/content/Hero/hero3.webp 2x",
+      src: "/images/content/Hero/hero3.webp",
+      srcDark: "/images/content/Hero/hero3.webp",
       alt: "Ball black",
       isImage: true
     }

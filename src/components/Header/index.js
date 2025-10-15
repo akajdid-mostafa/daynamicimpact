@@ -253,7 +253,7 @@ const Headers = () => {
               })}
             </div>
             <Link
-              className={cn("button-stroke button-small", styles.button)}
+              className={cn("button button-small", styles.button)}
               to="/contact"
             >
               Contactez-nous
@@ -261,7 +261,7 @@ const Headers = () => {
           </div>
         </div>
         <Link
-          className={cn("button-stroke button-small", styles.button)}
+          className={cn("button button-small", styles.button)}
           to="/contact"
         >
           Contactez-nous

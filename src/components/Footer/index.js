@@ -6,7 +6,8 @@ import Subscription from "../Subscription";
 import Theme from "../Theme";
 import Icon from "../Icon";
 import Image from "../Image";
-import { FaSquareFacebook,FaSquareXTwitter,FaSquareInstagram,FaLinkedin } from "react-icons/fa6";
+import { FaFacebookSquare, FaInstagramSquare, FaLinkedin, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaSquareXTwitter } from "react-icons/fa6";
 
 const menu = [
   {
@@ -41,12 +42,12 @@ const socials = [
   },
   {
     title: "Facebook",
-    icon: FaSquareFacebook,
+    icon: FaFacebookSquare,
     url: "https://www.facebook.com/profile.php?id=61580942150486",
   },
   {
     title: "Instagram",
-    icon: FaSquareInstagram,
+    icon: FaInstagramSquare,
     url: "https://www.instagram.com/dynamic.impact.agency/",
   },
   
@@ -103,13 +104,22 @@ const Footer = () => {
           <div className={styles.col}>
             <div className={styles.category}>contact</div>
             <div className={styles.info}>
-              <p>
-                Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38,
-                Casablanca, Morocco
-              </p>
-              {/* <p>Zackerychester</p> */}
-              {/* <p>Bahamas</p> */}
-              <p>0660434143</p>
+              
+              <div className={styles.contactItem}>
+                <FaEnvelope className={styles.contactIcon} />
+                <p>contact@dynamicimpact.ma</p>
+              </div>
+              <div className={styles.contactItem}>
+                <FaPhone className={styles.contactIcon} />
+                <p>0660434143</p>
+              </div>
+              <div className={styles.contactItem}>
+                <FaMapMarkerAlt className={styles.contactIcon} />
+                <p>
+                  Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38,
+                  Casablanca, Morocco
+                </p>
+              </div>
             </div>
           </div>
           <div className={styles.col}>

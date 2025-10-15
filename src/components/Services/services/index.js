@@ -109,7 +109,7 @@ const Services = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
           <h3 className={cn("h4", styles.title)}>{title}</h3>
           <div className={styles.info}>
              Nous aidons
-            <strong className={styles.purple}> les marques</strong> à se transformer, performer et croître grâce à des
+            <strong className={styles.purple}> les entreprises</strong> à se transformer, performer et croître grâce à des
             <strong className={styles.black}> stratégies digitales</strong> sur mesure
           </div>
         </div>
