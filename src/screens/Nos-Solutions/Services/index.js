@@ -165,13 +165,13 @@ const Services = () => {
                           </li>
                         ))}
                       </ul>
-                      {/* <Link
+                      <Link
                         className={cn("button-stroke button-small", styles.detailsButton)}
                         to={`/Nos-Solutions${x.url}`}
                       >
                         Voir les détails
                         <Icon name="arrow-right" size="10" />
-                      </Link> */}
+                      </Link>
                     </div>
                   </div>
                   <div className={styles.col}>
