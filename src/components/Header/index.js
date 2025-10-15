@@ -192,7 +192,7 @@ const Headers = () => {
             className={styles.pic}
             src="/images/logo-dark-dynamic.svg"
             srcDark="/images/Logo-white.svg"
-            alt="Fitness Pro"
+            alt="Dynamic Impact"
           />
         </Link>
         <div className={cn(styles.wrap, { [styles.active]: visibleNav })}>

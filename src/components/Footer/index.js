@@ -69,7 +69,7 @@ const Footer = () => {
                   className={styles.pic}
                   src="/images/logo-dark-dynamic.svg"
                   srcDark="/images/Logo-white.svg"
-                  alt="Fitness Pro"
+                  alt="Dynamic Impact"
                 />
               </Link>
               <Theme className={styles.theme} />
