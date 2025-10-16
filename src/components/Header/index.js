@@ -226,6 +226,13 @@ const Headers = () => {
                 </NavLink>
               )
             )}
+            <Link
+              className={cn("button button-small", styles.mobileButton)}
+              to="/contact"
+              onClick={() => setVisibleNav(false)}
+            >
+              Contactez-nous
+            </Link>
           </nav>
           <div className={styles.details}>
             <div className={styles.contact}>
@@ -252,12 +259,12 @@ const Headers = () => {
                 );
               })}
             </div>
-            <Link
+            {/* <Link
               className={cn("button button-small", styles.button)}
               to="/contact"
             >
               Contactez-nous
-            </Link>
+            </Link> */}
           </div>
         </div>
         <Link

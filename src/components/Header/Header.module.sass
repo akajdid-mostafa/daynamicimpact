@@ -59,7 +59,7 @@
         &.active
             display: flex
             +dark
-                background: $neutrals20
+                background: $neutrals1
     +t
         padding: 0 40px 64px
     +m
@@ -72,10 +72,21 @@
         +d
             background: $neutrals1
     .button
-        display: none
+        // display: none
         +m
-            display: inline-flex
-            margin-top: 48px
+            // display: block !important
+            align-items: center;
+            margin-bottom: 500px
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 12px 24px;
+            // background: ;
+            // color: $neutrals8;
+            // border-radius: 8px;
+            // text-align: center
 
 .nav
     display: flex
@@ -112,17 +123,22 @@
 
 .mobileButton
     margin: 24px 0
-    width: 100%
+    // width: 100%
+    max-width: 200px;
     text-align: center
-    display: block !important
+    align-items: center;
+    justify-content: center;
+    display: none
     padding: 12px 24px
-    background: $primary-gradient
+    background: $purplef
     color: white
     border-radius: 8px
     text-decoration: none
     font-weight: 600
-    +d
-        display: none !important
+    +m
+        display: block !important
+    &:hover
+        background: $purplef-hover
 
 .link
   display: inline-block
@@ -132,7 +148,7 @@
   color: $neutrals4
   transition: color .2s
   +dark
-    color: $neutrals20
+    color: $neutrals8
 
   &:hover
     background: $primary-gradient
@@ -153,18 +169,18 @@
     background-clip: text
     color: transparent
     +dark
-      color: $neutrals20
+      color: $neutrals8
 
   // Scrolled state - change color when user scrolls
   &.scrolled
     +dark
-      color: $neutrals20
+      color: $neutrals8
 
   // Clicked state - change color when link is clicked
   &.clicked
     color: $purple
     +dark
-      color: $neutrals20
+      color: $neutrals8
 
     
 .details
@@ -242,9 +258,11 @@
         height: 32px
         background: none
         -webkit-tap-highlight-color: rgba(0,0,0,0)
+        +dark
+            color: $neutrals8
         &.active
             +dark
-                color: $neutrals20
+                color: $neutrals8
             &:before
                 transform: translateY(0) rotate(-45deg)
             &:after
@@ -259,7 +277,9 @@
             height: 2px
             background: $neutrals4
             border-radius: 2px
-            transition: transform .2s
+            transition: transform .2s, background .2s
+            +dark
+                background: $neutrals8
         &:before
             transform: translateY(-4px)
         &:after
