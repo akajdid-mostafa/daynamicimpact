@@ -22,11 +22,7 @@ const Story = () => {
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.row}>
-          <div className={styles.col}>
-            <div className={styles.preview}>
-              <img src="/images/content/impact2.webp" alt="Story Pic" />
-            </div>
-          </div>
+          
           <div className={styles.col}>
             <div className={cn("stage-small", styles.stage)}>
               NOTRE RAISON D&apos;AVANCER
@@ -54,6 +50,11 @@ const Story = () => {
             <Link className={cn("button", styles.button)} to="/class02">
               Rejoindre l&apos;aventure
             </Link>
+          </div>
+          <div className={styles.col}>
+            <div className={styles.preview}>
+              <img src="/images/content/impact2.webp" alt="Story Pic" />
+            </div>
           </div>
         </div>
       </div>

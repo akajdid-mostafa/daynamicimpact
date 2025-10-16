@@ -24,11 +24,13 @@ import { BlogProvider } from "./context/BlogContext";
 import About from "./screens/About/index";
 import MetaTags from "./components/MetaTags";
 import ContactUs from "./screens/contact-us/index";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 
 function App() {
     return (
         <BlogProvider>
+            <GoogleAnalytics />
             <MetaTags />
             <ScrollButton/>
             <ProgressBar/>

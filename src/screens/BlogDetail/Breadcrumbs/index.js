@@ -37,7 +37,7 @@ const Breadcrumbs = ({ blogData, loading }) => {
       <div className={styles.overlay}></div>
       <div className={cn("container", styles.container)}>
         <div className={styles.wrap}>
-          <h2 className={cn("h2", styles.title)}>
+          <h2 className={cn("h3", styles.title)}>
             {loading ? "Chargement de l'article..." : (blogData?.title || "Découvrez nos insights digitaux")}
           </h2>
           {/* <div className={styles.info}>

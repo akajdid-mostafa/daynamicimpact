@@ -1,109 +1,111 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import cn from "classnames";
 import styles from "./Steps.module.sass";
+import Slider from "react-slick";
 import ScrollParallax from "../../../components/ScrollParallax";
+// import Icon from "../../../components/Icon";
 
 const items = [
   {
-    title: "Conception & Stratégie",
+    title: "Diagnostic ",
     // color: "#3772FF",
     images: "/images/icon/step1.svg",
     content:
-      "Définition des objectifs SMART, élaboration du parcours client et priorisation des fonctionnalités clés.",
+      "Nous identifions vos défis, auditons votre gouvernance et vos processus, puis ciblons les opportunités de croissance.",
   },
   {
-    title: "Architecture & Blueprint",
+    title: "Planification",
     // color: "#9757D7",
     images: "/images/icon/step2.svg",
     content:
-      "Conception du blueprint technique : flux de données, choix technologiques (site, CRM, ERP), et architecture API.",
+      "Nous concevons une stratégie sur mesure, élaborons des plans d'action détaillés, et définissons des indicateurs de succès concrets.",
   },
   {
-    title: "Implémentation MVP",
+    title: "Mise en œuvre ",
     // color: "#EF466F",
     images: "/images/icon/step3.svg",
     content:
-      "Développement du MVP (site/landing page + intégration CRM), tests essentiels et déploiement en pré-production.",
+      "Nous déployons les solutions, gérons votre projet de manière agile, et assurons une optimisation constante de vos opérations.",
   },
   {
-    title: "Adoption et Formation",
+    title: "Accompagnement",
     // color: "#45B26B",
     images: "/images/icon/step4.svg",
     content:
-      "Formation des équipes (SOP, scripts, playbooks) et déploiement d'automatisations (confirmation, rappels).",
+      "Nous formons vos équipes, transférons nos compétences, et mesurons les résultats pour un succès durable et mesurable.",
   },
 ];
 
+// const SlickArrow = ({ children, ...props }) => (
+//   <button {...props}>{children}</button>
+// );
+
 const Steps = ({ scrollToRef }) => {
-  const listRef = useRef(null);
-
-  useEffect(() => {
-    // Check if mobile and start auto-scroll
-    const isMobile = window.innerWidth <= 768;
-    let scrollInterval;
-    
-    if (isMobile && listRef.current) {
-      const startAutoScroll = () => {
-        const scrollWidth = listRef.current.scrollWidth - listRef.current.clientWidth;
-        let currentScroll = 0;
-        let isScrollingRight = true;
-        
-        scrollInterval = setInterval(() => {
-          if (isScrollingRight) {
-            currentScroll += 1;
-            listRef.current.scrollLeft = currentScroll;
-            
-            // When reach the end, start scrolling back
-            if (currentScroll >= scrollWidth) {
-              isScrollingRight = false;
-            }
-          } else {
-            currentScroll -= 1;
-            listRef.current.scrollLeft = currentScroll;
-            
-            // When reach the beginning, start scrolling forward again
-            if (currentScroll <= 0) {
-              isScrollingRight = true;
-            }
-          }
-        }, 20); // Smooth scroll speed
-      };
-
-      // Start auto-scroll after 1 second
-      setTimeout(startAutoScroll, 1000);
-    }
-
-    // Cleanup function
-    return () => {
-      if (scrollInterval) {
-        clearInterval(scrollInterval);
-      }
-    };
-  }, []);
+  const settings = {
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    // nextArrow: (
+    //   <SlickArrow>
+    //     <Icon name="arrow-next" size="14" />
+    //   </SlickArrow>
+    // ),
+    // prevArrow: (
+    //   <SlickArrow>
+    //     <Icon name="arrow-prev" size="14" />
+    //   </SlickArrow>
+    // ),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className={cn("section", styles.section)} ref={scrollToRef}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
-          <h2 className={cn("h2", styles.title)}><span className={styles.underlined}>Notre méthode</span> </h2>
+          <h2 className={cn("h3", styles.title)}><span className={styles.underlined}>Notre méthode</span> </h2>
           <div className={styles.info}>
-          Notre agence vous accompagne de l&apos;idée à la réalisation grâce à des solutions digitales innovantes et sur mesure.
+          Notre agence vous accompagne de l&apos;idée à la réalisation grâce à des solutions stratégiques et opérationnelles sur mesure.
           </div>
         </div>
-        <div className={styles.list} ref={listRef}>
-          {items.map((x, index) => (
-            <ScrollParallax className={styles.item} key={index}>
-              <div
-                className={styles.preview}
-                // style={{ backgroundColor: x.color }}
-              >
-                <img src={x.images} alt={`Step ${index}`} />
-              </div>
-              <div className={styles.number}>Etape {index + 1}</div>
-              <div className={styles.subtitle}>{x.title}</div>
-              <div className={styles.content}>{x.content}</div>
-            </ScrollParallax>
-          ))}
+        
+        <div className={styles.wrap}>
+          <Slider className="steps-slider" {...settings}>
+            {items.map((x, index) => (
+              <ScrollParallax className={styles.slide} key={index}>
+                <div className={cn("steps-item", styles.item)}>
+                  <div className={styles.preview}>
+                    <img src={x.images} alt={`Step ${index}`} />
+                  </div>
+                  <div className={styles.number}>Etape {index + 1}</div>
+                  <div className={styles.subtitle}>{x.title}</div>
+                  <div className={styles.content}>{x.content}</div>
+                </div>
+              </ScrollParallax>
+            ))}
+          </Slider>
         </div>
       </div>
     </div>

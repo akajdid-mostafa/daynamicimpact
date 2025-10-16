@@ -13,25 +13,25 @@ const MetaTags = () => {
       switch (path) {
         case '/':
           metaData = {
-            title: 'Dynamic Impact - Agence Digitale Casablanca | Transformation Digitale',
-            description: 'Agence digitale à Casablanca spécialisée en transformation digitale, marketing digital, développement web et création de sites web. Accompagnement personnalisé pour votre croissance digitale.',
-            keywords: 'agence digitale, Casablanca, transformation digitale, marketing digital, développement web, création site web, SEO, social media, automatisation, formation digitale, coaching digital, Maroc'
+            title: 'Dynamic Impact - Agence Digitale & Conseil Casablanca | Transformation Digitale',
+            description: 'Agence digitale et de conseil à Casablanca. Transformation digitale, audits stratégiques, solutions sur-mesure et accompagnement des entreprises vers la croissance. Découvrez nos services et demandez votre analyse gratuite.',
+            keywords: 'agence digitale, conseil, Casablanca, transformation digitale, audit stratégique, solutions sur-mesure, accompagnement entreprise, croissance, mission, vision, valeurs, avantages concurrentiels, Maroc'
           };
           break;
 
         case '/about':
           metaData = {
-            title: 'À Propos - Dynamic Impact | Notre Équipe d\'Experts Digitaux',
-            description: 'Découvrez Dynamic Impact, votre partenaire de confiance en transformation digitale à Casablanca. Notre équipe d\'experts vous accompagne dans votre projet digital.',
-            keywords: 'à propos, équipe, experts digitaux, Casablanca, agence digitale, transformation digitale, expérience, compétences, Maroc'
+            title: 'Notre Impact & À Propos - Dynamic Impact | Mission, Vision & Valeurs',
+            description: 'Découvrez l\'ADN de Dynamic Impact : mission, vision, valeurs et approche centrée sur la transparence, l\'innovation et l\'engagement. Témoignages clients, études de cas et preuves d\'impact pour rassurer et inspirer confiance.',
+            keywords: 'notre impact, à propos, mission, vision, valeurs, transparence, innovation, engagement, témoignages clients, études de cas, méthodes de travail, preuves d\'impact, confiance, Casablanca, Maroc'
           };
           break;
 
         case '/Nos-Solutions':
           metaData = {
-            title: 'Nos Solutions Digitales - Dynamic Impact | Services Complets',
-            description: 'Découvrez nos solutions digitales complètes : transformation digitale, création de sites web, marketing digital, gestion réseaux sociaux, automatisation et formation.',
-            keywords: 'solutions digitales, services, transformation digitale, création site web, marketing digital, réseaux sociaux, automatisation, formation, coaching, Casablanca'
+            title: 'Nos Solutions - Dynamic Impact | Prestations Digitales Complètes',
+            description: 'Présentation détaillée de nos prestations : audit stratégique, transformation digitale, intégration d\'outils (CRM, ERP, automatisations), marketing digital, développement web/app, performance et conformité. Solutions adaptées aux besoins des entreprises marocaines.',
+            keywords: 'solutions, prestations, audit stratégique, transformation digitale, intégration outils, CRM, ERP, automatisations, marketing digital, développement web, développement app, performance, conformité, entreprises marocaines, valeur mesurable, Casablanca'
           };
           break;
 
@@ -85,25 +85,19 @@ const MetaTags = () => {
 
         case '/blog':
           metaData = {
-            title: 'Blog Digital - Dynamic Impact | Conseils & Actualités Digitales',
-            description: 'Découvrez nos articles sur la transformation digitale, le marketing digital, le développement web et les dernières tendances technologiques.',
-            keywords: 'blog digital, articles, conseils, actualités, transformation digitale, marketing digital, développement web, tendances, technologie, Casablanca'
+            title: 'Ressources & Blog - Dynamic Impact | Hub de Contenus Éducatifs',
+            description: 'Hub de contenus éducatifs : articles de blog, études, guides pratiques et FAQ sur la transformation digitale, le marketing et la croissance d\'entreprise. Pensé pour le SEO et asseoir l\'expertise de l\'agence.',
+            keywords: 'ressources, blog, contenus éducatifs, articles, études, guides pratiques, FAQ, transformation digitale, marketing, croissance entreprise, SEO, expertise agence, Casablanca, Maroc'
           };
           break;
 
-        case '/pricing':
-          metaData = {
-            title: 'Tarifs & Prix - Dynamic Impact | Solutions Digitales Accessibles',
-            description: 'Découvrez nos tarifs pour nos solutions digitales. Packages personnalisés pour la transformation digitale, création de sites web et marketing digital.',
-            keywords: 'tarifs, prix, solutions digitales, packages, transformation digitale, création site web, marketing digital, devis, Casablanca, Maroc'
-          };
-          break;
+        
 
         case '/contact':
           metaData = {
-            title: 'Contact - Dynamic Impact | Agence Digitale Casablanca',
-            description: 'Contactez Dynamic Impact pour vos projets digitaux. Devis gratuit, consultation personnalisée. Agence digitale à Casablanca, Maroc.',
-            keywords: 'contact, devis gratuit, consultation, agence digitale, Casablanca, Maroc, projet digital, accompagnement, experts'
+            title: 'Contact - Dynamic Impact | Devis Gratuit & Consultation',
+            description: 'Page incitant à la prise de contact rapide : formulaire, coordonnées, adresse, liens sociaux. Pour demande de devis, diagnostic ou consultation stratégique. Contactez-nous pour vos projets digitaux.',
+            keywords: 'contact, devis gratuit, consultation, diagnostic, consultation stratégique, formulaire, coordonnées, adresse, liens sociaux, projet digital, Casablanca, Maroc'
           };
           break;
 

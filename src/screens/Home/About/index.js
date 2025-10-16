@@ -58,7 +58,7 @@ const About = () => {
             <div className={cn("stage", styles.stage)}>À PROPOS DE NOUS</div>
           </div>
           <div className={styles.col}>
-            <h2 className={cn("h2", styles.title)}>
+            <h2 className={cn("h3", styles.title)}>
               Une Stratégie Ciblée, un Succès Garanti
             </h2>
             <div className={styles.info}>

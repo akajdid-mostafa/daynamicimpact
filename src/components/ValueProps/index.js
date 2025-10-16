@@ -6,7 +6,7 @@ import Image from "../Image";
 
 // Default data for ValueProps component
 const defaultValuePropsData = {
-  stage: "CONSEIL STRATÉGIQUE & OPÉRATIONNEL",
+  // stage: "CONSEIL STRATÉGIQUE & OPÉRATIONNEL",
   title: "Des Services Axés sur les Résultats pour Votre Croissance",
   items: [
     {
@@ -40,9 +40,9 @@ const ValueProps = ({
     <div className={cn(className, styles.section)}>
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
-          <div className={cn("stage-small", styles.stage)}>
+          {/* <div className={cn("stage-small", styles.stage)}>
             {stage}
-          </div>
+          </div> */}
           <div className={cn("h2", styles.title)}>
             {title}
           </div>

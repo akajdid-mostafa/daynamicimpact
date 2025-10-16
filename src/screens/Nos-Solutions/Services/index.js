@@ -1,7 +1,6 @@
 import React from "react";
 import cn from "classnames";
 import { Link } from "react-router-dom";
-import Slider from "react-slick";
 import styles from "./Services.module.sass";
 import Icon from "../../../components/Icon";
 import ScrollParallax from "../../../components/ScrollParallax";
@@ -87,40 +86,7 @@ const items = [
   },
 ];
 
-const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
-  <button {...props}>{children}</button>
-);
-
 const Services = () => {
-  const settings = {
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true,
-    nextArrow: (
-      <SlickArrow>
-        <Icon name="arrow-next" size="14" />
-      </SlickArrow>
-    ),
-    prevArrow: (
-      <SlickArrow>
-        <Icon name="arrow-prev" size="14" />
-      </SlickArrow>
-    ),
-    responsive: [
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 100000,
-        settings: "unslick",
-      },
-    ],
-  };
 
   return (
     <section id="services">
@@ -128,12 +94,12 @@ const Services = () => {
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
           <div className={cn("stage-small", styles.stage)}>Nos Solutions</div>
-          <h2 className={cn("h2", styles.title)}>Solutions Digitales Complètes</h2>
+          <h2 className={cn("h3", styles.title)}>Solutions Digitales Complètes</h2>
           <div className={styles.info}>
             Découvrez comment Dynamic Impact transforme votre présence en ligne en un moteur de croissance durable avec des résultats mesurables.
           </div>
           <Link
-            className={cn("button-stroke", styles.button)}
+            className={cn("button ", styles.button)}
             to="/contact"
           >
             <span>Demander un audit</span>
@@ -141,53 +107,48 @@ const Services = () => {
           </Link>
         </div>
         <div className={styles.wrap}>
-          <Slider
-            className={cn("lifestyle-slider", styles.slider)}
-            {...settings}
-          >
-            {items.map((x, index) => (
-              <ScrollParallax className={styles.item} key={index}>
-                <div className={styles.row}>
-                  <div className={styles.col}>
-                    <div className={styles.details}>
-                      <div className={styles.number}>0{index + 1}.</div>
-                      <div className={styles.category}>{x.title}</div>
-                      <div className={styles.content}>{x.content}</div>
-                      <ul className={styles.points}>
-                        {x.points.map((point, pointIndex) => (
-                          <li 
-                            key={pointIndex} 
-                            className={styles.point}
-                            style={{ animationDelay: `${pointIndex * 0.1}s` }}
-                          >
-                            <Icon name="check" size="16" className={styles.checkIcon} />
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-                      {/* <Link
-                        className={cn("button-stroke button-small", styles.detailsButton)}
-                        to={`/Nos-Solutions${x.url}`}
-                      >
-                        Voir les détails
-                        <Icon name="arrow-right" size="10" />
-                      </Link> */}
-                    </div>
-                  </div>
-                  <div className={styles.col}>
-                    <br />
-                    <br />
-                    <br />
-                    <img
-                      srcSet={`${x.image2x} 2x`}
-                      src={x.image}
-                      alt="Solutions Digitales"
-                    />
+          {items.map((x, index) => (
+            <ScrollParallax className={styles.item} key={index}>
+              <div className={styles.row}>
+                <div className={styles.col}>
+                  <br />
+                  <br />
+                  <br />
+                  <img
+                    srcSet={`${x.image2x} 2x`}
+                    src={x.image}
+                    alt="Solutions Digitales"
+                  />
+                </div>
+                <div className={styles.col}>
+                  <div className={styles.details}>
+                    {/* <div className={styles.number}>0{index + 1}.</div> */}
+                    <div className={styles.category}>{x.title}</div>
+                    <div className={styles.content}>{x.content}</div>
+                    <ul className={styles.points}>
+                      {x.points.map((point, pointIndex) => (
+                        <li 
+                          key={pointIndex} 
+                          className={styles.point}
+                          style={{ animationDelay: `${pointIndex * 0.1}s` }}
+                        >
+                          <Icon name="check" size="16" className={styles.checkIcon} />
+                          <span>{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {/* <Link
+                      className={cn("button-stroke button-small", styles.detailsButton)}
+                      to={`/Nos-Solutions${x.url}`}
+                    >
+                      Voir les détails
+                      <Icon name="arrow-right" size="10" />
+                    </Link> */}
                   </div>
                 </div>
-              </ScrollParallax>
-            ))}
-          </Slider>
+              </div>
+            </ScrollParallax>
+          ))}
         </div>
       </div>
     </div>

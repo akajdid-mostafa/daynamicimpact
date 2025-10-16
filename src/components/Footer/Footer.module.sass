@@ -139,6 +139,17 @@
     +dark
         color: $neutrals20
 
+.phoneLink,
+.emailLink,
+.mapLink
+    color: inherit
+    text-decoration: none
+    transition: color .2s
+    &:hover
+        color: $purple
+        +dark
+            color: $purple-light
+
 .foot
     padding: 25px 0 20px
     border-top: 1px solid $neutrals6

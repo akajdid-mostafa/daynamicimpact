@@ -107,17 +107,32 @@ const Footer = () => {
               
               <div className={styles.contactItem}>
                 <FaEnvelope className={styles.contactIcon} />
-                <p>contact@dynamicimpact.ma</p>
+                <p>
+                  <a href="mailto:contact@dynamicimpact.ma" className={styles.emailLink}>
+                    contact@dynamicimpact.ma
+                  </a>
+                </p>
               </div>
               <div className={styles.contactItem}>
                 <FaPhone className={styles.contactIcon} />
-                <p>0660434143</p>
+                <p>
+                  <a href="tel:+212660434143" className={styles.phoneLink}>
+                    0660434143
+                  </a>
+                </p>
               </div>
               <div className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.contactIcon} />
                 <p>
-                  Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38,
-                  Casablanca, Morocco
+                  <a 
+                    href="https://maps.app.goo.gl/62SaNxku43sSR4RZ8" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={styles.mapLink}
+                  >
+                    Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38,
+                    Casablanca, Morocco
+                  </a>
                 </p>
               </div>
             </div>

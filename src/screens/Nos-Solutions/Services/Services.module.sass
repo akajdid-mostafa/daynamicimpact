@@ -26,24 +26,27 @@
         width: 100%
 
 .wrap
+    display: flex
+    flex-direction: column
+    gap: 80px
+    +t
+        gap: 60px
     +m
+        gap: 48px
         margin: 0 -12px
 
 .item
-    &:not(:last-child)
-        margin-bottom: 112px
-        +t
-            margin-bottom: 80px
-        +m
-            margin-bottom: 0
+    // Remove margin-bottom since we're using gap in .wrap
 
 .row
     display: flex
     align-items: center
     margin: 0 -16px
+    flex-direction: row-reverse
     +m
-        flex-direction: column-reverse
+        flex-direction: column
         margin: 0
+        // Mobile: content first, image second
 
 .col
     flex: 0 0 calc(50% - 32px)
@@ -65,7 +68,7 @@
         +d
             padding-top: 0
         +m
-            margin-top: 48px
+            margin-top: 0
 
 .details
     max-width: 460px

@@ -5,54 +5,36 @@ import Item from "./Item";
 
 const items = [
   {
-    title: "Quels services propose Dynamic Impact ?",
+    title: "Qu'est-ce qui distingue Dynamic Impact des autres agences de conseil ?",
     answer:
-      "Nous concevons et déployons des écosystèmes marketing & opérationnels : audit, stratégie, site web & e-commerce, intégration CRM/ERP, automatisations, production photo/vidéo, formation d’équipes et gestion marketing continue (retainer).",
+      "Nous combinons le conseil stratégique et l'expertise en solutions digitales pour garantir une exécution alignée avec votre stratégie globale.",
   },
   {
     title:
-      "Combien de temps faut-il pour voir des résultats ?",
+      "Où est située l'agence Dynamic Impact ? ",
     answer:
-      "Les « quick wins » apparaissent souvent en 2–6 semaines (optimisation GMB, landing conversion, campagnes locales). Les résultats durables (SEO, adoption CRM, hausse du LTV) se mesurent sur 3–6 mois selon le périmètre.",
+      "Notre cabinet est basé à Casablanca, et nous accompagnons les entreprises et les dirigeants sur l'ensemble du territoire marocain.",
   },
   {
-    title: "Qu’est-ce que contient l’audit initial ? Est-il payant ?",
+    title: "Quels types d'entreprises accompagnez-vous ? ",
     answer:
-      "L’audit (phase Discovery) inclut workshop, collecte d’accès, diagnostic technique & opérationnel et roadmap 90 jours. Il est payant et permet d’obtenir un chiffrage ferme et une feuille de route priorisée.",
+      "Nous travaillons avec des entreprises de toutes tailles, des PME aux grands comptes, qui cherchent à optimiser leur croissance, leur gouvernance et leur performance à l'ère du numérique.",
   },
   {
-    title: "Combien de temps dure un contrat retainer ?",
+    title: "Comment débute un partenariat avec votre cabinet ? ",
     answer:
-      "Nous recommandons un engagement minimum de 6 mois pour permettre l’adoption, l’optimisation et la mesure réelle des résultats. Les conditions sont négociables selon le scope.",
+      "Tout commence par un diagnostic stratégique. Nous analysons vos défis et vos modèles actuels pour définir ensemble une feuille de route claire et sur mesure.",
   },
   {
-    title: "Pouvez-vous intégrer nos outils existants (POS, ERP, caisse) ?",
+    title: "Proposez-vous des solutions pour la transformation digitale ? ",
     answer:
-      "Oui, nous nous connectons aux systèmes via API, webhooks ou outils d’automatisation (Make / Zapier). La complexité dépendra des accès et de la documentation des systèmes ; la phase de diagnostic permet d’évaluer précisément l’effort.",
-  },
-  {
-    title:
-      "Qui possède les livrables (photos, code, contenus) ?",
-    answer:
-      "Après paiement intégral, les livrables (images, vidéos, textes, code source) sont cédés au client selon les modalités du contrat. Certaines licences tierces (musique, plugins payants) restent gérées séparément.",
+      "Oui. Nous gérons la transformation digitale de A à Z, incluant l'intégration de systèmes (ERP/Data), l'optimisation des processus et la formation des équipes.",
   },
   {
     title:
-      "Comment mesurez-vous le succès d'un projet ?",
+      "Vos services incluent-ils la gestion des risques ? ",
     answer:
-      "Nous définissons 3 KPIs prioritaires au démarrage (ex : réservations directes, taux conversion, CAC) et suivons via GA4, CRM et dashboards partagés. Reporting mensuel et points d'optimisation réguliers.",
-  },
-  {
-    title:
-      "Quel est votre délai moyen pour une landing / MVP ?",
-    answer:
-      "Pour une landing optimisée + intégration basique CRM : 2–4 semaines selon validations client et fourniture des contenus.",
-  },
-  {
-    title:
-      "Offrez-vous une garantie de résultats ?",
-    answer:
-      "Nous garantissons la qualité de la livraison. Les résultats commerciaux dépendent aussi de facteurs externes ; nous préférons fixer des objectifs mesurables et des paliers de performance dans le contrat.",
+      "Absolument. Nous aidons à établir une gouvernance solide et proposons des services de management des risques et conformité pour sécuriser votre activité.",
   },
 ];
 
@@ -66,7 +48,7 @@ const FaqDigital = () => {
           <div className={cn("stage-small", styles.stage)}>
             apprenez comment commencer
           </div>
-          <h2 className={cn("h2", styles.title)}>
+          <h2 className={cn("h3", styles.title)}>
             Questions Fréquemment Posées
           </h2>
           <div className={styles.info}>

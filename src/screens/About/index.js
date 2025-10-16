@@ -59,7 +59,7 @@ const AboutPage = () => {
       <Story />
       <ValueProps 
         className="section"
-        stage="UN PARTENARIAT DURABLE REPOSE SUR DES VALEURS SIMPLES ET CONCRÈTES"
+        // stage="UN PARTENARIAT DURABLE REPOSE SUR DES VALEURS SIMPLES ET CONCRÈTES"
         title="Nos principes, Un cadre simple et efficace"
         items={[
           {

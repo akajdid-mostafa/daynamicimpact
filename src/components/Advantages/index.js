@@ -41,12 +41,12 @@ const Advantages = () => {
           <span className={styles.stage}>NOS ATOUTS</span>
           <h2 className={styles.title}>Pourquoi nous choisir</h2>
           <p className={styles.info}>
-            Nous ne livrons pas seulement des outils : nous construisons le
-            contexte  process et formation  qui les rend réellement efficaces.
-            Notre méthode est pragmatique : MVP rapides, preuves d&apos;impact et
-            montée en charge maîtrisée. Nous assurons un accompagnement terrain
-            avec formation et SOP incluses pour garantir l&apos;adoption et maximiser
-            le ROI.
+            Nous ne livrons pas seulement des solutions : nous construisons un
+            écosystème qui combine la stratégie, la gouvernance et le digital
+            pour des résultats durables. Notre méthode est pragmatique : un
+            audit stratégique rapide, un plan d&apos;action sur mesure et un
+            accompagnement terrain pour garantir l&apos;adoption et maximiser votre
+            performance.
           </p>
         </div>
 

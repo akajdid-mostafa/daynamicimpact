@@ -124,7 +124,7 @@ const Blog = () => {
       <div className={cn("container", styles.container)}>
         <div className={styles.wrapper}>
           <div className={styles.head}>
-            <h4 className={cn("h3", styles.title)}>
+            <h4 className={cn("h4", styles.title)}>
               Dynamic Impact | Guides & études sur l&apos;écosystème marketing
             </h4>
             <div className={styles.info}>

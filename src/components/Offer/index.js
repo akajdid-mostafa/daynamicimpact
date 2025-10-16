@@ -10,7 +10,7 @@ const Offer = ({ className }) => {
         <div className={cn("stage", styles.stage)}>
           DEMANDE D'ANALYSE STRATÉGIQUE 
         </div>
-        <h2 className={cn("h1", styles.title)}>
+        <h2 className={cn("h3", styles.title)}>
           Agence de Marketing et de Conseil Stratégique
         </h2>
         <div className={styles.text}>
