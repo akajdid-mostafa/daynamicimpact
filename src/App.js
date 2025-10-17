@@ -3,17 +3,11 @@ import "./styles/app.sass";
 import Page from "./components/Page";
 import Home from "./screens/Home";
 import Solutions from "./screens/Nos-Solutions";
-// import Pricing from "./screens/Pricing";
-// import Download from "./screens/Download";
 import Blog from "./screens/Blog";
 import BlogDetail from "./screens/BlogDetail";
-// import Lifestyle from "./screens/Lifestyle";
-// import Article from "./screens/Article";
 import Contact from "./screens/Contact";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import ScrollButton from "./components/ScrollButton/index";
-// import Class02 from "./screens/Class02";
-// import Class02Details from "./screens/Class02Details";
 import StrategieTransformationDigitale from "./screens/StrategieTransformationDigitale";
 import CreationSiteWebSEO from "./screens/CreationSiteWebSEO";
 import GestionCroissanceReseauxSociauxSocialMedia from "./screens/GestionCroissanceReseauxSociauxSocialMedia";
@@ -23,6 +17,7 @@ import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFor
 import { BlogProvider } from "./context/BlogContext";
 import About from "./screens/About/index";
 import MetaTags from "./components/MetaTags";
+import StructuredData from "./components/StructuredData";
 import ContactUs from "./screens/contact-us/index";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
@@ -32,6 +27,7 @@ function App() {
         <BlogProvider>
             <GoogleAnalytics />
             <MetaTags />
+            <StructuredData />
             <ScrollButton/>
             <ProgressBar/>
             <Routes>
@@ -95,38 +91,6 @@ function App() {
                             </Page>
                         }
                     />
-                    {/* <Route
-                        path="lifestyle"
-                        element={
-                            <Page>
-                                <Lifestyle />
-                            </Page>
-                        }
-                    /> */}
-                    {/* <Route
-                        path="article"
-                        element={
-                            <Page>
-                                <Article />
-                            </Page>
-                        }
-                    /> */}
-                    {/* <Route
-                        path="class02"
-                        element={
-                            <Page>
-                                <Class02 />
-                            </Page>
-                        }
-                    /> */}
-                    {/* <Route
-                        path="class02-details"
-                        element={
-                            <Page>
-                                <Class02Details />
-                            </Page>
-                        }
-                    /> */}
                     <Route
                         path="contact"
                         element={

@@ -31,60 +31,12 @@ const navLinks = [
     content: {
       menu: [
         {
-          title: "Program Videos",
-          url: "/class01",
-          image: "/images/menu-video.svg",
-        },
-        {
-          title: "Premium Class",
-          url: "/class02",
-          image: "/images/menu-class.svg",
+          
         },
       ],
       links: [
         {
-          title: "Sales & Marketing Alignment",
-          url: "/class01-details",
-          image: "/images/Blog/Blog1.jpg",
-          image2x: "/images/Blog/Blog1.jpg",
-          category: "black",
-          categoryText: "Blog en vedette",
-          content:
-            "Sweet and Tone is a seven-day bodyweight training program designed to boost your strength and endurance over the course of a week.",
-          level: "green",
-          levelText: "Général",
-        },
-        {
-          title: "Sales & Marketing Alignment",
-          url: "/class01-details",
-          image: "/images/Blog/Blog2.png",
-          image2x: "/images/Blog/Blog2.png",
-          category: "green",
-          categoryText: "Marketing Digital",
-        },
-        {
-          title: "Sales & Marketing Alignment",
-          url: "/class01-details",
-          image: "/images/Blog/Blog3.webp",
-          image2x: "/images/Blog/Blog3.webp",
-          category: "purple",
-          categoryText: "esign & Développement",
-        },
-        {
-          title: "Sales & Marketing Alignment",
-          url: "/class01-details",
-          image: "/images/Blog/Blog4.webp",
-          image2x: "/images/Blog/Blog4.webp",
-          category: "red",
-          categoryText: "Collaboration",
-        },
-        {
-          title: "Sales & Marketing Alignment",
-          url: "/class01-details",
-          image: "/images/Blog/Blog4.webp",
-          image2x: "/images/Blog/Blog4.webp",
-          category: "red",
-          categoryText: "Collaboration",
+          
         },
       ],
     },
@@ -190,8 +142,8 @@ const Headers = () => {
         >
           <Image
             className={styles.pic}
-            src="/images/LOGO_COLORS.webp"
-            srcDark="/images/LOGO_BLACK.webp"
+            src="/images/logo-dynamicimpact.webp"
+            srcDark="/images/logo-dynamicimpact-black.webp"
             alt="Dynamic Impact"
           />
         </Link>

@@ -13,9 +13,9 @@ const MetaTags = () => {
       switch (path) {
         case '/':
           metaData = {
-            title: 'Dynamic Impact - Agence Digitale & Conseil Casablanca | Transformation Digitale',
-            description: 'Agence digitale et de conseil à Casablanca. Transformation digitale, audits stratégiques, solutions sur-mesure et accompagnement des entreprises vers la croissance. Découvrez nos services et demandez votre analyse gratuite.',
-            keywords: 'agence digitale, conseil, Casablanca, transformation digitale, audit stratégique, solutions sur-mesure, accompagnement entreprise, croissance, mission, vision, valeurs, avantages concurrentiels, Maroc'
+            title: 'Dynamic Impact Advertising | Business Ecosystems & Marketing Strategy Agency',
+            description: 'Dynamic Impact aide les entreprises à transformer la complexité en clarté grâce à la stratégie, la digitalisation et l\'intelligence des données.',
+            keywords: 'agence digitale, conseil, Casablanca, transformation digitale, audit stratégique, solutions sur-mesure, accompagnement entreprise, croissance, mission, vision, valeurs, avantages concurrentiels, Maroc, écosystèmes marketing, stratégie business'
           };
           break;
 
@@ -38,8 +38,8 @@ const MetaTags = () => {
         case '/Nos-Solutions/strategie-transformation-digitale':
           metaData = {
             title: 'Stratégie Transformation Digitale - Dynamic Impact | Accompagnement Expert',
-            description: 'Transformez votre entreprise avec notre stratégie de transformation digitale personnalisée. Audit, conseil et accompagnement par nos experts à Casablanca.',
-            keywords: 'transformation digitale, stratégie digitale, audit digital, conseil, accompagnement, entreprise, Casablanca, Maroc, innovation, technologie'
+            description: 'Nous concevons une stratégie digitale globale pour transformer vos défis en leviers de croissance durable. Audit stratégique, conseil et accompagnement par nos experts à Casablanca.',
+            keywords: 'stratégie transformation digitale, audit stratégique, conseil digital, accompagnement entreprise, croissance durable, Casablanca, Maroc, innovation, technologie, vision digitale'
           };
           break;
 
@@ -111,9 +111,9 @@ const MetaTags = () => {
             };
           } else {
             metaData = {
-              title: 'Dynamic Impact - Agence Digitale Casablanca',
-              description: 'Agence digitale à Casablanca spécialisée en transformation digitale, marketing digital et développement web.',
-              keywords: 'agence digitale, Casablanca, transformation digitale, marketing digital, développement web, Maroc'
+              title: 'Dynamic Impact Advertising | Business Ecosystems & Marketing Strategy Agency',
+              description: 'Dynamic Impact aide les entreprises à transformer la complexité en clarté grâce à la stratégie, la digitalisation et l\'intelligence des données.',
+              keywords: 'agence digitale, Casablanca, transformation digitale, marketing digital, développement web, Maroc, écosystèmes marketing, stratégie business'
             };
           }
       }
@@ -149,7 +149,7 @@ const MetaTags = () => {
 
       const ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) {
-        ogUrl.setAttribute('content', `https://digital-impact-kappa.vercel.app${path}`);
+        ogUrl.setAttribute('content', `https://www.dynamicimpact.ma${path}`);
       }
 
       // Update Twitter tags

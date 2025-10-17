@@ -67,8 +67,8 @@ const Footer = () => {
               <Link className={styles.logo} to="/">
                 <Image
                   className={styles.pic}
-                  src="/images/LOGO_COLORS.webp"
-                  srcDark="/images/LOGO_BLACK.webp"
+                  src="/images/logo-dynamicimpact.webp"
+                  srcDark="/images/logo-dynamicimpact-black.webp"
                   alt="Dynamic Impact"
                 />
               </Link>
