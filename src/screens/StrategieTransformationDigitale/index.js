@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -127,14 +127,14 @@ const StrategieTransformationDigitale = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Audit stratégique offert"
         title="Passez à l'étape supérieure"
         text="Nous vous offrons un audit personnalisé pour identifier vos leviers de croissance digitale."
         buttonText="Réserver un audit"
         buttonLink="/contact"
         className="section"
-      />
+      /> */}
     </>
   );
 };

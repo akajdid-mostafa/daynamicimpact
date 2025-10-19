@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -127,13 +127,13 @@ const AutomatisationSolutionsDigitalesSurMesure = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Session Découverte Offerte - 30 min 🎓"
         title="Accélérez votre montée en compétence"
         text="Profitez d’une session gratuite pour évaluer vos besoins et bâtir ensemble votre plan de formation."
         buttonText="Planifier votre session"
         buttonLink="/contact"
-      />
+      /> */}
     </>
   );
 };

@@ -6,7 +6,7 @@ import styles from "./about.module.sass";
 import Story from "../../components/Story";
 import Hero from "../../components/Hero";
 import ValueProps from "../../components/ValueProps";
-import Offer from "../../components/Offer";
+// import Offer from "../../components/Offer";
 import Advantages from "../../components/Advantages";
 import Faq from "../../components/Faq";
 
@@ -81,7 +81,7 @@ const AboutPage = () => {
       />
       <Advantages />
       <Faq />
-      <Offer className="section" />
+      {/* <Offer className="section" /> */}
       <div >
         <div className={cn("container", styles.container)}>
           

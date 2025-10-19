@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -127,13 +127,13 @@ const ProductionContenuMarque = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Séance Créative Gratuite - 30 min 🎥"
         title="Faites rayonner votre marque"
         text="Donnez vie à votre message avec des contenus visuels et éditoriaux de qualité professionnelle."
         buttonText="Planifier une séance"
         buttonLink="/contact"
-      />
+      /> */}
     </>
   );
 };

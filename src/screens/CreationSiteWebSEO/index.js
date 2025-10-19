@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -127,14 +127,14 @@ const CreationSiteWebSEO = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Devis personnalisé en 24h"
         title="Votre site, votre succès"
         text="Un site rapide, esthétique et bien référencé : la base de votre visibilité en ligne."
         buttonText="Demander un devis"
         buttonLink="/contact"
         className="section"
-      />
+      /> */}
     </>
   );
 };

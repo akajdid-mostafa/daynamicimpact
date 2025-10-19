@@ -21,7 +21,7 @@ import Faq from "../../components/Faq";
 // import Programs from "../../components/Programs";
 import Blog from "../../components/Blog";
 import Services from "../../components/Services/services";
-import Offer from "../../components/Offer";
+// import Offer from "../../components/Offer";
 // import Multisites from "../../components/Multisites";
 // import Succes from "../../components/Succes";
 // import Sucees from "../../components/sucees";
@@ -74,7 +74,7 @@ const Home = () => {
       
       {/* <History/> */}
       {/* <Join /> */}
-      <Offer className="section-border-top" />
+      {/* <Offer className="section-border-top" /> */}
 
     </>
   );

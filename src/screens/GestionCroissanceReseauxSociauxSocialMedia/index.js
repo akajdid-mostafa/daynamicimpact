@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -127,13 +127,13 @@ const GestionCroissanceReseauxSociauxSocialMedia = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Audit Social Gratuit - 30 min 📊"
         title="Boostez votre notoriété et vos ventes"
         text="Nous gérons vos réseaux sociaux pour transformer vos abonnés en clients fidèles."
         buttonText="Demander un audit"
         buttonLink="/contact"
-      />
+      /> */}
     </>
   );
 };

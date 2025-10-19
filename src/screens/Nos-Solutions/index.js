@@ -9,7 +9,7 @@ import ValueProps from "../../components/ValueProps";
 // import Clients from "../../components/Clients";
 // import Workouts from "../../components/Workouts";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Offer";
+// import Offer from "../../components/Offer";
 import Services from "./Services";
 import Faq from "../../components/Faq";
 // import Services from "../../components/Services/services";
@@ -30,7 +30,7 @@ const Features = () => {
       <Services />
       {/* <Advantages /> */}
       <Faq />
-      <Offer className="section" />
+      {/* <Offer className="section" /> */}
     </>
   );
 };

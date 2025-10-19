@@ -9,7 +9,7 @@ import ValueProps from "../../components/Solution/ValueProps/index";
 // import Clients from "../../components/Clients";
 import Workouts from "../../components/Solution/Workouts/index";
 // import Advantages from "../../components/Advantages";
-import Offer from "../../components/Solution/Offer/index";
+// import Offer from "../../components/Solution/Offer/index";
 // import Lifestyle from "./Lifestyle";
 import Faq from "../../components/Faq";
 
@@ -126,14 +126,14 @@ const AccompagnementFormationDigitaleCoaching = () => {
       {/* <Advantages /> */}
       {/* <Offer className="section" /> */}
       <Faq />
-      <Offer
+      {/* <Offer
         stage="Audit Gratuit - 30 min 🚀"
         title="Agence Marketing Digital au Maroc - Résultats Garantis"
         text="Boostez votre visibilité en ligne avec Dynamic Impact. SEO, Google Ads et sites web performants pour votre croissance."
         buttonText="Audit gratuit"
         buttonLink="/download"
         className="section"
-      />
+      /> */}
     </>
   );
 };
