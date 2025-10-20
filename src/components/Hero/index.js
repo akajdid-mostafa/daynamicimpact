@@ -5,7 +5,6 @@ import styles from "./Hero.module.sass";
 import Image from "../Image";
 
 const Hero = ({ 
-  scrollToRef,
   stage = "Votre marque, irrésistible en ligne",
   title = "Dynamic Impact",
   titleHighlight = "Agence marketing",
@@ -56,7 +55,7 @@ const Hero = ({
           <div className={cn("stage", styles.stage)}>
             {stage}
           </div>
-          <h1 className={cn("h2", styles.title)}>
+          <h1 className={cn("h3", styles.title)}>
             {title}
             <span className={styles.underlined}>{titleHighlight}</span> {titleSuffix}
           </h1>
@@ -67,12 +66,12 @@ const Hero = ({
             <Link className={cn("button", styles.button)} to={primaryButton.to}>
               {primaryButton.text}
             </Link>
-            <Link
+            {/* <Link
               className={cn("button-stroke", styles.button)}
               to={secondaryButton.to}
             >
               {secondaryButton.text}
-            </Link>
+            </Link> */}
           </div>
         </div>
 

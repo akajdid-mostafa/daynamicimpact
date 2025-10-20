@@ -46,15 +46,29 @@
         min-height: auto
         padding: 64px 0 152px
 
+.container
+    display: flex
+    align-items: center
+    gap: 60px
+    +d
+        gap: 40px
+    +t
+        gap: 30px
+    +m
+        flex-direction: column
+        gap: 40px
+        align-items: stretch
+
 .wrap
     position: relative
     z-index: 3
     max-width: 450px
+    flex: 1
     +t
         max-width: 340px
     +m
         max-width: 100%
-        margin-bottom: 80px
+        flex: none
 
 .title
     margin-bottom: 20px
@@ -85,17 +99,17 @@
     +dark
         color: $neutrals20
 
-.btns
-    display: flex
-    gap: 16px
-    flex-wrap: wrap
-    +t
-        gap: 12px
-    +m
-        display: flex
-        flex-direction: column
-        gap: 12px
-        width: 100%
+// .btns
+    // display: flex
+    // gap: 16px
+    // flex-wrap: wrap
+    // +t
+    //     gap: 12px
+    // +m
+    //     display: flex
+    //     flex-direction: column
+    //     gap: 12px
+    //     width: 100%
 
 .button
     flex: 1
@@ -121,30 +135,18 @@
         bottom: 64px
 
 .gallery
-    position: absolute
-    top: 50%
-    right: calc(50% - 465px)
+    position: relative
     width: 612px
     max-width: 90vw
-    transform: translateY(-58%)
+    flex: 1
     pointer-events: none
     +x
-        right: calc(40% - 425px)
         width: min(650px, 80vw)
     +d
-        right: calc(30% - 465px)
         width: min(420px, 70vw)
     +t
-        right: calc(35% - 270px)
         width: min(420px, 60vw)
-        transform: translateY(-50%)
     +m
-        position: relative
-        top: auto
-        right: auto
-        left: 0
-        margin: 40px auto 0
-        transform: translate(0, 0)
         width: 100%
         max-width: 400px
         pointer-events: all
@@ -153,7 +155,7 @@
     &:first-child
         position: relative
         z-index: 2
-    // &:nth-child(2)
+    // &:nth-child(4)
     //     top: -20%
     //     left: -15%
     //     z-index: 3

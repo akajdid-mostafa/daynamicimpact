@@ -13,7 +13,7 @@ const Hero = ({ scrollToRef }) => {
           <div className={cn("stage", styles.stage)}>
             Solutions Digitales Complètes
           </div>
-          <h1 className={cn("h2", styles.title)}>
+          <h1 className={cn("h3", styles.title)}>
             Agence de Marketing et de Conseil Stratégique
           </h1>
           <div className={styles.text}>
@@ -27,19 +27,23 @@ const Hero = ({ scrollToRef }) => {
             <Link className={cn("button", styles.button)} to="/contact">
               Demande Audit 
             </Link>
-            <Link
+            <a
               className={cn("button-stroke", styles.button)}
-              to="/nos-solutions/#services"
+              href="#services"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('services')?.scrollIntoView({ 
+                  behavior: 'smooth' 
+                });
+              }}
             >
               Nos Services
-            </Link>
+            </a>
           </div>
         </div>
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet="/images/content/hero-sulution.webp 2x"
-              srcSetDark="/images/content/hero-sulution.webp 2x"
               src="/images/content/hero-sulution.webp"
               srcDark="/images/content/hero-sulution.webp"
               alt="Dynamic Impact - Agence Marketing Digital"

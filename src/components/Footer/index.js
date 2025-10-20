@@ -140,8 +140,7 @@ const Footer = () => {
           <div className={styles.col}>
             <div className={styles.category}>lettre d&apos;information</div>
             <div className={styles.info}>
-              Abonnez-vous à notre newsletter pour obtenir davantage de cours et
-              de ressources gratuits sur le design.
+              Abonnez-vous pour recevoir nos conseils stratégiques et insights sur la transformation digitale.
             </div>
             <Subscription
               className={styles.subscription}
@@ -153,7 +152,7 @@ const Footer = () => {
       <div className={styles.foot}>
         <div className={cn("container", styles.container)}>
           <div className={styles.copyright}>
-            Copyright © 2025.Dynamic Impact Tous droits réservés.
+            Copyright © 2025.Dynamic Impact Advertising Tous droits réservés.
           </div>
           <div className={styles.socials}>
             {socials.map((x, index) => {

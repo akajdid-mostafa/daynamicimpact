@@ -12,7 +12,7 @@ const Hero = ({ scrollToRef }) => {
           <div className={cn("stage", styles.stage)}>
             CRÉER UN SYSTÈME. CONSTRUIRE L'AVENIR.
           </div>
-          <h1 className={cn("h2", styles.title)}>
+          <h1 className={cn("h3", styles.title)}>
             Nous transformons votre entreprise en
             <span className={styles.underlined}>
               accélérant
@@ -40,31 +40,20 @@ const Hero = ({ scrollToRef }) => {
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet="/images/content/Hero/hero1.webp 2x"
-              srcSetDark="/images/content/Hero/hero1.webp 2x"
               src="/images/content/Hero/hero1.webp"
               srcDark="/images/content/Hero/hero1.webp"
-              alt="Watch"
+              alt="Hero 1"
             />
           </div>
-          {/* <div className={styles.preview}>
-            <img
-              srcSet="/images/content/Hero/hero1.webp 2x"
-              src="/images/content/ball.png"
-              alt="Ball"
-            />
-          </div> */}
           <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero2.webp 2x"
-              src="/images/content/Hero/hero2.webp"
               alt="Bottle"
             />
           </div>
           <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero3.webp 2x"
-              src="/images/content/Hero/hero3.webp"
               alt="Ball black"
             />
           </div>

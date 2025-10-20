@@ -52,10 +52,9 @@ const FaqDigital = () => {
             Questions Fréquemment Posées
           </h2>
           <div className={styles.info}>
-            Vous avez une question ou besoin d’assistance ? Consultez notre FAQ
+            Vous avez une question ou besoin d&apos;assistance ? Consultez notre FAQ
             ou contactez notre équipe de support pour obtenir des réponses
             rapides et fiables.
-            <a href="/contact">Contacter le support</a>
           </div>
         </div>
         <div className={styles.list}>
