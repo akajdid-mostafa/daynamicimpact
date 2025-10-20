@@ -20,13 +20,11 @@ const ProductionContenuMarque = () => {
     <>
       <Hero
         scrollToRef={scrollToRef}
-        stage="Créativité & Impact"
-        title="Production de Contenu"
-        text="Nous créons des contenus puissants et mémorables qui renforcent votre image de marque et captivent votre audience."
-        primaryButtonText="Demander un shooting"
+        stage="PERFORMANCE & MESURE"
+        title="Pilotez votre performance avec clarté"
+        text="Nous concevons des systèmes de pilotage et de mesure de la performance qui transforment vos données en leviers de décision stratégique."
+        primaryButtonText="Demander un audit"
         primaryButtonLink="/contact"
-        secondaryButtonText="Voir nos réalisations"
-        secondaryButtonLink="/projects"
         mainImage={{
           src: "/images/content/all-service.svg",
           srcSet: "/images/content/all-service.svg 2x",
@@ -49,9 +47,9 @@ const ProductionContenuMarque = () => {
 
       <Intro
         scrollToRef={scrollToRef}
-        title="Des histoires qui marquent"
-        text="Nous produisons des contenus visuels et textuels adaptés à votre identité, votre marché et vos objectifs marketing."
-        buttonText="Créer votre contenu"
+        title="Mesurez, optimisez et progressez"
+        text="Nous identifions les indicateurs clés de votre activité, mettons en place des outils de suivi adaptés et assurons un pilotage continu pour garantir une performance durable et mesurable."
+        buttonText="Discutons de votre projet"
         buttonLink="/contact"
         image={{
           src: "/images/content/boost.svg",
@@ -62,25 +60,25 @@ const ProductionContenuMarque = () => {
       {/* <ValueProps className="section-pb" /> */}
       <ValueProps
         className="section-pb"
-        stage="Nos Expertises"
-        title="Ce que nous créons pour vous"
+        stage="NOS EXPERTISES"
+        title="Ce que nous faisons pour vous"
         items={[
           {
-            title: "Photo & Vidéo",
+            title: "Tableaux de bord & KPIs",
             content:
-              "Shooting professionnels, vidéos promotionnelles et interviews de marque.",
+              "Nous concevons des tableaux de bord dynamiques et des indicateurs personnalisés pour suivre vos performances en temps réel.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path d="M12 4.5L10.5 8.5 6.5 9.5l3 2.9-.7 4.1L12 14.5l3.2 2-.7-4.1 3-2.9-4-.5L12 4.5z"/></svg>',
           },
           {
-            title: "Design & Graphisme",
+            title: "Audit de performance",
             content:
-              "Création de visuels percutants pour vos réseaux, sites web et campagnes.",
+              "Nous évaluons vos processus, vos outils et vos pratiques pour identifier les freins et opportunités d’amélioration.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/><path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>',
           },
           {
-            title: "Rédaction & Storytelling",
+            title: "Reporting stratégique & financier",
             content:
-              "Articles, scripts et textes qui donnent vie à votre message.",
+              "Nous construisons des rapports automatisés et fiables pour éclairer vos décisions et renforcer votre gouvernance.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>',
           },
         ]}
@@ -90,18 +88,18 @@ const ProductionContenuMarque = () => {
       {/* <Review className="section-pb64" /> */}
       {/* <Clients /> */}
       <Workouts
-        title="Renforcez votre image de marque"
-        highlight="notre approche"
-        info="Nous transformons vos idées en contenus engageants qui captivent et convertissent."
+        title="Des leviers pour "
+        highlight="une performance durable"
+        info="La performance se pilote par la clarté, la mesure et l’action. Voici ce que nous mettons en place pour assurer votre succès :"
         items={[
-          "Définition du concept créatif",
-          "Shooting photo & tournage vidéo",
-          "Montage et retouche professionnelle",
-          "Rédaction et optimisation SEO",
-          "Publication multicanale",
+          "Mise en place de tableaux de bord décisionnels",
+          "Définition et suivi des KPIs stratégiques",
+          "Audit de performance et analyse des écarts",
+          "Reporting automatisé et visualisation des données",
+          "Accompagnement  à la prise de décision",
         ]}
-        primaryButtonText="Commencer maintenant"
-        secondaryButtonText="Voir notre portfolio"
+        primaryButtonText="Démarrer votre pilotage"
+        secondaryButtonText="Voir nos études de cas"
         primaryButtonLink="/contact"
         images={[
           {

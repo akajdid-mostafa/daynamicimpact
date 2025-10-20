@@ -20,9 +20,9 @@ const GestionCroissanceReseauxSociauxSocialMedia = () => {
     <>
       <Hero
         scrollToRef={scrollToRef}
-        stage="Présence & Engagement"
-        title="Gestion des Réseaux Sociaux"
-        text="Nous transformons vos réseaux sociaux en un levier puissant de notoriété et de conversion grâce à des stratégies créatives et ciblées."
+        stage="GOUVERNANCE & RISQUES"
+        title="Sécurisez votre croissance avec une gouvernance solide"
+        text="Nous vous aidons à construire une structure de gouvernance claire et à maîtriser les risques pour assurer la conformité, la transparence et la pérennité de votre organisation."
         primaryButtonText="Demander un audit social"
         primaryButtonLink="/contact"
         secondaryButtonText="Voir nos campagnes"

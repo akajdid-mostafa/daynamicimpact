@@ -42,8 +42,8 @@ const Hero = ({ scrollToRef }) => {
             <Image
               srcSet="/images/content/Hero/hero1.webp 2x"
               srcSetDark="/images/content/Hero/hero1.webp 2x"
-              src="/images/content/Hero/hero.webp"
-              srcDark="/images/content/Hero/hero.webp"
+              src="/images/content/Hero/hero1.webp"
+              srcDark="/images/content/Hero/hero1.webp"
               alt="Watch"
             />
           </div>

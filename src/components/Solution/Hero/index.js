@@ -35,12 +35,12 @@ const Hero = ({
             <Link className={cn("button", styles.button)} to={primaryButtonLink || "/download"}>
               {primaryButtonText || "Audit Gratuit"}
             </Link>
-            <Link
+            {/* <Link
               className={cn("button-stroke", styles.button)}
               to={secondaryButtonLink || "/class02-details"}
             >
               {secondaryButtonText || "Nos Services"}
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className={styles.gallery}>

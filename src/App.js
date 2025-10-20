@@ -8,10 +8,10 @@ import BlogDetail from "./screens/BlogDetail";
 import Contact from "./screens/Contact";
 import ProgressBar from "./components/ProgressBar/ProgressBar";
 import ScrollButton from "./components/ScrollButton/index";
-import StrategieTransformationDigitale from "./screens/StrategieTransformationDigitale";
-import CreationSiteWebSEO from "./screens/CreationSiteWebSEO";
-import GestionCroissanceReseauxSociauxSocialMedia from "./screens/GestionCroissanceReseauxSociauxSocialMedia";
-import ProductionContenuMarque from "./screens/ProductionContenuMarque";
+import StrategieTransformationDigitale from "./screens/TransformationDigitale";
+import StrategieConseil from "./screens/StrategieConseil";
+import PerformanceMesure from "./screens/PerformanceMesure";
+import GouvernanceRisques from "./screens/GouvernanceRisques";
 import AutomatisationSolutionsDigitalesSurMesure from "./screens/AutomatisationSolutionsDigitalesSur-Mesure";
 import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFormationDigitaleCoaching";
 import { BlogProvider } from "./context/BlogContext";
@@ -100,7 +100,7 @@ function App() {
                         }
                     />
                     <Route
-                        path="Nos-Solutions/strategie-transformation-digitale"
+                        path="Nos-Solutions/transformation-digitale"
                         element={
                             <Page>
                                 <StrategieTransformationDigitale />
@@ -108,26 +108,26 @@ function App() {
                         }
                     />
                      <Route
-                        path="Nos-Solutions/creation-site-web"
+                        path="Nos-Solutions/strategie-conseil"
                         element={
                             <Page>
-                                <CreationSiteWebSEO />
+                                <StrategieConseil />
                             </Page>
                         }
                     />
                     <Route
-                        path="Nos-Solutions/gestion-reseaux-sociaux"
+                        path="Nos-Solutions/performance-mesure"
                         element={
                             <Page>
-                                <GestionCroissanceReseauxSociauxSocialMedia />
+                                <PerformanceMesure />
                             </Page>
                         }
                     />
                     <Route
-                        path="Nos-Solutions/production-contenu-marque"
+                        path="Nos-Solutions/gouvernance-risques"
                         element={
                             <Page>
-                                <ProductionContenuMarque />
+                                <GouvernanceRisques />
                             </Page>
                         }
                     />
