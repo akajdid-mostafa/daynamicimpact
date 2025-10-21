@@ -4,7 +4,6 @@ import { MdMarkEmailRead, MdPhoneInTalk, MdLocationOn } from "react-icons/md";
 import Breadcrumbs from "./Breadcrumbs";
 import cn from "classnames";
 
-
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -29,13 +28,13 @@ const Contact = () => {
         name: formData.name,
         email: formData.email,
         number: formData.phone,
-        message: formData.message
+        message: formData.message,
       };
 
       const res = await fetch("https://email-lemon-pi.vercel.app/api/dynamic", {
         method: "POST",
-        headers: { 
-          "Content-Type": "application/json" 
+        headers: {
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(emailData),
       });
@@ -64,22 +63,23 @@ const Contact = () => {
     <div>
       <Breadcrumbs />
       <div className={styles.contactWrapper}>
-         {/* INTRO */}
-         <div className={styles.intro}>
-           <p className={styles.introDesc}>
-             Besoin d'un accompagnement digital personnalisé ? Notre équipe d'experts 
-             en transformation digitale, marketing digital et développement web vous 
-             accompagne dans votre projet. Contactez-nous pour un devis gratuit et 
-             une consultation personnalisée.
-           </p>
-         </div>
+        <div className={styles.intro}>
+          <h2 className={cn("h3", styles.title)}>Contactez Dynamic Impact</h2>
+          <p className={styles.introDesc}>
+            Vous cherchez à clarifier vos décisions et accélérer vos résultats ?
+            Nous vous aidons à transformer votre stratégie, vos processus
+            digitaux et votre performance pour atteindre vos
+            objectifs.<strong>Contactez-nous dès maintenant</strong> pour discuter de votre
+            projet et des solutions adaptées.
+          </p>
+        </div>
 
         {/* CONTACT CARDS */}
         <div className={styles.cards}>
           <ContactCard
             icon={<MdLocationOn className={styles.icon} />}
             title="Adresse"
-            description="Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38, Casablanca, Morocco"
+            description="Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38, Casablanca, Morocco"
             link="https://maps.app.goo.gl/VyAELKEnQyZBrGrf7"
             linkText="Voir sur Google Maps"
           />
@@ -99,8 +99,8 @@ const Contact = () => {
           />
         </div>
 
-         {/* BUSINESS HOURS & CTA */}
-         {/* <div className={styles.businessInfo}>
+        {/* BUSINESS HOURS & CTA */}
+        {/* <div className={styles.businessInfo}>
            <div className={styles.hours}>
              <h3>Horaires de contact</h3>
              <p>Lun–Ven : 09:00 – 18:00 • Sam : sur RDV • Dimanche : fermé</p>

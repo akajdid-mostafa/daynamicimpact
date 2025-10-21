@@ -8,6 +8,9 @@
   max-width: 1200px // Slightly reduced max-width
   margin: 0 auto
   margin-bottom: 70px
+  +dark
+    background: $neutrals1
+    color: $neutrals8
 
 // HERO - Keep as is for now, as it's commented out
 .hero
@@ -27,6 +30,19 @@
   display: flex
   align-items: center
   justify-content: center
+
+
+.title
+    // max-width: 600px
+    margin: 0 auto
+    // margin-top: 40px
+    text-align: center
+    // font-size: 40px
+    // font-weight: 500
+    margin-bottom: 20px
+    color: $neutrals3
+    +dark
+        color: $neutrals8
 
 .heroTitle
   color: #fff
@@ -70,9 +86,20 @@
   box-shadow: 0 8px 24px rgba(0,0,0,.08) // Softer, more diffuse shadow
   text-align: center
   transition: transform .3s ease, box-shadow .3s ease
+  display: flex
+  flex-direction: column
+  height: 100%
+  +dark
+    background: $neutrals2
+    box-shadow: 0 8px 24px rgba(0,0,0,.3)
+    border: 1px solid $neutrals3
   &:hover
     transform: translateY(-5px)
     box-shadow: 0 12px 32px rgba(0,0,0,.12)
+    +dark
+      box-shadow: 0 12px 32px rgba(0,0,0,.4)
+  +dark
+            filter: drop-shadow(0 0 20px rgba(194, 148, 234, 0.1))
 
 .cardHeader
   display: flex
@@ -85,38 +112,67 @@
   font-size: 1.5rem // Larger title font
   font-weight: 700 // Consistent bold weight
   color: $purplef
+  +dark
+    color: $purple-light
 
 .cardDesc
   color: $neutrals4 // Use neutrals color
   margin-bottom: 1.5rem // More spacing
   font-size: 1rem // Standard font size
+  flex-grow: 1 // Take up available space
+  +dark
+    color: $neutrals6
 
 .cardLink
   font-weight: 600 // Slightly less bold for link
   color: $purple // Use blue for links
   transition: color .3s, transform .3s
   text-decoration: none // Remove underline
+  margin-top: auto // Push to bottom
+  +dark
+    color: $purple-light
   &:hover
     color: $purple-light // Hover color
     transform: translateY(-2px) // Subtle hover effect
+    +dark
+      color: $purple
 
 .icon
   font-size: 2rem // Larger icon size
   color: $purplef // Use blue for icons
+  +dark
+    color: $purple-light
 
 // BOTTOM SECTION
 .bottom
-   
   display: grid
   grid-template-columns: 1fr 1fr
   margin-bottom: 4rem
   gap: 3rem // Increased gap
+  +dark
+    background: $neutrals1
+    padding: 2rem
+    border-radius: 1.5rem
+    border: 1px solid $neutrals3
   @media(max-width: 768px)
     grid-template-columns: 1fr
+
+.mapSection
+  position: relative
+  +dark
+    background: $neutrals2
+    border-radius: 1rem
+    border: 1px solid $neutrals3
+    box-shadow: 0 8px 24px rgba(0,0,0,.3)
+    overflow: hidden
 
 .mapSection iframe
   border-radius: 1rem // Rounded corners for map
   box-shadow: 0 8px 24px rgba(0,0,0,.08) // Softer shadow
+  +dark
+    filter: invert(1) hue-rotate(180deg) contrast(0.8)
+    border-radius: 1rem
+    box-shadow: none
 
 .socialBlock
   margin-top: 1.5rem // More spacing
@@ -167,6 +223,14 @@
   @media(max-width: 768px)
     grid-template-columns: 1fr
 
+.form
+  +dark
+    background: $neutrals2
+    padding: 2rem
+    border-radius: 1.5rem
+    border: 1px solid $neutrals3
+    box-shadow: 0 8px 24px rgba(0,0,0,.3)
+
 .form input,
 .form select,
 .form textarea
@@ -174,15 +238,30 @@
   border-radius: .75rem // More rounded corners
   border: 1px solid $neutrals6 // Lighter border
   font-size: 1.05rem // Slightly larger font size
+  font-family: inherit // Use the same font as the rest of the site
   width: 100%
   background: $neutrals9 // Lighter input background
   color: $neutrals2 // Input text color
+  transition: all 0.3s ease
+  +dark
+    background: $neutrals3
+    border-color: $neutrals4
+    color: $neutrals8
+    box-shadow: 0 2px 8px rgba(0,0,0,.2)
   &:focus
     outline: none
     border-color: $blue // Focus highlight
     box-shadow: 0 0 0 3px rgba($blue, 0.2)
+    +dark
+      border-color: $purple-light
+      box-shadow: 0 0 0 3px rgba($purple-light, 0.2), 0 4px 12px rgba(0,0,0,.3)
+      background: $neutrals2
   &::placeholder
     color: $neutrals4 // Placeholder color
+    font-family: inherit // Use the same font family for placeholders
+    font-weight: 400 // Normal weight for placeholders
+    +dark
+      color: $neutrals5
 
 
 // Business Info Section
@@ -242,6 +321,8 @@
   left: 50%
   transform: translateX(-50%)
   background: $purplef// Using a success-oriented gradient
+  +dark
+    background: $purple-light
   color: $white
   padding: 1.2rem 2.5rem
   border-radius: .75rem
@@ -258,3 +339,13 @@
   cursor: pointer
   transition: all .3s ease
   box-shadow: 0 4px 12px rgba($purple, 0.2)
+  +dark
+    background: linear-gradient(135deg, $purple-light, $purple)
+    box-shadow: 0 4px 12px rgba($purple-light, 0.3)
+    border: 1px solid $purple-light
+  &:hover
+    transform: translateY(-2px)
+    box-shadow: 0 8px 20px rgba($purple, 0.3)
+    +dark
+      box-shadow: 0 8px 20px rgba($purple-light, 0.4)
+      background: linear-gradient(135deg, $purple, $purple-light)
