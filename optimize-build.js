@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('🚀 Optimizing Dynamic Impact build for production...');
+console.log('📦 Targeting modern browsers to reduce bundle size...');
 
 // Function to copy .htaccess to build directory
 function copyHtaccess() {
@@ -50,6 +51,8 @@ function optimizeBuild() {
   console.log('2. Ensure your server supports .htaccess (Apache) or use nginx.conf (Nginx)');
   console.log('3. Test your website with PageSpeed Insights');
   console.log('4. Verify cache headers are working with browser dev tools');
+  console.log('\n💡 For ultra-modern browsers (saves ~9KB):');
+  console.log('   Run: npm run build:ultra');
 }
 
 // Run optimization
