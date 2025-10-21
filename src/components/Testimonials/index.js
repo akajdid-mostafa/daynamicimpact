@@ -90,7 +90,7 @@ const Trainer = ({ className }) => {
               key={index}
             >
               <div className={styles.avatar}>
-                <img src={x.avatar} alt="Avatar" />
+                <img src={x.avatar} alt={`Photo de ${x.name} - Témoignage Dynamic Impact`} />
               </div>
               <div className={styles.details}>
                 <div className={styles.man}>{x.name}</div>

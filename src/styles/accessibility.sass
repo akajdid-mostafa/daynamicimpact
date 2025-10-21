@@ -1,0 +1,56 @@
+// Accessibility improvements for better contrast and usability
+
+// Ensure minimum contrast ratios
+.text-muted
+  color: $neutrals3 !important // Better contrast than neutrals4/5
+
+.text-light
+  color: $neutrals2 !important // Better contrast for light backgrounds
+
+// Form labels should have good contrast
+.label
+  color: $neutrals2
+  font-weight: 600
+  margin-bottom: 8px
+  display: block
+  
+  +dark
+    color: $neutrals8
+
+// Focus indicators for better keyboard navigation
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+a:focus
+  outline: 2px solid $blue
+  outline-offset: 2px
+
+// Skip link for keyboard users
+.skip-link
+  position: absolute
+  top: -40px
+  left: 6px
+  background: $blue
+  color: $white
+  padding: 8px
+  text-decoration: none
+  z-index: 1000
+  
+  &:focus
+    top: 6px
+
+// High contrast mode support
+@media (prefers-contrast: high)
+  .text-muted
+    color: $neutrals2 !important
+    
+  .text-light
+    color: $neutrals1 !important
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce)
+  *
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important

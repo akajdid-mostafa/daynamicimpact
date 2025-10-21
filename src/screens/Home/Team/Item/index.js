@@ -13,7 +13,7 @@ const Item = ({ item, className }) => {
         onClick={() => setVisibleModal(true)}
       >
         <div className={styles.avatar}>
-          <img src={item.image} alt="Avatar" />
+          <img src={item.image} alt={`${item.name} - Équipe Dynamic Impact`} />
         </div>
         <div className={styles.man}>{item.name}</div>
         <div className={styles.position}>{item.position}</div>

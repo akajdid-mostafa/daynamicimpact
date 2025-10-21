@@ -9,7 +9,7 @@ const Item = ({ item }) => {
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.logo}>
-            <img src={item.logo} alt="Logo" />
+            <img src={item.logo} alt={`Logo ${item.company} - Partenaire Dynamic Impact`} />
           </div>
           <div className={styles.content}>“ {item.comment} “</div>
           <div className={styles.details}>

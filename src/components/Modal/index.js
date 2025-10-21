@@ -40,14 +40,26 @@ const Modal = ({
 
     return createPortal(
         visible && (
-            <div className={styles.modal} id="modal">
+            <div 
+                className={styles.modal} 
+                id="modal"
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="modal-title"
+            >
                 <div className={cn(styles.outer, outerClassName)}>
                     <OutsideClickHandler onOutsideClick={onClose}>
                         <div
                             className={cn(styles.container, containerClassName)}
+                            role="document"
                         >
                             {children}
-                            <button className={styles.close} onClick={onClose}>
+                            <button 
+                                className={styles.close} 
+                                onClick={onClose}
+                                aria-label="Fermer la fenêtre"
+                                type="button"
+                            >
                                 <Icon name="close" size="14" />
                             </button>
                         </div>

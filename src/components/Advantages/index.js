@@ -39,7 +39,7 @@ const Advantages = () => {
       <div className={cn("container", styles.container)}>
         <div className={styles.head}>
           <span className={styles.stage}>NOS ATOUTS</span>
-          <h2 className={styles.title}>Pourquoi nous choisir</h2>
+          <h2 className={cn("h2", styles.title)}>Pourquoi nous choisir</h2>
           <p className={styles.info}>
             Nous ne livrons pas seulement des solutions : nous construisons un
             écosystème qui combine la stratégie, la gouvernance et le digital
@@ -56,7 +56,7 @@ const Advantages = () => {
               <div className={styles.preview}>
                 <img srcSet={`${x.image2x} 2x`} src={x.image} alt="Avantages Dynamic Impact - Marketing digital et transformation" />
               </div>
-              <h3 className={styles.subtitle}>{x.title}</h3>
+              <h3 className={cn("h3", styles.subtitle)}>{x.title}</h3>
               <p className={styles.description}>{x.description}</p>
               {x.keyword && <div className={styles.keyword}></div>}
             </ScrollParallax>

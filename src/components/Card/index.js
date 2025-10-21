@@ -10,7 +10,7 @@ const Card = ({ className, item }) => {
     <ScrollParallax className={cn(styles.card, className)}>
       <Link className={styles.link} to={item.url}>
         <div className={styles.preview}>
-          <img srcSet={`${item.image2x} 2x`} src={item.image} alt="Card pic" />
+          <img srcSet={`${item.image2x} 2x`} src={item.image} alt={`${item.title} - Dynamic Impact`} />
           <div
             className={styles.category}
           >
@@ -25,7 +25,7 @@ const Card = ({ className, item }) => {
         <div className={styles.head}>
           <div className={styles.user}>
             {/* <div className={styles.avatar}>
-              <img src={item.avatar} alt="Avatar" />
+              <img src={item.avatar} alt={`Photo de ${item.name} - Équipe Dynamic Impact`} />
             </div> */}
             <div className={styles.details}>
               <div className={styles.title}>{item.title}</div>

@@ -135,59 +135,69 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className={styles.form}>
             {/* <h2 className={styles.formTitle}>Formulaire de contact</h2> */}
             <div className={styles.formRow}>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Votre nom"
-                required
-              />
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Téléphone"
-                required
-              />
+              <div className={styles.fieldGroup}>
+                <label htmlFor="contact-name" className={styles.label}>
+                  Votre nom *
+                </label>
+                <input
+                  id="contact-name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Votre nom complet"
+                  required
+                  aria-describedby="name-error"
+                />
+              </div>
+              <div className={styles.fieldGroup}>
+                <label htmlFor="contact-phone" className={styles.label}>
+                  Téléphone *
+                </label>
+                <input
+                  id="contact-phone"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+212 6XX XXX XXX"
+                  required
+                  aria-describedby="phone-error"
+                />
+              </div>
             </div>
             <div className={styles.formmail}>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                required
-              />
-              {/* <select
-                name="service"
-                value={formData.service}
-                onChange={handleChange}
-                required
-              >
-                <option value="0" disabled>
-                  Choisissez un service
-                </option>
-                <option value="Nettoyage All">Tous services</option>
-                <option value="Façades">Nettoyage des façades</option>
-                <option value="Panneaux solaires">
-                  Nettoyage panneaux solaires
-                </option>
-                <option value="Électricité">Réparations électriques</option>
-                <option value="Plomberie">Réparations d’eau</option>
-                <option value="Insectes">Destruction des nuisibles</option>
-              </select> */}
+              <div className={styles.fieldGroup}>
+                <label htmlFor="contact-email" className={styles.label}>
+                  Adresse email *
+                </label>
+                <input
+                  id="contact-email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="votre@email.com"
+                  required
+                  aria-describedby="email-error"
+                />
+              </div>
             </div>
-            <textarea
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              placeholder="Votre message"
-              rows="4"
-              required
-            />
+            <div className={styles.fieldGroup}>
+              <label htmlFor="contact-message" className={styles.label}>
+                Votre message *
+              </label>
+              <textarea
+                id="contact-message"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                placeholder="Décrivez votre projet ou vos besoins..."
+                rows="4"
+                required
+                aria-describedby="message-error"
+              />
+            </div>
             <button type="submit" className={cn("button", styles.buttonn)}>
               Envoyer
             </button>

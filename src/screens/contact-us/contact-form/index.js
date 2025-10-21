@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import cn from "classnames";
 import styles from "./contact-form.module.css";
-import Dropdown from "../../../components/ui/dropdown";
 import Socials from "../../../components/socials";
 import mock from "../../../constants/mock";
 
@@ -72,41 +71,77 @@ const ContactForm = ({ options = mock.options }) => {
           <div className={styles.col}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.wrapper}>
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="Name"
-                className={styles.textfield}
-                required
-              />
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="Email"
-                className={styles.textfield}
-                required
-              />
+              <div className={styles.fieldGroup}>
+                <label htmlFor="name" className={styles.label}>
+                  Nom complet *
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Votre nom complet"
+                  className={styles.textfield}
+                  required
+                  aria-describedby="name-error"
+                />
+              </div>
+              <div className={styles.fieldGroup}>
+                <label htmlFor="email" className={styles.label}>
+                  Adresse email *
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="votre@email.com"
+                  className={styles.textfield}
+                  required
+                  aria-describedby="email-error"
+                />
+              </div>
             </div>
 
             <div className={styles.wrapper}>
-              <input
-                type="tel"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                placeholder="Phone number"
-                className={styles.textfield}
-                required
-              />
-              <Dropdown
-                placeholder="Select an option"
-                className={styles.dropdown}
-                options={options}
-              />
+              <div className={styles.fieldGroup}>
+                <label htmlFor="phone" className={styles.label}>
+                  Téléphone *
+                </label>
+                <input
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="+212 6XX XXX XXX"
+                  className={styles.textfield}
+                  required
+                  aria-describedby="phone-error"
+                />
+              </div>
+              <div className={styles.fieldGroup}>
+                <label htmlFor="service" className={styles.label}>
+                  Service souhaité
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  value={formData.service}
+                  onChange={handleChange}
+                  className={styles.textfield}
+                  aria-describedby="service-help"
+                >
+                  <option value="">Choisissez un service</option>
+                  {options.map((option) => (
+                    <option key={option.value} value={option.value}>
+                      {option.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </div>
 
             <textarea
