@@ -24,14 +24,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:prod": "GENERATE_SOURCEMAP=false react-scripts build",
-    "build:modern": "BROWSERSLIST_CONFIG=.browserslistrc.modern GENERATE_SOURCEMAP=false react-scripts build",
+    "build:modern": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "analyze": "npm run build && npx webpack-bundle-analyzer build/static/js/*.js",
     "serve": "serve -s build -l 3000",
     "optimize": "node optimize-build.js",
+    "optimize:images": "node optimize-images.js",
     "build:optimized": "npm run build:prod && npm run optimize",
-    "build:ultra": "npm run build:modern && npm run optimize"
+    "build:ultra": "npm run build:modern && npm run optimize",
+    "build:complete": "npm run build:ultra && npm run optimize:images"
   },
   "eslintConfig": {
     "extends": [
