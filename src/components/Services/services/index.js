@@ -12,7 +12,7 @@ const items = [
     url: "/Nos-Solutions/strategie-transformation-digitale",
     // color: "#45B26B",
     image: "/images/icon/strategie-conseil.svg",
-    alt: "user",
+    alt: "Stratégie et conseil Dynamic Impact - Marketing digital",
     content:
       "Aligner votre vision et planifier votre croissance durable.",
   },
@@ -21,7 +21,7 @@ const items = [
     url: "/Nos-Solutions/creation-site-web",
     // color: "#9757D7",
     image: "/images/icon/transformation-digitalisation.svg",
-    alt: "medal",
+    alt: "Transformation digitale Dynamic Impact - Marketing et advertising",
     content:
       "Optimiser vos processus et intégrer des solutions digitales.",
   },
@@ -122,7 +122,7 @@ const Services = ({ classNameTitle, title, classNameSection, scrollToRef }) => {
                     className={styles.icon}
                     style={{ backgroundColor: x.color }}
                   >
-                    <img src={x.image} alt={x.alt} />
+                    <img src={x.image} alt={`${x.alt} - Dynamic Impact marketing digital`} />
                   </div>
                   <div className={styles.subtitle}>{x.title}</div>
                   <div className={styles.content}>{x.content}</div>

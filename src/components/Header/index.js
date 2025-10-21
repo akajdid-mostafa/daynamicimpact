@@ -144,7 +144,7 @@ const Headers = () => {
             className={styles.pic}
             src="/images/logo-dynamicimpact.webp"
             srcDark="/images/logo-dynamicimpact-black.webp"
-            alt="Dynamic Impact"
+            alt="Dynamic Impact - Agence marketing digital et transformation"
           />
         </Link>
         <div className={cn(styles.wrap, { [styles.active]: visibleNav })}>

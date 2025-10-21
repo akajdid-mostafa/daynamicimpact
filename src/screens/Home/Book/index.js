@@ -11,14 +11,14 @@ const items = [
     title: "Identité Visuelle",
     // color: "#45B26B",
     images: "/images/icon/identite-visuel.svg",
-    alt: "branding",
+    alt: "Icône identité visuelle Dynamic Impact - Services de branding et marketing digital",
     content: "Création de logos, chartes graphiques et univers visuels uniques",
   },
   {
     title: "Marketing Digital",
     // color: "#9757D7",
     images: "/images/icon/marketing-digital.svg",
-    alt: "marketing",
+    alt: "Icône marketing digital Dynamic Impact - Services de publicité et transformation",
     content:
       "Stratégies social media, publicité en ligne et génération de leads",
   },
@@ -26,7 +26,7 @@ const items = [
     title: "Développement Web & App",
     // color: "#3772FF",
     images: "/images/icon/developpement.svg",
-    alt: "code",
+    alt: "Icône développement web Dynamic Impact - Solutions digitales et impact",
     content: "Sites vitrines, e-commerce et applications sur mesure",
   },
 ];
@@ -42,7 +42,7 @@ const Book = () => {
               srcSetDark="/images/content/book.webp 2x"
               src="/images/content/book.webp"
               srcDark="/images/content/book.webp"
-              alt="Book pic"
+              alt="Livre Dynamic Impact présentant les solutions marketing digital et transformation"
             />
           </div>
           {/* <ScrollParallax
@@ -53,7 +53,7 @@ const Book = () => {
             <img
               srcSet="/images/content/book2.webp 2x"
               src="/images/content/book2.webp"
-              alt="Ball"
+              alt="Illustration des solutions digitales Dynamic Impact en marketing et impact"
             />
           </ScrollParallax> */}
           {/* <ScrollParallax
@@ -64,7 +64,7 @@ const Book = () => {
             <img
               srcSet="/images/content/advanced.svg 2x"
               src="/images/content/advanced.svg"
-              alt="Ball"
+              alt="Illustration des solutions digitales Dynamic Impact en marketing et impact"
             />
           </ScrollParallax> */}
           {/* <ScrollParallax
@@ -75,7 +75,7 @@ const Book = () => {
             <img
               srcSet="/images/content/dumbbells@2x.png 2x"
               src="/images/content/dumbbells.png"
-              alt="Dumbbells"
+              alt="Illustration de la performance marketing Dynamic Impact en digital et advertising"
             />
           </ScrollParallax> */}
         </div>

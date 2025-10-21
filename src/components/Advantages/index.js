@@ -54,7 +54,7 @@ const Advantages = () => {
           {items.map((x, index) => (
             <ScrollParallax className={styles.item} key={index}>
               <div className={styles.preview}>
-                <img srcSet={`${x.image2x} 2x`} src={x.image} alt="Equipment" />
+                <img srcSet={`${x.image2x} 2x`} src={x.image} alt="Avantages Dynamic Impact - Marketing digital et transformation" />
               </div>
               <h3 className={styles.subtitle}>{x.title}</h3>
               <p className={styles.description}>{x.description}</p>

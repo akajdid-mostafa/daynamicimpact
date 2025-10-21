@@ -69,7 +69,7 @@ const Footer = () => {
                   className={styles.pic}
                   src="/images/logo-dynamicimpact.webp"
                   srcDark="/images/logo-dynamicimpact-black.webp"
-                  alt="Dynamic Impact"
+                  alt="Dynamic Impact - Agence marketing digital et transformation"
                 />
               </Link>
               <Theme className={styles.theme} />

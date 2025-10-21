@@ -54,7 +54,7 @@ const ValueProps = ({
                 <Image
                   src={x.icon}
                   srcDark={x.icon}
-                  alt={x.title}
+                  alt={`${x.title} - Dynamic Impact marketing digital`}
                 />
               </div>
               <div className={styles.category}>{x.title}</div>

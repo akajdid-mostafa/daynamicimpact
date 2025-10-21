@@ -117,7 +117,7 @@ const Services = () => {
                   <img
                     srcSet={`${x.image2x} 2x`}
                     src={x.image}
-                    alt="Solutions Digitales"
+                    alt="Solutions digitales Dynamic Impact - Marketing et transformation"
                   />
                 </div>
                 <div className={styles.col}>

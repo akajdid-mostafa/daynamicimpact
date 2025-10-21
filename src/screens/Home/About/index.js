@@ -27,7 +27,7 @@ const item2 = [
     title: "Notre Mission",
     color: "#45B26B",
     images: "/images/icon/mission.svg",
-    alt: "branding",
+    alt: "Mission Dynamic Impact - Marketing digital et branding",
     content:
       "Transformer la complexité en clarté pour que vos ambitions deviennent des résultats concrets. Nous vous accompagnons dans votre transformation stratégique pour un impact mesurable.",
   },
@@ -35,7 +35,7 @@ const item2 = [
     title: "Notre Vision",
     color: "#9757D7",
     images: "/images/icon/vision.svg",
-    alt: "marketing",
+    alt: "Vision Dynamic Impact - Transformation digitale et marketing",
     content:
       "Créer des modèles où la gouvernance, la technologie et les données se combinent pour servir vos ambitions. Chaque solution est un levier de croissance durable pour votre entreprise.",
   },
@@ -43,7 +43,7 @@ const item2 = [
     title: "Nos Valeurs",
     color: "#3772FF",
     images: "/images/icon/valeur.svg",
-    alt: "code",
+    alt: "Valeurs Dynamic Impact - Digital marketing et innovation",
     content:
       "Transparence, innovation et engagement total envers la réussite de chaque projet. Votre succès est notre boussole. Nous construisons avec vous un partenariat de confiance.",
   },
@@ -96,13 +96,13 @@ const About = () => {
               <img
                 srcSet="/images/icon/about.webp 2x"
                 src="/images/icon/about.webp"
-                alt="À propos de notre équipe"
+                alt="À propos de notre équipe Dynamic Impact - Marketing digital et transformation"
               />
               {/* <ScrollParallax className={styles.preview} animateIn="fadeInUp">
                 <img
                   srcSet="/images/content/plate.svg 2x"
                   src="/images/content/plate.svg"
-                  alt="Notre plateforme"
+                  alt="Notre plateforme Dynamic Impact - Solutions digitales et marketing"
                 />
               </ScrollParallax> */}
               {/* <button className={cn("play", styles.play)}>

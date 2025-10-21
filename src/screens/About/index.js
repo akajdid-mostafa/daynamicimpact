@@ -21,10 +21,6 @@ const AboutPage = () => {
         description="Chez Dynamic Impact, la transformation n'est pas un projet isolé, c'est un levier de croissance. Nous concevons des systèmes clairs, efficaces et adaptés : plus de gouvernance, moins de risques, des équipes qui excellent. Envie de comprendre comment ? La suite vous montre notre vision, notre méthode et les résultats concrets obtenus sur le terrain."
         primaryButton={{
           text: "Notre stratégie",
-          to: "#team",
-        }}
-        secondaryButton={{
-          text: "Contactez-nous",
           to: "/contact",
         }}
         gallery={[
@@ -33,25 +29,19 @@ const AboutPage = () => {
             srcSetDark: "/images/content/impact.webp 2x",
             src: "/images/content/impact.webp",
             srcDark: "/images/content/impact.webp",
-            alt: "Watch",
+            alt: "Équipe Dynamic Impact travaillant sur des projets de marketing digital et transformation digitale",
             isImage: false,
           },
-          // {
-          //   srcSet: "/images/content/Hero/hero1.webp 2x",
-          //   src: "/images/content/ball.png",
-          //   alt: "Ball",
-          //   isImage: true,
-          // },
           {
             srcSet: "/images/content/Hero/book1.webp 2x",
             src: "/images/content/Hero/book1.webp",
-            alt: "Bottle",
+            alt: "Solutions marketing digital et publicité performante - Dynamic Impact accompagne votre croissance",
             isImage: true,
           },
           {
             srcSet: "/images/content/Hero/book2.webp 2x",
             src: "/images/content/Hero/book2.webp",
-            alt: "Ball black",
+            alt: "Stratégie digitale et impact marketing - Dynamic Impact optimise votre présence en ligne",
             isImage: true,
           },
         ]}
@@ -93,7 +83,7 @@ const AboutPage = () => {
               srcSetDark="/images/content/about-pic.svg 2x"
               src="/images/content/about-pic.svg"
               srcDark="/images/content/about-pic.svg"
-              alt="Notre équipe chez Dynamic Impact"
+              alt="Photo de l'équipe Dynamic Impact - Experts en marketing digital et transformation digitale"
               className={styles.mainImage}
             />
           </div> */}
@@ -119,7 +109,7 @@ const AboutPage = () => {
                     srcSetDark="/images/content/advanced.svg 2x"
                     src="/images/content/advanced.svg"
                     srcDark="/images/content/advanced.svg"
-                    alt="Approche avancée de transformation digitale"
+                    alt="Illustration de transformation digitale et solutions marketing avancées par Dynamic Impact"
                     className={styles.sideImage}
                   />
                 </div>
@@ -137,7 +127,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/service1.svg 2x"
                       src="/images/content/service1.svg"
                       srcDark="/images/content/service1.svg"
-                      alt="Icône de mission"
+                      alt="Icône représentant la mission Dynamic Impact en marketing digital et impact"
                       className={styles.icon}
                     />
                   </div>
@@ -156,7 +146,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/goldlines.svg 2x"
                       src="/images/content/goldlines.svg"
                       srcDark="/images/content/goldlines.svg"
-                      alt="Icône de promesse"
+                      alt="Icône illustrant la promesse Dynamic Impact en digital marketing et advertising"
                       className={styles.icon}
                     />
                   </div>
@@ -201,7 +191,7 @@ const AboutPage = () => {
                     srcSetDark="/images/content/all-service.svg 2x"
                     src="/images/content/all-service.svg"
                     srcDark="/images/content/all-service.svg"
-                    alt="Nos services complets"
+                    alt="Illustration des services complets Dynamic Impact en marketing digital et transformation"
                     className={styles.sideImage}
                   />
                 </div>
@@ -268,7 +258,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/trainer-pic.png 2x"
                       src="/images/content/trainer-pic.png"
                       srcDark="/images/content/trainer-pic.png"
-                      alt="Anass IDRISSI"
+                      alt="Photo d'Anass IDRISSI, expert en marketing digital et transformation digitale chez Dynamic Impact"
                       className={styles.avatar}
                     />
                   </div>
@@ -287,7 +277,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/avatar-1.png 2x"
                       src="/images/content/avatar-1.png"
                       srcDark="/images/content/avatar-1.png"
-                      alt="Membre de l'équipe"
+                      alt="Photos des membres de l'équipe Dynamic Impact, experts en marketing digital et advertising"
                       className={styles.avatar}
                     />
                   </div>
@@ -304,7 +294,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/avatar-2.png 2x"
                       src="/images/content/avatar-2.png"
                       srcDark="/images/content/avatar-2.png"
-                      alt="Membre de l'équipe"
+                      alt="Photos des membres de l'équipe Dynamic Impact, experts en marketing digital et advertising"
                       className={styles.avatar}
                     />
                   </div>
@@ -321,7 +311,7 @@ const AboutPage = () => {
                       srcSetDark="/images/content/avatar-3.png 2x"
                       src="/images/content/avatar-3.png"
                       srcDark="/images/content/avatar-3.png"
-                      alt="Membre de l'équipe"
+                      alt="Photos des membres de l'équipe Dynamic Impact, experts en marketing digital et advertising"
                       className={styles.avatar}
                     />
                   </div>

@@ -93,9 +93,9 @@ const Contact = () => {
           <ContactCard
             icon={<MdMarkEmailRead className={styles.icon} />}
             title="Email"
-            description="contact@dynamicimpact.ma"
+            description="Contactez-nous par email"
             link="mailto:contact@dynamicimpact.ma"
-            linkText="Écrire"
+            linkText="contact@dynamicimpact.ma"
           />
         </div>
 
@@ -127,7 +127,7 @@ const Contact = () => {
               allowFullScreen
               loading="lazy"
               title="Dynamic Impact Advertising Map"
-              alt="Dynamic Impact location in Casablanca, Morocco"
+              alt="Dynamic Impact - Agence marketing digital Casablanca Maroc"
               //<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.7272900428936!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d44bd2c21a1%3A0xef88e5ae83bb7ce7!2sDynamic%20Impact%20Advertising!5e0!3m2!1sfr!2sma!4v1761037765744!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             />
           </div>

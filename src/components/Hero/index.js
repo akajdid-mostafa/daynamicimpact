@@ -12,11 +12,7 @@ const Hero = ({
   description = "Dynamic Impact conçoit et déploie des écosystèmes marketing et opérationnels complets : site web SEO, CRM/ERP, création de contenu et formation d'équipes. Résultat : conversion, fidélisation et croissance mesurable.",
   primaryButton = {
     text: "Demander un audit offert",
-    to: "/download"
-  },
-  secondaryButton = {
-    text: "Voir nos offres",
-    to: "/class02-details"
+    to: "/contact"
   },
   gallery = [
     {
@@ -24,7 +20,7 @@ const Hero = ({
       srcSetDark: "/images/content/Hero/hero1.webp 2x",
       src: "/images/content/Hero/hero1.webp",
       srcDark: "/images/content/Hero/hero1.webp",
-      alt: "Watch",
+      alt: "Image principale Dynamic Impact - Agence marketing digital et transformation digitale",
       isImage: false
     },
     // {
@@ -36,14 +32,14 @@ const Hero = ({
     {
       srcSet: "/images/content/Hero/hero2.webp 2x",
       src: "/images/content/Hero/hero2.webp",
-      alt: "Bottle",
+      alt: "Illustration des solutions marketing digital et publicité performante par Dynamic Impact",
       isImage: true
     },
     {
       srcSet: "/images/content/Hero/hero3.webp 2x",
       src: "/images/content/Hero/hero3.webp",
       srcDark: "/images/content/Hero/hero3.webp",
-      alt: "Ball black",
+      alt: "Représentation de la stratégie digitale et impact marketing Dynamic Impact",
       isImage: true
     }
   ]
@@ -66,12 +62,6 @@ const Hero = ({
             <Link className={cn("button", styles.button)} to={primaryButton.to}>
               {primaryButton.text}
             </Link>
-            {/* <Link
-              className={cn("button-stroke", styles.button)}
-              to={secondaryButton.to}
-            >
-              {secondaryButton.text}
-            </Link> */}
           </div>
         </div>
 

@@ -8,7 +8,7 @@ const Maintenance = () => {
       {/* Header */}
       <div className={styles.header}>
         <div className={styles.logo}>
-          <img src="/images/logo-dark.svg" alt="Dynamic Impact" className={styles.logoImage} />
+          <img src="/images/logo-dark.svg" alt="Dynamic Impact - Agence marketing digital et transformation" className={styles.logoImage} />
         </div>
       </div>
 

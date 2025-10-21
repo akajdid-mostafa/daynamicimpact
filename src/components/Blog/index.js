@@ -148,7 +148,7 @@ const Blog = () => {
                     <div className={styles.preview}>
                       <img
                         src={blog.image}
-                        alt={blog.title}
+                        alt={`${blog.title} - Dynamic Impact marketing digital`}
                       />
                       <div className={styles.hoverIcon}>
                         <FaArrowRight size={14} />

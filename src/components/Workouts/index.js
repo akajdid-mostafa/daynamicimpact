@@ -25,21 +25,21 @@ const DigitalServices = () => {
               srcSetDark="/images/content/offre/expertis.svg 2x"
               src="/images/content/offre/expertis.svg"
               srcDark="/images/content/offre/expertis.svg"
-              alt="Solutions digitales clé en main"
+              alt="Solutions digitales clé en main - Dynamic Impact marketing"
             />
           </div>
           <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
               srcSet="/images/content/offre/flesh.svg 2x"
               src="/images/content/ball-green-1.png"
-              alt="Croissance digitale"
+              alt="Croissance digitale et impact marketing"
             />
           </ScrollParallax>
           <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
               srcSet="/images/content/offre/analytique.svg 2x"
               src="/images/content/apple.png"
-              alt="Performance marketing"
+              alt="Performance marketing et advertising digital"
             />
           </ScrollParallax>
         </div>

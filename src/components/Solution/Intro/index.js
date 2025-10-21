@@ -19,21 +19,21 @@ const Intro = ({
           <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
               src={image?.src || "/images/content/boost.svg"}
-              alt={image?.alt || "Nos solutions créatives"}
+              alt={image?.alt || "Solutions marketing digital et transformation créatives"}
             />
           </ScrollParallax>
           {/* <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
               srcSet="/images/content/gloves@2x.png 2x"
               src="/images/content/gloves.png"
-              alt="Stratégie digitale"
+              alt="Stratégie digitale et marketing performant"
             />
           </ScrollParallax> */}
           {/* <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
               srcSet="/images/content/bottle-1@2x.png 2x"
               src="/images/content/bottle-1.png"
-              alt="Croissance de marque"
+              alt="Croissance de marque et impact marketing"
             />
           </ScrollParallax> */}
         </div>

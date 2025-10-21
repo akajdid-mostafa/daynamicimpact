@@ -40,7 +40,7 @@ const Hero = ({
             <Image
               src={mainImage?.src || "/images/content/all-service.svg"}
               srcDark={mainImage?.srcDark || "/images/content/all-service.svg"}
-              alt={mainImage?.alt || "Dynamic Impact - Agence Marketing Digital"}
+              alt={mainImage?.alt || "Dynamic Impact - Agence marketing digital et transformation"}
             />
           </div>
           <ScrollParallax
@@ -50,7 +50,7 @@ const Hero = ({
           >
             <img
               src={ballImage?.src || "/images/content/ball.png"}
-              alt={ballImage?.alt || "Solutions SEO"}
+              alt={ballImage?.alt || "Solutions SEO et marketing digital performantes"}
             />
           </ScrollParallax>
           <ScrollParallax
@@ -60,7 +60,7 @@ const Hero = ({
           >
             <img
               src={ballBlackImage?.src || "/images/content/ball-black.png"}
-              alt={ballBlackImage?.alt || "Marketing Digital"}
+              alt={ballBlackImage?.alt || "Marketing digital et advertising performant"}
             />
           </ScrollParallax>
         </div>

@@ -41,7 +41,7 @@ const Clients = () => {
         <div className={styles.list}>
           {list.map((x, index) => (
             <div className={styles.logo} key={index}>
-              <img src={x.url} alt={x.title} />
+              <img src={x.url} alt={`${x.title} - Client Dynamic Impact marketing digital`} />
             </div>
           ))}
         </div>

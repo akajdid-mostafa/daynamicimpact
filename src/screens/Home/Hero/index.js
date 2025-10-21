@@ -29,7 +29,7 @@ const Hero = ({ scrollToRef }) => {
               Demander une étude
             </Link>
             <Link
-              className={cn("button-stroke", styles.button)}
+              className={cn("button-stroke", styles.button2)}
               to="/nos-solutions"
             >
               Nos Services
@@ -42,19 +42,19 @@ const Hero = ({ scrollToRef }) => {
             <Image
               src="/images/content/Hero/hero1.webp"
               srcDark="/images/content/Hero/hero1.webp"
-              alt="Hero 1"
+              alt="Image principale Dynamic Impact - Agence marketing digital et transformation digitale"
             />
           </div>
           <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero2.webp 2x"
-              alt="Bottle"
+              alt="Illustration des solutions marketing digital et publicité performante par Dynamic Impact"
             />
           </div>
           <div className={styles.preview}>
             <img
               srcSet="/images/content/Hero/hero3.webp 2x"
-              alt="Ball black"
+              alt="Représentation de la stratégie digitale et impact marketing Dynamic Impact"
             />
           </div>
         </div>

@@ -207,3 +207,12 @@
     margin-top: 24px
     +m
         width: 100%
+
+.button
+    +dark
+        background: linear-gradient(135deg, $purple-light, $purple)
+        box-shadow: 0 4px 12px rgba($purple-light, 0.3)
+        border: 1px solid $purple-light
+        &:hover
+            background: linear-gradient(135deg, $purple, $purple-light)
+            box-shadow: 0 8px 20px rgba($purple-light, 0.4)

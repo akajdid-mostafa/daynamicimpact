@@ -28,7 +28,7 @@ const Hero = ({ scrollToRef }) => {
               Demande Audit 
             </Link>
             <a
-              className={cn("button-stroke", styles.button)}
+              className={cn("button-stroke", styles.button2)}
               href="#services"
               onClick={(e) => {
                 e.preventDefault();
@@ -46,7 +46,7 @@ const Hero = ({ scrollToRef }) => {
             <Image
               src="/images/content/hero-sulution.webp"
               srcDark="/images/content/hero-sulution.webp"
-              alt="Dynamic Impact - Agence Marketing Digital"
+              alt="Dynamic Impact - Agence marketing digital et transformation digitale"
             />
           </div>
           {/* <ScrollParallax
@@ -57,7 +57,7 @@ const Hero = ({ scrollToRef }) => {
             <img
               srcSet="/images/content/ball@2x.png 2x"
               src="/images/content/ball.png"
-              alt="Solutions SEO"
+              alt="Solutions SEO et marketing digital performantes"
             />
           </ScrollParallax> */}
           {/* <ScrollParallax
@@ -68,7 +68,7 @@ const Hero = ({ scrollToRef }) => {
             <img
               srcSet="/images/content/ball-black@2x.png 2x"
               src="/images/content/ball-black.png"
-              alt="Marketing Digital"
+              alt="Marketing digital et advertising performant"
             />
           </ScrollParallax> */}
         </div>

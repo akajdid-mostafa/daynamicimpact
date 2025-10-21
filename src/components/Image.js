@@ -1,7 +1,7 @@
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
-const Image = ({ className, src, srcDark, srcSet, srcSetDark, alt }) => {
+const Image = ({ className, src, srcDark, srcSet, srcSetDark, alt = "Image Dynamic Impact - Agence marketing digital et transformation digitale" }) => {
   const darkMode = useDarkMode(false);
 
   return (

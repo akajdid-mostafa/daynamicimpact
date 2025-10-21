@@ -12,7 +12,7 @@ const Breadcrumbs = () => {
         <div className={styles.wrap}>
           <img 
             src="/images/content/contact-hero.webp" 
-            alt="Contact Hero" 
+            alt="Contact Dynamic Impact - Agence marketing digital et transformation" 
             className={styles.heroImage}
           />
         </div>
