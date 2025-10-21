@@ -19,7 +19,7 @@ import Faq from "../../components/Faq";
 // import Whay from "../../components/whay";
 // import Services from "../../components/services";
 // import Programs from "../../components/Programs";
-import Blog from "../../components/Blog";
+// import Blog from "../../components/Blog";
 import Services from "../../components/Services/services";
 // import Offer from "../../components/Offer";
 // import Multisites from "../../components/Multisites";
@@ -56,7 +56,7 @@ const Home = () => {
       {/* Workouts */}
       {/* <Workouts /> */}
       {/* Blog / Ressources (SEO + content marketing) */}
-      <Blog/>
+      {/* <Blog/> */}
       {/* Foire aux Questions (FAQ)  */}
       <Faq />
       {/* <Work /> */}
