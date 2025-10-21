@@ -52,7 +52,7 @@ const socials = [
   {
     title: "X (Twitter)",
     icon: FaSquareXTwitter,
-    url: "https://x.com/",
+    url: "_https://x.com/dynamicimpactma",
   },
   {
     title: "Facebook",
@@ -62,7 +62,7 @@ const socials = [
   {
     title: "Instagram",
     icon: FaSquareInstagram,
-    url: "https://www.instagram.com/dynamic.impact.agency/",
+    url: "https://www.instagram.com/dynamic.impact.advertising/",
   },
 ];
 
