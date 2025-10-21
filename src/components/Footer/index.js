@@ -38,7 +38,7 @@ const socials = [
   {
     title: "X (Twitter)",
     icon: FaSquareXTwitter,
-    url: "_https://x.com/dynamicimpactma",
+    url: "https://x.com/dynamicimpactma",
   },
   {
     title: "Facebook",
