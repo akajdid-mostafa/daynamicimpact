@@ -6,6 +6,7 @@ import Icon from "../Icon";
 import ScrollParallax from "../ScrollParallax";
 import styles from "./Comment.module.sass";
 import { useBlog } from "../../context/BlogContext";
+import { FaArrowRight } from "react-icons/fa";
 
 const SlickArrow = ({ currentSlide, slideCount, children, ...props }) => (
   <button {...props}>{children}</button>
@@ -146,10 +147,12 @@ const Blog = () => {
                   >
                     <div className={styles.preview}>
                       <img
-                        srcSet={blog.image2x ? `${blog.image2x} 2x` : undefined}
-                        src={blog.image || "/images/content/placeholder.png"}
+                        src={blog.image}
                         alt={blog.title}
                       />
+                      <div className={styles.hoverIcon}>
+                        <FaArrowRight size={14} />
+                      </div>
                     </div>
                     <div className={styles.subtitle}>{blog.title}</div>
                     <div className={styles.content}>

@@ -20,28 +20,22 @@ const AutomatisationSolutionsDigitalesSurMesure = () => {
     <>
       <Hero
         scrollToRef={scrollToRef}
-        stage="Automatisation & Efficacité"
-        title="Automatisation & Solutions Digitales Sur-Mesure"
-        text="Nous automatisons vos process et développons des outils sur-mesure (CRM, ERP, workflows) pour gagner du temps, réduire les erreurs et scaler votre activité."
+        stage="COMMUNICATION & IMPACT"
+        title="Une communication qui inspire et influence"
+        text="Nous façonnons des stratégies de communication puissantes et durables pour renforcer votre image, votre réputation et votre impact auprès de vos parties prenantes."
         primaryButtonText="Demander un audit"
         primaryButtonLink="/contact"
-        secondaryButtonText="Voir nos cas clients"
-        secondaryButtonLink="/projects"
         mainImage={{
           src: "/images/content/all-service.svg",
-          srcSet: "/images/content/all-service.svg 2x",
           srcDark: "/images/content/all-service.svg",
-          srcSetDark: "/images/content/all-service.svg 2x",
           alt: "Automatisation et intégrations",
         }}
         ballImage={{
           src: "/images/content/ball.png",
-          srcSet: "/images/content/ball@2x.png 2x",
           alt: "Automatisation",
         }}
         ballBlackImage={{
           src: "/images/content/ball-black.png",
-          srcSet: "/images/content/ball-black@2x.png 2x",
           alt: "Marketing Digital",
         }}
       />
@@ -49,38 +43,37 @@ const AutomatisationSolutionsDigitalesSurMesure = () => {
 
       <Intro
         scrollToRef={scrollToRef}
-        title="Optimisez vos flux, gagnez en productivité"
-        text="Nous cartographions vos processus, identifions les tâches répétitives et implémentons des automatisations fiables (intégration d’API, scripts, workflows) pour simplifier vos opérations."
-        buttonText="Planifier un audit gratuit"
+        title="Donner du sens à votre communication"
+        text="Nous construisons une stratégie alignée sur vos valeurs et vos objectifs, afin de faire de votre communication un levier de confiance, d’engagement et de différenciation."
+        buttonText="Discutons de votre projet"
         buttonLink="/contact"
         image={{
           src: "/images/content/boost.svg",
-          srcSet: "/images/content/boost.svg 2x",
           alt: "Cartographie des processus",
         }}
       />
       {/* <ValueProps className="section-pb" /> */}
       <ValueProps
         className="section-pb"
-        stage="Nos Expertises"
-        title="Ce que nous mettons en place pour vous"
+        stage="NOS EXPERTISES"
+        title="Ce que nous faisons pour vous"
         items={[
           {
-            title: "Audit & Cartographie",
+            title: "Communication institutionnelle & image durable",
             content:
-              "Analyse complète de vos processus métiers et identification des points d’automatisation prioritaires.",
+              "Nous créons des stratégies qui renforcent votre positionnement et valorisent vos engagements sociétaux et environnementaux.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/><path d="M12 4.5L10.5 8.5 6.5 9.5l3 2.9-.7 4.1L12 14.5l3.2 2-.7-4.1 3-2.9-4-.5L12 4.5z"/></svg>',
           },
           {
-            title: "Intégration & Développement",
+            title: "Stratégie de réputation & marque employeur",
             content:
-              "Connecteurs API, développement de modules CRM/ERP et création d’outils internes sur-mesure.",
+              "Nous développons des plans d’action pour bâtir une image solide, attirer les bons talents et fidéliser vos parties prenantes.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/><path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/></svg>',
           },
           {
-            title: "Automatisation & Workflows",
+            title: "Gestion de crise & communication sensible",
             content:
-              "Mise en place d’automatisations (emailing, génération de docs, triggers métier) avec Zapier, n8n, Make ou solutions sur-mesure.",
+              "Nous vous accompagnons dans la gestion des situations complexes avec réactivité, cohérence et maîtrise pour préserver votre réputation.",
             icon: '<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#23262f" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>',
           },
         ]}
@@ -90,36 +83,30 @@ const AutomatisationSolutionsDigitalesSurMesure = () => {
       {/* <Review className="section-pb64" /> */}
       {/* <Clients /> */}
       <Workouts
-        title="Automatisez pour mieux croître"
-        highlight="Notre approche"
-        info="Des solutions pragmatiques, sécurisées et évolutives pour automatiser vos opérations sans perturber votre activité."
+        title="Des leviers pour "
+        highlight="amplifier votre impact"
+        info="La communication n’est pas qu’un message, c’est une stratégie d’influence et de confiance. Voici comment nous transformons vos prises de parole en impact durable :"
         items={[
-          "Audit des processus et priorisation des cas d’usage",
-          "Prototype & validation (MVP d’automatisation)",
-          "Développement / configuration des intégrations",
-          "Tests, sécurité et mise en production",
-          "Formation & transfert de compétences",
+          "Audit de communication et diagnostic d’image",
+          "Élaboration de stratégie de marque et de réputation",
+          "Gestion de la communication interne et externe",
+          "Accompagnement à la communication de crise",
+          "Définition de la stratégie RSE et d’impact institutionnel",
         ]}
-        primaryButtonText="Demarrer l'audit"
-        secondaryButtonText="Voir nos intégrations"
-        primaryButtonLink="/contact"
+        primaryButtonText="Construisez votre image d’impact"
         images={[
           {
             src: "/images/content/offre/expertis.svg",
-            srcSet: "/images/content/offre/expertis.svg 2x",
             srcDark: "/images/content/offre/expertis.svg",
-            srcSetDark: "/images/content/offre/expertis.svg 2x",
-            alt: "Intégration d'API",
+            alt: "Communication institutionnelle",
           },
           {
             src: "/images/content/ball-green-1.png",
-            srcSet: "/images/content/offre/flesh.svg 2x",
-            alt: "Session de mentoring digital",
+            alt: "Stratégie de réputation",
           },
           {
             src: "/images/content/apple.png",
-            srcSet: "/images/content/offre/analytique.svg 2x",
-            alt: "Performance marketing",
+            alt: "Gestion de crise",
           },
         ]}
       />

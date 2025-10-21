@@ -12,8 +12,8 @@ import StrategieTransformationDigitale from "./screens/TransformationDigitale";
 import StrategieConseil from "./screens/StrategieConseil";
 import PerformanceMesure from "./screens/PerformanceMesure";
 import GouvernanceRisques from "./screens/GouvernanceRisques";
-import AutomatisationSolutionsDigitalesSurMesure from "./screens/AutomatisationSolutionsDigitalesSur-Mesure";
-import AccompagnementFormationDigitaleCoaching from "./screens/AccompagnementFormationDigitaleCoaching";
+import CommunicationImpact from "./screens/CommunicationImpact";
+import FormationLeadership from "./screens/FormationLeadership";
 import { BlogProvider } from "./context/BlogContext";
 import About from "./screens/About/index";
 import MetaTags from "./components/MetaTags";
@@ -132,18 +132,18 @@ function App() {
                         }
                     />
                     <Route
-                        path="Nos-Solutions/automatisation-processus"
+                        path="Nos-Solutions/communication-impact"
                         element={
                             <Page>
-                                <AutomatisationSolutionsDigitalesSurMesure />
+                                <CommunicationImpact />
                             </Page>
                         }
                     />
                     <Route
-                        path="Nos-Solutions/formation-coaching-digital"
+                        path="Nos-Solutions/formation-leadership"
                         element={
                             <Page>
-                                <AccompagnementFormationDigitaleCoaching />
+                                <FormationLeadership />
                             </Page>
                         }
                     />

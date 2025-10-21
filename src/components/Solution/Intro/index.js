@@ -18,7 +18,6 @@ const Intro = ({
         <div className={styles.gallery}>
           <ScrollParallax className={styles.preview} animateIn="fadeInUp">
             <img
-              srcSet={image?.srcSet || "/images/content/boost.svg 2x"}
               src={image?.src || "/images/content/boost.svg"}
               alt={image?.alt || "Nos solutions créatives"}
             />
@@ -39,7 +38,7 @@ const Intro = ({
           </ScrollParallax> */}
         </div>
         <div className={styles.wrap}>
-          <h2 className={cn("h1", styles.title)}>
+          <h2 className={cn("h3", styles.title)}>
             {title || "Boostez Votre Présence Digitale"}
           </h2>
           <div className={styles.text}>

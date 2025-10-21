@@ -11,8 +11,6 @@ const Hero = ({
   text,
   primaryButtonText,
   primaryButtonLink,
-  secondaryButtonText,
-  secondaryButtonLink,
   mainImage,
   ballImage,
   ballBlackImage,
@@ -25,7 +23,7 @@ const Hero = ({
           <div className={cn("stage", styles.stage)}>
             {stage || "Solutions Digitales Complètes"}
           </div>
-          <h1 className={cn("h1", styles.title)}>
+          <h1 className={cn("h3", styles.title)}>
             {title || "Agence Marketing Digital au Maroc"}
           </h1>
           <div className={styles.text}>
@@ -35,19 +33,11 @@ const Hero = ({
             <Link className={cn("button", styles.button)} to={primaryButtonLink || "/download"}>
               {primaryButtonText || "Audit Gratuit"}
             </Link>
-            {/* <Link
-              className={cn("button-stroke", styles.button)}
-              to={secondaryButtonLink || "/class02-details"}
-            >
-              {secondaryButtonText || "Nos Services"}
-            </Link> */}
           </div>
         </div>
         <div className={styles.gallery}>
           <div className={styles.preview}>
             <Image
-              srcSet={mainImage?.srcSet || "/images/content/all-service.svg 2x"}
-              srcSetDark={mainImage?.srcSetDark || "/images/content/all-service.svg 2x"}
               src={mainImage?.src || "/images/content/all-service.svg"}
               srcDark={mainImage?.srcDark || "/images/content/all-service.svg"}
               alt={mainImage?.alt || "Dynamic Impact - Agence Marketing Digital"}
@@ -59,7 +49,6 @@ const Hero = ({
             delay={300}
           >
             <img
-              srcSet={ballImage?.srcSet || "/images/content/ball@2x.png 2x"}
               src={ballImage?.src || "/images/content/ball.png"}
               alt={ballImage?.alt || "Solutions SEO"}
             />
@@ -70,7 +59,6 @@ const Hero = ({
             delay={600}
           >
             <img
-              srcSet={ballBlackImage?.srcSet || "/images/content/ball-black@2x.png 2x"}
               src={ballBlackImage?.src || "/images/content/ball-black.png"}
               alt={ballBlackImage?.alt || "Marketing Digital"}
             />

@@ -125,7 +125,7 @@ const Footer = () => {
                 <FaMapMarkerAlt className={styles.contactIcon} />
                 <p>
                   <a 
-                    href="https://maps.app.goo.gl/62SaNxku43sSR4RZ8" 
+                    href="https://maps.app.goo.gl/VyAELKEnQyZBrGrf7" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className={styles.mapLink}

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./contact.module.sass";
 import { MdMarkEmailRead, MdPhoneInTalk, MdLocationOn } from "react-icons/md";
-import Breadcrumbs from "../../components/Breadcrumbs";
+import Breadcrumbs from "./Breadcrumbs";
 import cn from "classnames";
 
 
@@ -80,7 +80,7 @@ const Contact = () => {
             icon={<MdLocationOn className={styles.icon} />}
             title="Adresse"
             description="Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38, Casablanca, Morocco"
-            link="https://maps.app.goo.gl/62SaNxku43sSR4RZ8"
+            link="https://maps.app.goo.gl/VyAELKEnQyZBrGrf7"
             linkText="Voir sur Google Maps"
           />
           <ContactCard
@@ -121,12 +121,14 @@ const Contact = () => {
         <div className={styles.bottom}>
           <div className={styles.mapSection}>
             <iframe
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=G9C7+2XC,%20Bd%20Zoulikha%20Nasri,%20Casablanca+(Dynamic%20Impact)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.7272900428936!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d44bd2c21a1%3A0xef88e5ae83bb7ce7!2sDynamic%20Impact%20Advertising!5e0!3m2!1sfr!2sma!4v1761037765744!5m2!1sfr!2sma"
               width="100%"
               height="400"
               allowFullScreen
               loading="lazy"
-              title="Ocean Connecting Map"
+              title="Dynamic Impact Advertising Map"
+              alt="Dynamic Impact location in Casablanca, Morocco"
+              //<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.7272900428936!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d44bd2c21a1%3A0xef88e5ae83bb7ce7!2sDynamic%20Impact%20Advertising!5e0!3m2!1sfr!2sma!4v1761037765744!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             />
           </div>
 

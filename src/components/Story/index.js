@@ -21,9 +21,8 @@ const Story = () => {
   return (
     <div className={cn("section", styles.section)}>
       <div className={cn("container", styles.container)}>
-        <div className={styles.row}>
-          
-          <div className={styles.col}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.textContent}>
             <div className={cn("stage-small", styles.stage)}>
               NOTRE RAISON D&apos;AVANCER
             </div>
@@ -47,14 +46,9 @@ const Story = () => {
                 </ScrollParallax>
               ))}
             </div>
-            <Link className={cn("button", styles.button)} to="/class02">
+            <Link className={cn("button", styles.button)} to="/contact">
               Rejoindre l&apos;aventure
             </Link>
-          </div>
-          <div className={styles.col}>
-            <div className={styles.preview}>
-              <img src="/images/content/impact2.webp" alt="Story Pic" />
-            </div>
           </div>
         </div>
       </div>

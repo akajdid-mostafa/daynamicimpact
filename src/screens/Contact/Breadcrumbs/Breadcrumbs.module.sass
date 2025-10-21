@@ -1,0 +1,35 @@
+@import ../../../styles/helpers
+
+.breadcrumbs
+    margin-bottom: 72px
+    +d
+        margin-bottom: 64
+    +m
+        margin-bottom: 32px
+
+.wrap
+    padding: 112px 64px
+    border-radius: 24px
+    text-align: center
+    position: relative
+    +t
+        padding: 80px 48px
+    +m
+        padding: 32px 16px
+    &:before
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        background: rgba(0, 0, 0, 0.4)
+        border-radius: 24px
+        z-index: 1
+    .title
+        position: relative
+        z-index: 2
+        color: white
+
+.title
+    margin-bottom: 12px
