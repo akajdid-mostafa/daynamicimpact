@@ -64,9 +64,13 @@
         padding: 0 40px 64px
     +m
         flex-direction: column
-        align-items: flex-start
+        align-items: center
+        justify-content: start
         min-height: calc(100vh - 104px)
         padding: 48px 32px 44px
+        background: $neutrals8
+        +dark
+            background: $neutrals1
     +dark
         border-color: $neutrals3
         +d
@@ -102,11 +106,13 @@
         flex: 0 0 calc(100% - 344px)
         max-width: calc(100% - 344px)
     +m
-        align-items: stretch
-        flex: auto 0 calc(100% + 64px)
-        width: calc(100% + 64px)
-        max-width: calc(100% + 64px)
-        margin: 0 -32px auto
+        align-items: center
+        flex: auto 0 auto
+        width: auto
+        max-width: none
+        margin: 0 auto
+        gap: 8px
+        text-align: center
 
 .link,
 .group,
@@ -123,22 +129,42 @@
 
 .mobileButton
     margin: 24px 0
-    // width: 100%
     max-width: 200px;
     text-align: center
     align-items: center;
     justify-content: center;
     display: none
-    padding: 12px 24px
+    padding: 46px 32px
     background: $purplef
     color: white
-    border-radius: 8px
+    border-radius: 12px
     text-decoration: none
     font-weight: 600
+    font-size: 16px
+    transition: all 0.3s ease
+    box-shadow: 0 4px 12px rgba($purple, 0.3)
+    margin-left: 30px
     +m
-        display: block !important
+        display: flex !important
+        padding: 20px 32px
+        width: auto
+        max-width: none
+        margin: 32px auto 0 0
+        align-self: flex-center
+        
     &:hover
         background: $purplef-hover
+        transform: translateY(-2px)
+        box-shadow: 0 8px 20px rgba($purple, 0.4)
+    +dark
+        background: $purple-light
+        color: $neutrals1
+        box-shadow: 0 4px 12px rgba($purple-light, 0.3)
+        // margin-left: 30px
+        &:hover
+            background: $purple
+            color: white
+            box-shadow: 0 8px 20px rgba($purple-light, 0.4)
 
 .link
   display: inline-block
@@ -146,9 +172,39 @@
   padding: 16px 8px
   +button-2
   color: $neutrals4
-  transition: color .2s
+  transition: all .3s ease
   +dark
     color: $neutrals8
+  +m
+    padding: 20px 32px
+    font-size: 18px
+    font-weight: 500
+    border-radius: 12px
+    margin: 4px 0
+    background: transparent
+    border: 1px solid transparent
+    color: $neutrals2
+    text-decoration: none
+    display: block
+    width: auto
+    text-align: center
+    +dark
+      color: $neutrals8
+    &:hover
+      background: rgba($purple, 0.1)
+      border-color: rgba($purple, 0.2)
+      color: $purple
+      transform: translateX(8px)
+      text-decoration: none
+      +dark
+        background: rgba($purple-light, 0.15)
+        border-color: rgba($purple-light, 0.3)
+        color: $purple-light
+    &.active
+      color: white
+      text-decoration: none
+      +dark
+        color: $neutrals1
 
   &:hover
     background: $primary-gradient
