@@ -31,6 +31,7 @@
     "serve": "serve -s build -l 3000",
     "optimize": "node optimize-build.js",
     "optimize:images": "node optimize-images.js",
+    "optimize:css": "node optimize-css.js",
     "build:optimized": "npm run build:prod && npm run optimize",
     "build:ultra": "npm run build:modern && npm run optimize",
     "build:complete": "npm run build:ultra && npm run optimize:images"
