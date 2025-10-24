@@ -121,7 +121,7 @@ const Contact = () => {
         <div className={styles.bottom}>
           <div className={styles.mapSection}>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.7272900428936!2d0!3d0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d44bd2c21a1%3A0xef88e5ae83bb7ce7!2sDynamic%20Impact%20Advertising!5e0!3m2!1sfr!2sma!4v1761037765744!5m2!1sfr!2sma"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d88677.38504802622!2d-7.683279861497648!3d33.525008687848725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda62d44bd2c21a1%3A0xef88e5ae83bb7ce7!2sDynamic%20Impact%20Advertising!5e0!3m2!1sfr!2sma!4v1761304500291!5m2!1sfr!2sma"
               width="100%"
               height="400"
               allowFullScreen
