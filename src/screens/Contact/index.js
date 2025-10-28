@@ -88,7 +88,7 @@ const Contact = () => {
             title="Téléphone"
             description="Appelez-nous directement"
             link="tel:+212660434143"
-            linkText="+216 604-34143"
+            linkText="+212 604-34143"
           />
           <ContactCard
             icon={<MdMarkEmailRead className={styles.icon} />}
