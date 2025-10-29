@@ -6,7 +6,7 @@
 
   <!-- Homepage -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/</loc>
+    <loc>https://dynamicimpact.ma/</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -14,7 +14,7 @@
 
   <!-- About Page -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/about</loc>
+    <loc>https://dynamicimpact.ma/about</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -22,7 +22,7 @@
 
   <!-- Solutions Overview -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -30,42 +30,42 @@
 
   <!-- Service Pages -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/strategie-transformation-digitale</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/strategie-transformation-digitale</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/creation-site-web</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/creation-site-web</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/gestion-reseaux-sociaux</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/gestion-reseaux-sociaux</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/production-contenu-marque</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/production-contenu-marque</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/automatisation-processus</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/automatisation-processus</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/Nos-Solutions/formation-coaching-digital</loc>
+    <loc>https://dynamicimpact.ma/Nos-Solutions/formation-coaching-digital</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -73,7 +73,7 @@
 
   <!-- Blog -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/blog</loc>
+    <loc>https://dynamicimpact.ma/blog</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -81,7 +81,7 @@
 
   <!-- Contact -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/contact</loc>
+    <loc>https://dynamicimpact.ma/contact</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -89,7 +89,7 @@
 
   <!-- Contact Us Alternative -->
   <url>
-    <loc>https://digital-impact-kappa.vercel.app/contact-us</loc>
+    <loc>https://dynamicimpact.ma/contact-us</loc>
     <lastmod>2024-01-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
