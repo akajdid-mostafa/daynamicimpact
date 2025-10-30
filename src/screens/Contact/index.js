@@ -79,7 +79,7 @@ const Contact = () => {
           <ContactCard
             icon={<MdLocationOn className={styles.icon} />}
             title="Adresse"
-            description="Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38, Casablanca, Morocco"
+            description="5è étage, bureau N°38, Immeuble Corner Office, Bd Zoulikha Nasri, Casablanca"
             link="https://maps.app.goo.gl/VyAELKEnQyZBrGrf7"
             linkText="Voir sur Google Maps"
           />

@@ -130,8 +130,7 @@ const Footer = () => {
                     rel="noopener noreferrer"
                     className={styles.mapLink}
                   >
-                    Imm Corner Office, lotissement Florida lot N°5, 5ème Étage,Bureau N°38,
-                    Casablanca, Morocco
+                    5è étage, bureau N°38, Immeuble Corner Office, Bd Zoulikha Nasri, Casablanca
                   </a>
                 </p>
               </div>
