@@ -456,7 +456,7 @@ export default function DiagnosticFormFR() {
               Évaluation Institutionnelle et Financière
             </h2>
             <p className={styles.description}>
-              Complétez ce formulaire en 5 minutes pour obtenir un diagnostic
+              Complétez ce formulaire en 3 minutes pour obtenir un diagnostic
               instantané.
             </p>
             <div className={styles.progress}>

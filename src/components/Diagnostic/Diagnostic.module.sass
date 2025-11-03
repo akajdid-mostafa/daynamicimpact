@@ -582,3 +582,49 @@
   height: 300px
   object-fit: contain
   border-radius: 8px
+
+// ----- Responsive modal improvements -----
+@media (max-width: 768px)
+  .modalOverlay
+    padding: 10px
+
+  .modal
+    width: 100%
+    max-width: 95%
+    padding: 20px
+    border-radius: 16px
+    text-align: left
+    overflow-y: auto
+    max-height: 90vh
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3)
+
+  .modal h3
+    font-size: 20px
+    text-align: center
+
+  .thankYouMessage,
+  .resultDescription,
+  .classification
+    font-size: 14px
+    text-align: center
+
+  .resultImage
+    width: 100%
+    max-width: 280px
+    height: auto
+    object-fit: contain
+    margin: 0 auto
+    display: block
+
+  iframe
+    height: 450px !important
+    border-radius: 8px
+
+  .modalActions
+    flex-direction: column
+    gap: 10px
+
+    .btn
+      width: 100%
+      font-size: 15px
+      padding: 14px
