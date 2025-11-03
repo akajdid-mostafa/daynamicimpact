@@ -20,6 +20,7 @@ import MetaTags from "./components/MetaTags";
 import StructuredData from "./components/StructuredData";
 import ContactUs from "./screens/contact-us/index";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import Diagnostic from "./components/Diagnostic";
 
 
 function App() {
@@ -152,6 +153,14 @@ function App() {
                         element={
                             <Page>
                                 <ContactUs />
+                            </Page>
+                        }
+                    />
+                    <Route
+                        path="diagnostic"
+                        element={
+                            <Page>
+                                <Diagnostic />
                             </Page>
                         }
                     />

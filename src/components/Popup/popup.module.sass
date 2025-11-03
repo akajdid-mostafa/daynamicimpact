@@ -1,0 +1,288 @@
+@import ../../styles/helpers
+    
+// Variables
+$ztc-font-size-font-s34: 34px
+$ztc-font-size-font-s16: 16px
+$ztc-text-text-1: #000000
+$ztc-text-text-2: #ffffff
+$ztc-bg-bg-1: #ffffff
+$ztc-weight-bold: bold
+$grotesk: sans-serif
+
+$primary-color: #4b8bfc
+$primary-hover: #3a7bf0
+$success-color: #2ecc40
+$error-color: #e74c3c
+$border-color: #e1e5e9
+$border-focus: #4b8bfc
+$background-color: #f8f9fa
+$text-color: #2d3748
+$label-color: #4a5568
+$shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.08)
+$shadow-focus: 0 0 0 3px rgba(75, 139, 252, 0.1)
+
+/*============= POPUP CSS AREA STARTS ===============*/
+.popupOverlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.7)
+  justify-content: center
+  align-items: center
+  animation: fadeIn 0.5s ease forwards
+  z-index: 9999999
+  display: flex
+
+.popupContent
+  background-color: white
+  padding: 50px 26px
+  border-radius: 16px
+  width: 420px
+  text-align: center
+  position: relative
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15)
+  animation: popupSlide 0.5s ease forwards
+
+.popupIcon
+  img
+    height: 60px
+    width: 160px
+    object-fit: contain
+
+.heading2
+  h2
+    font-size: $ztc-font-size-font-s34
+    +body-2
+    line-height: 32px
+    color: $neutrals4
+    margin-bottom: 8px
+
+  p
+    color: $label-color
+    font-size: 14px
+    line-height: 1.5
+    margin: 0
+
+.closeBtn
+  position: absolute
+  top: 16px
+  right: 16px
+  font-size: 20px
+  cursor: pointer
+  height: 32px
+  width: 32px
+  text-align: center
+  line-height: 32px
+  background: #f1f5f9
+  color: #64748b
+  border-radius: 50%
+  font-weight: $ztc-weight-bold
+  border: none
+  outline: none
+  transition: all 0.2s ease
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:hover
+    background: #e2e8f0
+    color: #475569
+    transform: scale(1.1)
+
+/* Form Styles */
+.formGroup
+  margin-bottom: 20px
+  text-align: left
+
+  label
+    display: block
+    margin-bottom: 6px
+    font-weight: 500
+    color: $label-color
+    font-size: 14px
+
+.input
+  width: 100%
+  padding: 12px 16px
+  border-radius: 8px
+  border: 2px solid $border-color
+  background-color: $background-color
+  font-size: 14px
+  color: $text-color
+  transition: all 0.3s ease
+  box-sizing: border-box
+  font-family: inherit
+
+  &:focus
+    outline: none
+    border-color: $border-focus
+    background-color: white
+    box-shadow: $shadow-focus
+
+  &::placeholder
+    color: #a0aec0
+    font-size: 13px
+
+.form
+  display: flex
+  flex-direction: column
+
+.successMessage
+  text-align: center
+  color: $success-color
+  padding: 20px
+
+  h3
+    margin-bottom: 8px
+    font-size: 20px
+    color: $success-color
+
+  p
+    color: #27ae60
+    font-size: 14px
+
+.button
+  display: inline-block
+  width: 100%
+  padding: 12px
+  background-color: #2563eb
+  color: #fff
+  border: none
+  border-radius: 8px
+  font-size: 16px
+  font-weight: 600
+  text-align: center
+  cursor: pointer
+  transition: all 0.3s ease
+
+  &:hover
+    background-color: #1d4ed8
+
+  &:disabled
+    background-color: #9ca3af
+    cursor: not-allowed
+
+    &:hover
+      background-color: #9ca3af
+
+/* Spacing utilities */
+.space32
+  height: 32px
+
+.space8
+  height: 8px
+
+/* Animations */
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes popupSlide
+  0%
+    transform: translateY(-50px) scale(0.95)
+    opacity: 0
+  100%
+    transform: translateY(0) scale(1)
+    opacity: 1
+
+/* ========== REACT DATEPICKER CUSTOM STYLES ========== */
+// This is crucial - these styles must be global
+:global
+  .react-datepicker
+    font-family: inherit
+    border: 1px solid #e2e8f0
+    border-radius: 12px
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1)
+
+  .react-datepicker__header
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+    border-bottom: none
+    border-radius: 10px 10px 0 0
+    padding: 12px
+
+  .react-datepicker__current-month
+    color: white
+    font-weight: 600
+    font-size: 14px
+
+  .react-datepicker__navigation
+    top: 12px
+
+  .react-datepicker__navigation-icon::before
+    border-color: white
+    border-width: 2px 2px 0 0
+
+  .react-datepicker__day-names
+    margin-top: 8px
+
+  .react-datepicker__day-name
+    color: rgba(255, 255, 255, 0.9)
+    font-weight: 500
+    font-size: 12px
+    width: 32px
+
+  .react-datepicker__day
+    width: 32px
+    height: 32px
+    line-height: 32px
+    margin: 2px
+    border-radius: 6px
+    font-size: 13px
+
+    &:hover
+      background: #edf2f7
+      border-radius: 6px
+
+  .react-datepicker__day--selected
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)
+    color: white
+    font-weight: 600
+
+  .react-datepicker__day--today
+    font-weight: 600
+    background: #e2e8f0
+
+  .react-datepicker__day--disabled
+    color: #cbd5e0
+    background: #f7fafc
+    cursor: not-allowed
+
+    &:hover
+      background: #f7fafc
+      color: #cbd5e0
+
+  .react-datepicker__day--outside-month
+    color: #a0aec0
+
+/* DatePicker Wrapper */
+.datePickerWrapper
+  width: 100%
+  position: relative
+
+  :global(.react-datepicker-wrapper)
+    width: 100%
+
+  :global(.react-datepicker__input-container)
+    width: 100%
+
+/* Responsive Design */
+@media (max-width: 480px)
+  .popupContent
+    width: 90%
+    margin: 20px
+    padding: 40px 20px
+
+  .input
+    padding: 14px 16px
+    font-size: 16px
+
+  :global(.react-datepicker)
+    font-size: 14px
+    transform: scale(0.85)
+    transform-origin: top left
+
+/*============= POPUP CSS AREA ENDS ===============*/
