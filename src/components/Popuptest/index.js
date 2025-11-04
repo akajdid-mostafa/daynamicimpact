@@ -9,7 +9,7 @@ const Popup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 100);
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
