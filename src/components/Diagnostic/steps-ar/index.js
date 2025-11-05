@@ -470,6 +470,7 @@ export default function Steps() {
                     }
                     placeholder="أدخل رقم هاتفك"
                     required
+                    style={{ dir: "rtl", textAlign: "right" }}
                   />
                   {errors.companyPhone && (
                     <span className={styles.errorMessage}>
