@@ -18,12 +18,17 @@ const navLinks = [
     url: "/",
   },
   {
+    title: "Notre Impact",
+    url: "/about",
+  },
+  {
     title: "Nos Solutions",
     url: "/Nos-Solutions",
   },
+  
   {
-    title: "Notre Impact",
-    url: "/about",
+    title: "Diagnostic",
+    url: "/diagnostic",
   },
   {
     title: "Ressources",
@@ -69,7 +74,7 @@ const socials = [
 const contact = [
   {
     title: "Localisation",
-    content: "Imm Corner Office, lotissement Florida lot N°5, 5ème Étage N°38, Casablanca, Morocco",
+    content: "5è étage, bureau N°38, Immeuble Corner Office, Bd Zoulikha Nasri, Casablanca",
   },
   {
     title: "Email",
