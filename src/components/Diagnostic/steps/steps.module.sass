@@ -1,12 +1,14 @@
-// DiagnosticFormFR.module.sass
+@import ../../../styles/helpers
 
 .section
   padding: 80px 0
   position: relative
   overflow: hidden
+  +dark
+    background-color: #0000
 
-  &.dark
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%)
+  // &.dark
+  //   background: linear-gradient(135deg, #234d90 0%, #334155 100%)
 
 .container
   width: 100%
@@ -14,6 +16,8 @@
   padding-left: 15px
   margin: 0 auto
   max-width: 1000px
+  +dark
+    background-color: #0000
 
 .formWrapper
   background: #fff
@@ -23,9 +27,8 @@
   margin-top: 20px
   border: 1px solid rgba(255,255,255,0.2)
 
-  .dark &
-    background: #1e293b
-    border: 1px solid rgba(255,255,255,0.1)
+  +dark
+    background-color: #0000
 
 .header
   text-align: center
@@ -45,7 +48,7 @@
   color: #1e293b
   margin-bottom: 16px
 
-  .dark &
+  +dark
     color: #f8fafc
 
 .description
@@ -53,7 +56,7 @@
   color: #64748b
   margin-bottom: 24px
 
-  .dark &
+  +dark
     color: #cbd5e1
 
 .progress
@@ -64,7 +67,7 @@
     color: #64748b
     margin-bottom: 8px
 
-    .dark &
+    +dark
       color: #cbd5e1
 
 .progressBar
@@ -74,7 +77,7 @@
   border-radius: 3px
   overflow: hidden
 
-  .dark &
+  +dark
     background: #334155
 
 .progressFill
@@ -97,7 +100,7 @@
     padding-bottom: 12px
     border-bottom: 2px solid #f1f5f9
 
-    .dark &
+    +dark
       color: #f8fafc
       border-bottom-color: #334155
 
@@ -107,7 +110,7 @@
   color: #374151
   margin-bottom: 16px
 
-  .dark &
+  +dark
     color: #e2e8f0
 
 .input,
@@ -127,7 +130,8 @@
     border-color: #4e54c8
     box-shadow: 0 0 0 3px rgba(78, 84, 200, 0.1)
   
-  .dark &
+  +dark
+    background-color: #0000
     background: #334155
     border-color: #475569
     color: #f8fafc
@@ -166,7 +170,7 @@
   padding-top: 24px
   border-top: 2px solid #f1f5f9
 
-  .dark &
+  +dark
     border-top-color: #334155
 
 .btn
@@ -195,7 +199,7 @@
       background: #f1f5f9
       border-color: #cbd5e1
     
-    .dark &
+    +dark
       background: #334155
       color: #cbd5e1
       border-color: #475569
@@ -229,7 +233,7 @@
   flex-direction: column
   overflow: hidden
 
-  .dark &
+  +dark
     background: #1e293b
     color: #f8fafc
 
@@ -240,7 +244,7 @@
     color: #1e293b
     flex-shrink: 0
 
-    .dark &
+    +dark
       color: #f8fafc
 
 // Contenu modal principal
@@ -297,7 +301,7 @@
   border-radius: 12px
   margin: 20px 0
 
-  .dark &
+  +dark
     background: #334155
 
 .classification
@@ -306,7 +310,7 @@
   line-height: 1.5
   margin: 0
 
-  .dark &
+  +dark
     color: #e2e8f0
 
 // Boutons modal
@@ -319,7 +323,7 @@
   padding-top: 16px
   border-top: 1px solid #e2e8f0
 
-  .dark &
+  +dark
     border-top-color: #334155
 
 // Iframe calendrier
@@ -330,6 +334,10 @@
   border-radius: 12px
   flex: 1
   min-height: 400px
+  +dark
+    background: #dbdbdb
+
+
 
 // Couleurs pour les résultats
 .green
@@ -454,11 +462,17 @@
   text-align: center
 
 .reviewSection
-  background: #f8fafc
+  // background: #f8fafc
   padding: 16px
   border-radius: 8px
   margin-bottom: 16px
   border-left: 4px solid #4e54c8
+  +dark
+    background: #0000
+  &:hover
+    background: #f1f5f9
+    transform: translateX(4px)
+
   
   h4
     margin: 0 0 8px 0
@@ -483,9 +497,16 @@
 .consentSection
   margin-top: 32px
   padding: 20px
-  background: #f8fafc
+  // background: #f8fafc
   border-radius: 8px
   border: 1px solid #e2e8f0
+  +dark
+    background: #0000
+    border-color: #475569
+
+
+
+
 
 .consentLabel
   font-weight: 500 !important
@@ -494,6 +515,8 @@
   span
     font-size: 14px
     line-height: 1.4
+    +dark
+      color: $neutrals8
 
 // Amélioration des sections de review
 .reviewSection
@@ -505,7 +528,7 @@
   transition: all 0.3s ease
   
   &:hover
-    background: #f1f5f9
+    background: #000000
     transform: translateX(4px)
   
   h4
@@ -513,16 +536,23 @@
     color: #1e293b
     font-size: 16px
     font-weight: 600
+    +dark
+      color: $neutrals8
   
   p
     margin: 6px 0
     color: #64748b
     font-size: 14px
+    +dark
+      color: $neutrals4
     
     strong
       color: #374151
       min-width: 180px
       display: inline-block
+      +dark
+        color: $neutrals6
+
 
 // Amélioration des radio groups et checkbox groups
 .radioGroup,
@@ -532,7 +562,6 @@
   gap: 12px
   margin-top: 8px
   padding: 12px
-  background: #f8fafc
   border-radius: 8px
   border: 1px solid #e2e8f0
 
@@ -544,6 +573,7 @@
   cursor: pointer
   font-weight: 400
   padding: 4px 0
+  
   
   input
     margin: 0
@@ -579,6 +609,13 @@
   &Primary
     background: linear-gradient(135deg, #4e54c8, #8a94e3)
     color: #fff
+    +dark
+        background: linear-gradient(135deg, $purple-light, $purple)
+        box-shadow: 0 4px 12px rgba($purple-light, 0.3)
+        border: 1px solid $purple-light
+        &:hover
+            background: linear-gradient(135deg, $purple, $purple-light)
+            box-shadow: 0 8px 20px rgba($purple-light, 0.4)
     
     &:hover
       transform: translateY(-2px)

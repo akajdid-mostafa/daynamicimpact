@@ -22,6 +22,8 @@
   padding: 48px 40px
   margin-top: 20px
   border: 1px solid rgba(255,255,255,0.2)
+  +dark
+    background-color: #0000
 
 .header
   text-align: center
@@ -34,6 +36,7 @@
   text-transform: uppercase
   letter-spacing: 1px
   margin-bottom: 12px
+  font-family: 'Tajawal', sans-serif
 
 .subtitle
   font-size: 32px
@@ -41,12 +44,17 @@
   color: #1e293b
   margin-bottom: 16px
   font-family: 'Tajawal', sans-serif
+  +dark
+      color: $neutrals8
 
 .description
   font-size: 16px
   color: #64748b
   margin-bottom: 24px
   font-family: 'Tajawal', sans-serif
+  +dark
+    color: $neutrals4
+
 
 .progress
   margin-bottom: 8px
@@ -84,6 +92,10 @@
     padding-bottom: 12px
     border-bottom: 2px solid #f1f5f9
     font-family: 'Tajawal', sans-serif
+    +dark
+      color: $neutrals8
+      border-bottom-color: $neutrals8
+
 
 .label
   display: block
@@ -91,6 +103,10 @@
   color: #374151
   margin-bottom: 16px
   font-family: 'Tajawal', sans-serif
+  +dark
+    color: $neutrals6
+
+
 
 .input,
 .select,
@@ -104,6 +120,12 @@
   transition: all 0.3s ease
   background: #fff
   font-family: 'Tajawal', sans-serif
+  +dark 
+    background-color: #0000
+    background: #334155
+    border-color: #475569
+    color: #f8fafc
+    
   
   &:focus
     outline: none
@@ -151,11 +173,19 @@
   font-size: 14px
   transition: all 0.3s ease
   font-family: 'Tajawal', sans-serif
+  
   // flex: 1
   
   &Primary
     background: linear-gradient(135deg, #4e54c8, #8a94e3)
     color: #fff
+    +dark
+        background: linear-gradient(135deg, $purple-light, $purple)
+        box-shadow: 0 4px 12px rgba($purple-light, 0.3)
+        border: 1px solid $purple-light
+        &:hover
+            background: linear-gradient(135deg, $purple, $purple-light)
+            box-shadow: 0 8px 20px rgba($purple-light, 0.4)
     
     &:hover
       transform: translateY(-2px)
@@ -179,6 +209,9 @@
   justify-content: center
   z-index: 1000
   padding: 20px
+  
+  
+
 
 .modal
   background: white
@@ -189,6 +222,8 @@
   box-shadow: 0 25px 50px rgba(0,0,0,0.2)
   text-align: center
   animation: modalSlideIn 0.3s ease
+  +dark 
+    background: #1e293b
 
   h3
     font-size: 24px
@@ -202,6 +237,11 @@
   gap: 12px
   justify-content: center
   margin-top: 24px
+  
+.modalIframe
+  +dark 
+    background: $neutrals8
+
 
 @keyframes fadeIn
   from
@@ -229,9 +269,10 @@
   margin-bottom: 24px
   text-align: center
   font-family: 'Tajawal', sans-serif
+  
 
 .reviewSection
-  background: #f8fafc
+  // background: #f8fafc
   padding: 16px
   border-radius: 8px
   margin-bottom: 16px
@@ -239,14 +280,16 @@
   
   h4
     margin: 0 0 8px 0
-    color: #1e293b
+    color: $neutrals8
     font-size: 16px
     font-family: 'Tajawal', sans-serif
   
   p
     margin: 4px 0
-    color: #64748b
+    color: $neutrals5
     font-family: 'Tajawal', sans-serif
+    strong
+      color: $neutrals6
 
 .resultHeader
   text-align: center
@@ -264,12 +307,18 @@
   font-style: italic
   margin-top: 12px
   font-family: 'Tajawal', sans-serif
+  +dark 
+    color: $neutrals6
+
 
 .resultDetails
   background: #f8fafc
   padding: 16px
   border-radius: 8px
   margin-bottom: 20px
+  +dark 
+    background: #1e293b
+    color: $neutrals8
   
   p
     margin: 8px 0
@@ -279,6 +328,10 @@
   font-size: 15px
   color: #374151
   font-family: 'Tajawal', sans-serif
+  +dark 
+    color: $neutrals8
+
+
 
 .inputError
   border-color: #ef4444 !important
@@ -294,9 +347,12 @@
 .consentSection
   margin-top: 32px
   padding: 20px
-  background: #f8fafc
+  // background: #f8fafc
   border-radius: 8px
   border: 1px solid #e2e8f0
+  +dark
+    background: #0000
+    border-color: #475569
 
 .consentLabel
   font-weight: 500 !important
@@ -306,6 +362,8 @@
   span
     font-size: 14px
     line-height: 1.4
+    +dark
+      color: $neutrals8
 
 .otherSectorInput
   margin-top: 16px
@@ -358,6 +416,11 @@
   
   .subtitle
     font-size: 24px
+    font-family: 'Tajawal', sans-serif
+    +dark
+      color: $neutrals8
+  
+  
   
   .modalActions
     flex-direction: column
@@ -461,7 +524,7 @@
   gap: 12px
   margin-top: 8px
   padding: 16px
-  background: #f8fafc
+  // background: #f8fafc
   border-radius: 8px
   border: 1px solid #e2e8f0
 

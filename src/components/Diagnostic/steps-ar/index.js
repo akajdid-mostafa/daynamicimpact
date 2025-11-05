@@ -1249,7 +1249,7 @@ export default function Steps() {
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
             <h3>احجز موعد التشخيص</h3>
-            <p>اختر تاريخاً ووقتاً في جدولنا:</p>
+            <p>اختر تاريخاً و وقتاً في جدولنا:</p>
 
             <iframe
               title="Google Calendar Booking"
@@ -1259,8 +1259,10 @@ export default function Steps() {
                 width: "100%",
                 height: "650px",
                 borderRadius: "10px",
+
               }}
               allowFullScreen
+              className={styles.modalIframe}
             />
 
             <div className={styles.modalActions}>
