@@ -441,6 +441,9 @@ export default function Steps() {
     }
   };
 
+  const handleBackHome = () => {
+    window.location.href = "/";
+  };
   return (
     <div className={styles.section} id="diagnostic-form">
       <div className={cn("container", styles.container)}>
@@ -1265,7 +1268,7 @@ export default function Steps() {
       </div>
 
       <div className={styles.modalActions}>
-        <button className={cn("button", styles.btn, styles.btnSecondary)} onClick={() => setResultModalOpen(false)}>
+        <button className={cn("button", styles.btn, styles.btnSecondary)} onClick={(handleBackHome)}>
           Fermer
         </button>
         <button className={cn("button", styles.btn, styles.btnPrimary)} onClick={() => setCalendarModalOpen(true)}>
@@ -1293,7 +1296,7 @@ export default function Steps() {
       </div>
 
       <div className={styles.modalActions}>
-        <button className={cn("button", styles.btn, styles.btnSecondary)} onClick={() => setCalendarModalOpen(false)}>
+        <button className={cn("button", styles.btn, styles.btnSecondary)} onClick={(handleBackHome)}>
           Fermer
         </button>
       </div>

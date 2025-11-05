@@ -5,7 +5,6 @@ import cn from "classnames";
 export default function Steps() {
   const [step, setStep] = useState(1);
   const [form, setForm] = useState({
-    // I. المعلومات العامة
     companyName: "",
     companyEmail: "",
     companyPhone: "",
@@ -14,37 +13,26 @@ export default function Steps() {
     yearCreation: "",
     city: "",
     employees: "",
-
-    // II. الهيكلة والتنظيم
     hasOrgStructure: "",
     decisionsBasedOnData: "",
     hasInternalControl: "",
     orgChallenges: [],
-
-    // III. الوضعية المالية
     financialSituation: "",
     hasFinancialPlan: "",
     debtLevel: "",
     banksRelation: "",
-
-    // IV. الأداء والمخاطر
     salesProblems: "",
     observedFraud: "",
     digitalizationLevel: "",
     has12MonthsPlan: "",
-
-    // V. التقييم الذاتي
     selfEval: "",
     mainGoal: [],
-
-    // VI. الموافقة
     acceptTerms: false,
   });
 
   const [errors, setErrors] = useState({});
   const [resultModalOpen, setResultModalOpen] = useState(false);
   const [calendarModalOpen, setCalendarModalOpen] = useState(false);
-
   const [result, setResult] = useState({
     scorePercent: 0,
     category: "",
@@ -80,62 +68,76 @@ export default function Steps() {
     const currentYear = new Date().getFullYear();
 
     if (step === 1) {
-      if (!form.companyName) newErrors.companyName = "اسم المؤسسة مطلوب";
-      // Validation de l'email
+      if (!form.companyName?.trim())
+        newErrors.companyName = "اسم المؤسسة مطلوب";
+
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!form.companyEmail.trim()) {
-        newErrors.companyEmail = "L'email de l'entreprise est requis";
+      if (!form.companyEmail?.trim()) {
+        newErrors.companyEmail = "البريد الإلكتروني مطلوب";
       } else if (!emailRegex.test(form.companyEmail)) {
-        newErrors.companyEmail = "Veuillez entrer un email valide";
+        newErrors.companyEmail = "يرجى إدخال بريد إلكتروني صحيح";
       }
 
       const phoneRegex = /^[0-9+\s().-]{10,}$/;
-      if (!form.companyPhone) {
+      if (!form.companyPhone?.trim()) {
         newErrors.companyPhone = "هاتف المؤسسة مطلوب";
       } else if (!phoneRegex.test(form.companyPhone)) {
         newErrors.companyPhone = "يرجى إدخال رقم هاتف صحيح";
       }
+
       if (!form.sector) newErrors.sector = "يرجى اختيار القطاع";
-      if (form.sector === "other" && !form.otherSector)
+
+      if (form.sector === "other" && !form.otherSector?.trim())
         newErrors.otherSector = "يرجى تحديد قطاعك";
-      if (!form.employees) newErrors.employees = "يرجى اختيار عدد الموظفين";
-      if (
-        form.yearCreation &&
-        (form.yearCreation < 1900 || form.yearCreation > currentYear)
-      ) {
+
+      if (!form.yearCreation?.trim())
+        newErrors.yearCreation = "سنة التأسيس مطلوبة";
+      else if (form.yearCreation < 1900 || form.yearCreation > currentYear) {
         newErrors.yearCreation = `يجب أن تكون السنة بين 1900 و ${currentYear}`;
       }
+
+      if (!form.city?.trim()) newErrors.city = "المدينة مطلوبة";
+
+      if (!form.employees) newErrors.employees = "يرجى اختيار عدد الموظفين";
     }
 
     if (step === 2) {
-      if (!form.hasOrgStructure) newErrors.hasOrgStructure = "هذا الحقل مطلوب";
-      if (!form.decisionsBasedOnData)
+      if (!form.hasOrgStructure) {
+        newErrors.hasOrgStructure = "يرجى اختيار إجابة";
+      }
+      if (!form.decisionsBasedOnData) {
         newErrors.decisionsBasedOnData = "يرجى اختيار إجابة";
-      if (!form.hasInternalControl)
+      }
+      if (!form.hasInternalControl) {
         newErrors.hasInternalControl = "يرجى اختيار إجابة";
+      }
     }
 
     if (step === 3) {
-      if (!form.financialSituation)
+      if (!form.financialSituation || form.financialSituation === "")
         newErrors.financialSituation = "يرجى وصف وضعك المالي";
       if (!form.hasFinancialPlan)
         newErrors.hasFinancialPlan = "هذا الحقل مطلوب";
-      if (!form.debtLevel) newErrors.debtLevel = "يرجى اختيار مستوى المديونية";
-      if (!form.banksRelation)
+      if (!form.debtLevel || form.debtLevel === "")
+        newErrors.debtLevel = "يرجى اختيار مستوى المديونية";
+      if (!form.banksRelation || form.banksRelation === "")
         newErrors.banksRelation = "يرجى وصف العلاقة مع البنوك";
     }
 
     if (step === 4) {
-      if (!form.salesProblems) newErrors.salesProblems = "يرجى اختيار إجابة";
-      if (!form.observedFraud) newErrors.observedFraud = "يرجى اختيار إجابة";
-      if (!form.digitalizationLevel)
+      if (!form.salesProblems || form.salesProblems === "")
+        newErrors.salesProblems = "يرجى اختيار إجابة";
+      if (!form.observedFraud || form.observedFraud === "")
+        newErrors.observedFraud = "يرجى اختيار إجابة";
+      if (!form.digitalizationLevel || form.digitalizationLevel === "")
         newErrors.digitalizationLevel = "يرجى اختيار مستوى الرقمنة";
-      if (!form.has12MonthsPlan)
+      if (!form.has12MonthsPlan || form.has12MonthsPlan === "")
         newErrors.has12MonthsPlan = "يرجى اختيار إجابة";
     }
 
     if (step === 5) {
-      if (!form.selfEval) newErrors.selfEval = "يرجى اختيار جملة";
+      if (!form.selfEval || form.selfEval === "")
+        newErrors.selfEval = "يرجى اختيار جملة";
       if (!form.mainGoal || form.mainGoal.length === 0)
         newErrors.mainGoal = "يرجى اختيار هدف واحد على الأقل";
     }
@@ -153,12 +155,10 @@ export default function Steps() {
     let totalScore = 0;
     let maxScore = 0;
 
-    // I. المعلومات العامة (10%)
     const empMap = { "1-5": 3, "6-20": 5, "21-50": 7, "+50": 10 };
     totalScore += empMap[form.employees] || 0;
     maxScore += 10;
 
-    // II. الهيكلة والتنظيم (25%)
     totalScore += form.hasOrgStructure === "yes" ? 3 : 0;
     const decisionsMap = { always: 3, sometimes: 2, rarely: 1, never: 0 };
     totalScore += decisionsMap[form.decisionsBasedOnData] || 0;
@@ -168,7 +168,6 @@ export default function Steps() {
     totalScore = Math.max(0, totalScore - challengeCount);
     maxScore += 9;
 
-    // III. الوضعية المالية (30%)
     const finSitMap = { stable: 3, volatile: 2, difficulty: 1, threatened: 0 };
     totalScore += finSitMap[form.financialSituation] || 0;
     totalScore += form.hasFinancialPlan === "yes" ? 3 : 0;
@@ -178,7 +177,6 @@ export default function Steps() {
     totalScore += bankMap[form.banksRelation] || 0;
     maxScore += 12;
 
-    // IV. الأداء والمخاطر (25%)
     const salesMap = { no: 3, seasonal: 2, permanent: 1 };
     totalScore += salesMap[form.salesProblems] || 0;
     const fraudMap = { never: 3, limited_cases: 1, repeated: 0 };
@@ -189,7 +187,6 @@ export default function Steps() {
     totalScore += planMap[form.has12MonthsPlan] || 0;
     maxScore += 12;
 
-    // V. التقييم الذاتي (10%)
     const selfEvalMap = {
       clear_system: 3,
       under_control_no_metrics: 2,
@@ -201,7 +198,6 @@ export default function Steps() {
     totalScore += 3 - goalCount;
     maxScore += 6;
 
-    // حساب النسبة المئوية
     const scorePercent = Math.round((totalScore / maxScore) * 100);
 
     let category = "",
@@ -225,12 +221,7 @@ export default function Steps() {
       description = "طارئ: غياب تام للحكامة أو خلل مالي خطير";
     }
 
-    return {
-      scorePercent,
-      category,
-      color,
-      description,
-    };
+    return { scorePercent, category, color, description };
   };
 
   const handleSubmit = async (e) => {
@@ -238,10 +229,7 @@ export default function Steps() {
     if (validateStep()) {
       const calc = calculateScore();
       setResult(calc);
-
-      // إرسال البيانات إلى البريد الإلكتروني
       const sendSuccess = await sendDiagnosticData(form, calc);
-
       if (sendSuccess) {
         setResultModalOpen(true);
       } else {
@@ -390,14 +378,7 @@ export default function Steps() {
           }),
         }
       );
-
-      if (response.ok) {
-        console.log("تم إرسال بيانات التشخيص بنجاح");
-        return true;
-      } else {
-        console.error("فشل في إرسال بيانات التشخيص");
-        return false;
-      }
+      return response.ok;
     } catch (error) {
       console.error("خطأ في إرسال بيانات التشخيص:", error);
       return false;
@@ -405,7 +386,11 @@ export default function Steps() {
   };
 
   const handleBackToHome = () => {
-    window.location.reload(); // أو استخدام state management أفضل
+    window.location.reload();
+  };
+
+  const handleBackHome = () => {
+    window.location.href = "/";
   };
 
   return (
@@ -432,11 +417,9 @@ export default function Steps() {
           </div>
 
           <form className={styles.form} onSubmit={(e) => e.preventDefault()}>
-            {/* الخطوة 1: المعلومات العامة */}
             {step === 1 && (
               <div className={styles.step}>
                 <h3>I. المعلومات العامة</h3>
-
                 <label className={styles.label}>
                   1. اسم المؤسسة *
                   <input
@@ -446,6 +429,7 @@ export default function Steps() {
                     value={form.companyName}
                     onChange={(e) => updateField("companyName", e.target.value)}
                     placeholder="أدخل اسم مؤسستك"
+                    required
                   />
                   {errors.companyName && (
                     <span className={styles.errorMessage}>
@@ -454,7 +438,7 @@ export default function Steps() {
                   )}
                 </label>
                 <label className={styles.label}>
-                  2. البريد الإلكتروني للتواصل*
+                  2. البريد الإلكتروني للتواصل *
                   <input
                     className={cn(styles.input, {
                       [styles.inputError]: errors.companyEmail,
@@ -484,9 +468,8 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("companyPhone", e.target.value)
                     }
-                    placeholder="أدخل رقم هاتفك "
+                    placeholder="أدخل رقم هاتفك"
                     required
-                    style={{ dir: "rtl", textAlign: "right" }}
                   />
                   {errors.companyPhone && (
                     <span className={styles.errorMessage}>
@@ -509,6 +492,7 @@ export default function Steps() {
                             onChange={(e) =>
                               updateField("sector", e.target.value)
                             }
+                            required
                           />
                           {value === "commercial" && "تجاري"}
                           {value === "industrial" && "صناعي"}
@@ -534,6 +518,7 @@ export default function Steps() {
                             updateField("otherSector", e.target.value)
                           }
                           placeholder="مثال: فلاحة، سياحة، عقار..."
+                          required
                         />
                         {errors.otherSector && (
                           <span className={styles.errorMessage}>
@@ -547,28 +532,40 @@ export default function Steps() {
 
                 <div className={styles.row}>
                   <label className={styles.label}>
-                    5. سنة التأسيس
+                    5. سنة التأسيس *
                     <input
-                      className={styles.input}
+                      className={cn(styles.input, {
+                        [styles.inputError]: errors.yearCreation,
+                      })}
                       type="number"
-                      required
                       value={form.yearCreation}
                       onChange={(e) =>
                         updateField("yearCreation", e.target.value)
                       }
                       placeholder="مثال: 2020"
+                      required
                     />
+                    {errors.yearCreation && (
+                      <span className={styles.errorMessage}>
+                        {errors.yearCreation}
+                      </span>
+                    )}
                   </label>
 
                   <label className={styles.label}>
-                    6. المدينة
+                    6. المدينة *
                     <input
-                      className={styles.input}
-                      required
+                      className={cn(styles.input, {
+                        [styles.inputError]: errors.city,
+                      })}
                       value={form.city}
                       onChange={(e) => updateField("city", e.target.value)}
                       placeholder="مثال: الدار البيضاء"
+                      required
                     />
+                    {errors.city && (
+                      <span className={styles.errorMessage}>{errors.city}</span>
+                    )}
                   </label>
                 </div>
 
@@ -585,6 +582,7 @@ export default function Steps() {
                           onChange={(e) =>
                             updateField("employees", e.target.value)
                           }
+                          required
                         />
                         {value}
                       </label>
@@ -599,13 +597,15 @@ export default function Steps() {
               </div>
             )}
 
-            {/* الخطوة 2: الهيكلة والتنظيم */}
             {step === 2 && (
               <div className={styles.step}>
                 <h3>II. الهيكلة والتنظيم</h3>
 
-                <label className={styles.label}>
-                  8. هل لديك هيكل تنظيمي رسمي ووصف وظيفي محدد؟ *
+                {/* Question 8 */}
+                <div className={styles.formGroup}>
+                  <label className={styles.label}>
+                    8. هل لديك هيكل تنظيمي رسمي ووصف وظيفي محدد؟ *
+                  </label>
                   <div className={styles.radioGroup}>
                     <label className={styles.radioLabel}>
                       <input
@@ -627,15 +627,18 @@ export default function Steps() {
                     </label>
                   </div>
                   {errors.hasOrgStructure && (
-                    <span className={styles.errorMessage}>
+                    <div className={styles.errorMessage}>
                       {errors.hasOrgStructure}
-                    </span>
+                    </div>
                   )}
-                </label>
+                </div>
 
-                <label className={styles.label}>
-                  9. هل يتم اتخاذ القرارات داخل المؤسسة بناءً على معطيات وأرقام؟
-                  *
+                {/* Question 9 */}
+                <div className={styles.formGroup}>
+                  <label className={styles.label}>
+                    9. هل يتم اتخاذ القرارات داخل المؤسسة بناءً على معطيات
+                    وأرقام؟ *
+                  </label>
                   <select
                     className={cn(styles.select, {
                       [styles.inputError]: errors.decisionsBasedOnData,
@@ -652,14 +655,17 @@ export default function Steps() {
                     <option value="never">أبداً</option>
                   </select>
                   {errors.decisionsBasedOnData && (
-                    <span className={styles.errorMessage}>
+                    <div className={styles.errorMessage}>
                       {errors.decisionsBasedOnData}
-                    </span>
+                    </div>
                   )}
-                </label>
+                </div>
 
-                <label className={styles.label}>
-                  10. هل توجد آليات للمراقبة الداخلية ومتابعة الأداء؟ *
+                {/* Question 10 */}
+                <div className={styles.formGroup}>
+                  <label className={styles.label}>
+                    10. هل توجد آليات للمراقبة الداخلية ومتابعة الأداء؟ *
+                  </label>
                   <select
                     className={cn(styles.select, {
                       [styles.inputError]: errors.hasInternalControl,
@@ -675,14 +681,17 @@ export default function Steps() {
                     <option value="none">لا</option>
                   </select>
                   {errors.hasInternalControl && (
-                    <span className={styles.errorMessage}>
+                    <div className={styles.errorMessage}>
                       {errors.hasInternalControl}
-                    </span>
+                    </div>
                   )}
-                </label>
+                </div>
 
-                <label className={styles.label}>
-                  11. التحديات التنظيمية الرئيسية التي تواجهها مؤسستك اليوم:
+                {/* Question 11 */}
+                <div className={styles.formGroup}>
+                  <label className={styles.label}>
+                    11. التحديات التنظيمية الرئيسية التي تواجهها مؤسستك اليوم:
+                  </label>
                   <div className={styles.checkboxGroup}>
                     {[
                       "ضعف التواصل الداخلي",
@@ -701,15 +710,13 @@ export default function Steps() {
                       </label>
                     ))}
                   </div>
-                </label>
+                </div>
               </div>
             )}
 
-            {/* الخطوة 3: الوضعية المالية */}
             {step === 3 && (
               <div className={styles.step}>
                 <h3>III. الوضعية المالية</h3>
-
                 <label className={styles.label}>
                   12. كيف تصف وضعك المالي الحالي؟ *
                   <select
@@ -720,6 +727,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("financialSituation", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="stable">مستقرة</option>
@@ -743,6 +751,7 @@ export default function Steps() {
                         name="financialPlan"
                         checked={form.hasFinancialPlan === "yes"}
                         onChange={() => updateField("hasFinancialPlan", "yes")}
+                        required
                       />
                       نعم
                     </label>
@@ -752,6 +761,7 @@ export default function Steps() {
                         name="financialPlan"
                         checked={form.hasFinancialPlan === "no"}
                         onChange={() => updateField("hasFinancialPlan", "no")}
+                        required
                       />
                       لا
                     </label>
@@ -771,6 +781,7 @@ export default function Steps() {
                     })}
                     value={form.debtLevel}
                     onChange={(e) => updateField("debtLevel", e.target.value)}
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="none">لا</option>
@@ -794,6 +805,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("banksRelation", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="good">جيدة</option>
@@ -810,11 +822,10 @@ export default function Steps() {
               </div>
             )}
 
-            {/* الخطوة 4: الأداء والمخاطر */}
+            {/* Les autres étapes restent inchangées */}
             {step === 4 && (
               <div className={styles.step}>
                 <h3>IV. الأداء والمخاطر</h3>
-
                 <label className={styles.label}>
                   16. هل تواجه مؤسستك مشاكل في تدفق المبيعات أو العقود؟ *
                   <select
@@ -825,6 +836,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("salesProblems", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="no">لا</option>
@@ -849,6 +861,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("observedFraud", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="never">أبداً</option>
@@ -872,6 +885,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("digitalizationLevel", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="high">مرتفع</option>
@@ -896,6 +910,7 @@ export default function Steps() {
                     onChange={(e) =>
                       updateField("has12MonthsPlan", e.target.value)
                     }
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="yes">نعم</option>
@@ -911,11 +926,9 @@ export default function Steps() {
               </div>
             )}
 
-            {/* الخطوة 5: التقييم الذاتي */}
             {step === 5 && (
               <div className={styles.step}>
                 <h3>V. التقييم الذاتي</h3>
-
                 <label className={styles.label}>
                   20. اختر الجملة الأقرب إلى واقع مؤسستك اليوم *
                   <select
@@ -924,6 +937,7 @@ export default function Steps() {
                     })}
                     value={form.selfEval}
                     onChange={(e) => updateField("selfEval", e.target.value)}
+                    required
                   >
                     <option value="">-- اختر --</option>
                     <option value="lots_effort_no_results">
@@ -964,6 +978,7 @@ export default function Steps() {
                           type="checkbox"
                           checked={(form.mainGoal || []).includes(goal)}
                           onChange={() => toggleMainGoal(goal)}
+                          required
                         />
                         {goal}
                       </label>
@@ -978,7 +993,6 @@ export default function Steps() {
               </div>
             )}
 
-            {/* الخطوة 6: الملخص */}
             {step === 6 && (
               <div className={styles.step}>
                 <h3>VI. الملخص قبل المصادقة</h3>
@@ -1002,11 +1016,10 @@ export default function Steps() {
                     {getDisplayValue("sector", form.sector)}
                   </p>
                   <p>
-                    <strong>سنة التأسيس:</strong>{" "}
-                    {form.yearCreation || "غير مذكور"}
+                    <strong>سنة التأسيس:</strong> {form.yearCreation}
                   </p>
                   <p>
-                    <strong>المدينة:</strong> {form.city || "غير مذكور"}
+                    <strong>المدينة:</strong> {form.city}
                   </p>
                   <p>
                     <strong>عدد الموظفين:</strong>{" "}
@@ -1112,6 +1125,7 @@ export default function Steps() {
                       onChange={(e) =>
                         updateField("acceptTerms", e.target.checked)
                       }
+                      required
                     />
                     <span>
                       أوافق على استخدام إجاباتي لإعداد تشخيص والاتصال بي.
@@ -1131,15 +1145,14 @@ export default function Steps() {
           </form>
         </div>
         <button
-        onClick={handleBackToHome}
-        className={cn("button-stroke", styles.BackButton)}
-      >
-        ⮕  عودة إلى الصفحة الرئيسية
-      </button>
+          onClick={handleBackToHome}
+          className={cn("button-stroke", styles.BackButton)}
+        >
+          ⮕ عودة إلى الصفحة الرئيسية
+        </button>
       </div>
-      
 
-      {/* نافذة النتائج */}
+      {/* Les modales restent inchangées */}
       {resultModalOpen && (
         <div className={styles.modalOverlay}>
           <div className={styles.modal}>
@@ -1217,7 +1230,7 @@ export default function Steps() {
             <div className={styles.modalActions}>
               <button
                 className={cn("button", styles.btn, styles.btnSecondary)}
-                onClick={() => setResultModalOpen(false)}
+                onClick={handleBackHome}
               >
                 إغلاق
               </button>
@@ -1252,7 +1265,7 @@ export default function Steps() {
             <div className={styles.modalActions}>
               <button
                 className={cn("button", styles.btn, styles.btnSecondary)}
-                onClick={() => setCalendarModalOpen(false)}
+                onClick={(handleBackHome)}
               >
                 إغلاق
               </button>
