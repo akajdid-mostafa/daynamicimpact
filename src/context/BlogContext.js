@@ -76,7 +76,7 @@ export const BlogProvider = ({ children }) => {
       //   params.append('sortOrder', 'asc');
       // }
       
-      const apiUrl = `${API_BASE_URL}/api/blogs?${params.toString()}`;
+      const apiUrl = `${API_BASE_URL}/api/blog/dynamic?${params.toString()}`;
       
       console.log('Fetching blogs with URL:', apiUrl);
       console.log('Current filters:', currentFilters);
