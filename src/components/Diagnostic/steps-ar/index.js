@@ -33,6 +33,10 @@ export default function Steps() {
   const [errors, setErrors] = useState({});
   const [resultModalOpen, setResultModalOpen] = useState(false);
   const [calendarModalOpen, setCalendarModalOpen] = useState(false);
+  const [emailError, setEmailError] = useState(false);
+  const [isRetryingEmail, setIsRetryingEmail] = useState(false);
+  const [lastFormData, setLastFormData] = useState(null);
+  const [lastResultData, setLastResultData] = useState(null);
   const [result, setResult] = useState({
     scorePercent: 0,
     category: "",
@@ -229,12 +233,38 @@ export default function Steps() {
     if (validateStep()) {
       const calc = calculateScore();
       setResult(calc);
+      
+      // Store form and result data for potential retry
+      setLastFormData(form);
+      setLastResultData(calc);
+
+      // إرسال البيانات إلى البريد الإلكتروني
       const sendSuccess = await sendDiagnosticData(form, calc);
-      if (sendSuccess) {
-        setResultModalOpen(true);
-      } else {
-        alert("خطأ في إرسال التشخيص. يرجى المحاولة مرة أخرى.");
-      }
+      
+      // Show result modal regardless of email success
+      // User should still see their diagnostic results
+      setEmailError(!sendSuccess);
+      setResultModalOpen(true);
+    }
+  };
+
+  const handleRetryEmail = async () => {
+    if (!lastFormData || !lastResultData) return;
+    
+    setIsRetryingEmail(true);
+    setEmailError(false);
+    
+    const sendSuccess = await sendDiagnosticData(lastFormData, lastResultData);
+    
+    if (sendSuccess) {
+      setEmailError(false);
+      // Show success message briefly
+      setTimeout(() => {
+        setIsRetryingEmail(false);
+      }, 2000);
+    } else {
+      setEmailError(true);
+      setIsRetryingEmail(false);
     }
   };
 
@@ -364,23 +394,49 @@ export default function Steps() {
 
   const sendDiagnosticData = async (formData, resultData) => {
     try {
+      const payload = {
+        ...formData,
+        result: resultData,
+        submissionDate: new Date().toISOString(),
+      };
+
+      console.log("Sending diagnostic data:", payload);
+
       const response = await fetch(
-        "https://e-mail-dynamic.vercel.app/api/diagnostic",
+        "https://email-free.vercel.app/api/diagnostic",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({
-            ...formData,
-            result: resultData,
-            submissionDate: new Date().toISOString(),
-          }),
+          body: JSON.stringify(payload),
         }
       );
-      return response.ok;
+
+      if (response.ok) {
+        console.log("Diagnostic data sent successfully");
+        return true;
+      } else {
+        // Try to get error details from response
+        let errorMessage = `Server error: ${response.status} ${response.statusText}`;
+        try {
+          const errorData = await response.json();
+          console.error("Server error response:", errorData);
+          errorMessage = errorData.message || errorData.error || errorMessage;
+        } catch (e) {
+          const errorText = await response.text();
+          console.error("Server error text:", errorText);
+          errorMessage = errorText || errorMessage;
+        }
+        console.error("Failed to send diagnostic data:", errorMessage);
+        return false;
+      }
     } catch (error) {
       console.error("خطأ في إرسال بيانات التشخيص:", error);
+      console.error("Error details:", {
+        message: error.message,
+        stack: error.stack,
+      });
       return false;
     }
   };
@@ -1162,6 +1218,60 @@ export default function Steps() {
               <p className={styles.thankYouMessage}>
                 شكراً لإكمال النموذج. لقد استلمنا تفاصيلك بنجاح.
               </p>
+
+              {emailError && (
+                <div style={{
+                  background: '#fef3c7',
+                  border: '1px solid #fbbf24',
+                  borderRadius: '8px',
+                  padding: '12px',
+                  margin: '16px 0',
+                  color: '#92400e',
+                  fontSize: '14px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  gap: '8px'
+                }}>
+                  <div>
+                    ⚠️ تم حساب التشخيص بنجاح! النتائج معروضة أدناه.
+                  </div>
+                  <div style={{ fontSize: '12px', opacity: 0.9 }}>
+                    فشل إرسال البريد الإلكتروني للتأكيد. يمكنك المحاولة مرة أخرى إذا كنت ترغب في الحصول على نسخة بالبريد الإلكتروني.
+                  </div>
+                  <button
+                    onClick={handleRetryEmail}
+                    disabled={isRetryingEmail}
+                    style={{
+                      background: '#f59e0b',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '6px',
+                      padding: '8px 16px',
+                      fontSize: '13px',
+                      cursor: isRetryingEmail ? 'not-allowed' : 'pointer',
+                      opacity: isRetryingEmail ? 0.7 : 1,
+                      alignSelf: 'flex-start',
+                      marginTop: '4px'
+                    }}
+                  >
+                    {isRetryingEmail ? 'جاري الإرسال...' : 'إعادة المحاولة لإرسال البريد الإلكتروني'}
+                  </button>
+                </div>
+              )}
+              
+              {!emailError && isRetryingEmail && (
+                <div style={{
+                  background: '#d1fae5',
+                  border: '1px solid #10b981',
+                  borderRadius: '8px',
+                  padding: '12px',
+                  margin: '16px 0',
+                  color: '#065f46',
+                  fontSize: '14px'
+                }}>
+                  ✅ تم إرسال البريد الإلكتروني بنجاح!
+                </div>
+              )}
 
               <div>
                 <div className={styles.resultImageContainer}>
