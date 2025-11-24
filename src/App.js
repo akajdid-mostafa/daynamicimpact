@@ -1,44 +1,44 @@
 import { Routes, Route } from "react-router-dom";
 import "./styles/app.sass";
 // TEMPORARY: Vercel Error Component - Remove this import when restoring project
-import VercelError from "./components/VercelError";
+// import VercelError from "./components/VercelError";
 
 // TEMPORARY: Commented out imports - Uncomment when restoring project
-// import Page from "./components/Page";
-// import Home from "./screens/Home";
-// import Solutions from "./screens/Nos-Solutions";
-// import Blog from "./screens/Blog";
-// import BlogDetail from "./screens/BlogDetail";
-// import Contact from "./screens/Contact";
-// import ProgressBar from "./components/ProgressBar/ProgressBar";
-// import ScrollButton from "./components/ScrollButton/index";
-// import StrategieTransformationDigitale from "./screens/TransformationDigitale";
-// import StrategieConseil from "./screens/StrategieConseil";
-// import PerformanceMesure from "./screens/PerformanceMesure";
-// import GouvernanceRisques from "./screens/GouvernanceRisques";
-// import CommunicationImpact from "./screens/CommunicationImpact";
-// import FormationLeadership from "./screens/FormationLeadership";
-// import { BlogProvider } from "./context/BlogContext";
-// import About from "./screens/About/index";
-// import MetaTags from "./components/MetaTags";
-// import StructuredData from "./components/StructuredData";
-// import ContactUs from "./screens/contact-us/index";
-// import GoogleAnalytics from "./components/GoogleAnalytics";
-// import Diagnostic from "./components/Diagnostic";
+import Page from "./components/Page";
+import Home from "./screens/Home";
+import Solutions from "./screens/Nos-Solutions";
+import Blog from "./screens/Blog";
+import BlogDetail from "./screens/BlogDetail";
+import Contact from "./screens/Contact";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
+import ScrollButton from "./components/ScrollButton/index";
+import StrategieTransformationDigitale from "./screens/TransformationDigitale";
+import StrategieConseil from "./screens/StrategieConseil";
+import PerformanceMesure from "./screens/PerformanceMesure";
+import GouvernanceRisques from "./screens/GouvernanceRisques";
+import CommunicationImpact from "./screens/CommunicationImpact";
+import FormationLeadership from "./screens/FormationLeadership";
+import { BlogProvider } from "./context/BlogContext";
+import About from "./screens/About/index";
+import MetaTags from "./components/MetaTags";
+import StructuredData from "./components/StructuredData";
+import ContactUs from "./screens/contact-us/index";
+import GoogleAnalytics from "./components/GoogleAnalytics";
+import Diagnostic from "./components/Diagnostic";
 
 
 function App() {
     // TEMPORARY: Showing Vercel Error on all routes
     // To restore project: Uncomment the code below and comment out the Routes section
-    return (
-        <Routes>
-            <Route path="/" element={<VercelError />} />
-            <Route path="*" element={<VercelError />} />
-        </Routes>
-    );
+    // return (
+    //     <Routes>
+    //         <Route path="/" element={<VercelError />} />
+    //         <Route path="*" element={<VercelError />} />
+    //     </Routes>
+    // );
 
     // TEMPORARY: Original App code - Uncomment to restore project
-    /* return (
+    return (
         <BlogProvider>
             <GoogleAnalytics />
             <MetaTags />
@@ -163,7 +163,7 @@ function App() {
                
             </Routes>
         </BlogProvider>
-    ); */
+    ); 
 }
 
 export default App;
